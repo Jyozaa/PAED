@@ -12,3 +12,10 @@ raw:
 
 verify:
 	$(PYTHON) scripts/verify_outputs.py
+
+.PHONY: exploratory verify-exploratory
+exploratory:
+	$(PYTHON) scripts/run_exploratory.py --run-tests
+
+verify-exploratory:
+	$(PYTHON) scripts/verify_exploratory.py

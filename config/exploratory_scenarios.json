@@ -1,0 +1,131 @@
+{
+  "analysis_class": "exploratory_conditional",
+  "reference_date": "2026-11-11",
+  "evidence_policy": "Only supplied extraction and existing repository derivatives. No new papers, correspondence or clinical evidence.",
+  "random_seed": 20261111,
+  "deterministic_no_sampling": true,
+  "alpha": 0.05,
+  "auroc": {
+    "fixed_estimate_ids": [
+      "lu_2025_pedca_ft_a1",
+      "bose_2019_glm_a2"
+    ],
+    "dallas_alternatives": [
+      "yu_2023_rdn_boost_a1",
+      "yu_2022_logistic_a1"
+    ],
+    "kenet_alternatives": [
+      "kenet_2023_logistic_a1",
+      "kenet_2023_xgboost_a1",
+      "kenet_2023_soft_voting_a1"
+    ],
+    "initial_kenet": "kenet_2023_logistic_a1",
+    "initial_dallas": "yu_2023_rdn_boost_a1",
+    "assumed_auroc_scale_ses": [
+      0.02,
+      0.04,
+      0.08
+    ],
+    "se_rationale": "Illustrative precise, intermediate and imprecise scenarios on AUROC scale; not calibrated to these studies and not recovered sampling errors.",
+    "preserve_genuine_ci_variance": true,
+    "genuine_ci_transform": "existing endpoint-derived logit SE, construction method unverified",
+    "assumed_se_transform": "delta method: se_logit = assumed_se_auroc / (p * (1-p))",
+    "model_selection_rationale": "Named Lu index; Bose held-out test; analyst-selected conventional Kenet baseline first, plus two alternatives; mutually exclusive Dallas reports. No ranking scenarios by favourable result.",
+    "source_group_independence": "assumed across four conservative dependency groups, not independently established",
+    "method": "Paule-Mandel",
+    "software_function": "statsmodels.stats.meta_analysis.combine_effects(method_re='iterated')",
+    "tau2_start": 0.0,
+    "tau2_atol": 1e-10,
+    "tau2_maxiter": 1000,
+    "boundary_tolerance": 1e-10,
+    "equation_check_tolerance": 1e-07,
+    "interval": "modified Hartung-Knapp: var=max(1/sum(w),sum(w*(y-mu)^2)/((k-1)*sum(w))); t(k-1)",
+    "individual_plot_interval": "Reported genuine 95% CI when supplied; otherwise assumed normal-logit 95% interval",
+    "warning": "EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.",
+    "fallback_solver": "scipy.optimize.brentq on the same Paule-Mandel equation after failed library residual check; no input changes",
+    "fallback_initial_upper": 1.0,
+    "fallback_max_expansions": 60,
+    "fallback_xtol": 1e-12,
+    "fallback_rtol": 1e-14
+  },
+  "diagnostic": {
+    "yu_model": "yu_2023_rdn_boost",
+    "kenet_models": [
+      "kenet_2023_logistic",
+      "kenet_2023_soft_voting",
+      "kenet_2023_xgboost"
+    ],
+    "kenet_design_effects": [
+      1,
+      5,
+      20
+    ],
+    "yu_variance_inflations": [
+      1,
+      5
+    ],
+    "design_effect_rationale": "Analyst-supplied variance multipliers, not measured ICCs or observed effective sample sizes; 1 is naive independence. Yu inflation probes unit uncertainty without resolving attribution/linkage.",
+    "coordinates": [
+      "logit_sensitivity",
+      "logit_false_positive_rate"
+    ],
+    "within_study_variance": [
+      "D*(1/TP+1/FN)",
+      "D*(1/FP+1/TN)"
+    ],
+    "within_study_covariance": "rho_within * sqrt(v_sensitivity*v_fpr)",
+    "primary_within_correlation": 0.0,
+    "source_level_independence": "assumed conditional independence between the two source summaries",
+    "between_source_covariances": [
+      {
+        "id": "T0",
+        "sd_sensitivity": 0.0,
+        "sd_fpr": 0.0,
+        "correlation": 0.0
+      },
+      {
+        "id": "T05Rneg",
+        "sd_sensitivity": 0.5,
+        "sd_fpr": 0.5,
+        "correlation": -0.5
+      },
+      {
+        "id": "T05R0",
+        "sd_sensitivity": 0.5,
+        "sd_fpr": 0.5,
+        "correlation": 0.0
+      },
+      {
+        "id": "T05Rpos",
+        "sd_sensitivity": 0.5,
+        "sd_fpr": 0.5,
+        "correlation": 0.5
+      },
+      {
+        "id": "T1R0",
+        "sd_sensitivity": 1.0,
+        "sd_fpr": 1.0,
+        "correlation": 0.0
+      }
+    ],
+    "heterogeneity_rationale": "T=0 common-logit constraint; SD 0.5 and 1.0 illustrate increasing logit heterogeneity; +/-0.5 probes correlation in sensitivity/FPR coordinates. No T parameter is estimated.",
+    "within_correlation_sensitivity": {
+      "kenet_design_effect": 5,
+      "yu_variance_inflation": 1,
+      "between_covariance_id": "T05R0",
+      "alternative_correlations": [
+        -0.5,
+        0.5
+      ],
+      "apply_to": "both source covariance matrices"
+    },
+    "interval": "normal marginal intervals using known-assumed GLS covariance; chi-square(2) joint logit confidence ellipse",
+    "plot_between_covariance_id": "T05R0",
+    "plot_yu_variance_inflation": 1,
+    "condition_number_warning": 10000000000.0,
+    "normal_equation_tolerance": 1e-08,
+    "minimum_cell_warning": 5,
+    "boundary_cells": "stop; do not add continuity correction or alter counts",
+    "warning": "EXPLORATORY — clustered windows, unresolved analysis units and assumed statistical parameters."
+  }
+}

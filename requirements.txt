@@ -5,3 +5,4 @@ matplotlib==3.11.2
 Markdown==3.11.3
 pytest==9.2.0
 pypdf==7.0.1
+statsmodels==0.15.0

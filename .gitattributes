@@ -2,3 +2,5 @@
 # whitespace. Preserve them; apply ordinary whitespace checks to source code.
 figures/*.svg -whitespace
 results/*.csv -whitespace
+figures/exploratory/*.svg -whitespace
+results/exploratory/*.csv -whitespace
