@@ -1,0 +1,251 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>data audit</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="full-extraction-audit">Full extraction audit</h1>
+<p>All 3 supplied files were read completely before analysis: the CSV, the 3-page extraction framework, and the 7-page PROSPERO snapshot. PDF text was extracted page by page and its layout checked locally. No original study full texts or patient data were supplied. Original files and extracted PDF text remain local and ignored by Git.</p>
+<h2 id="counts-and-source-numbering">Counts and source numbering</h2>
+<ul>
+<li>42 columns; two header records (group labels and original field names).</li>
+<li>27 records after headers: 26 populated model entries, <strong>1 cross-reference record, 0 completely blank records</strong>.</li>
+<li>Six original study reports: Yu 2026 (5 models), Lu 2025 (11), Bose 2019 (1), Yu 2023 (2 populated, plus 1 unpopulated cross-reference), Kenet 2023 (6), Yu 2022 (1).</li>
+<li>Five Yu 2026 models excluded for composite outcomes, plus one Yu 2023 Gaussian Naive Bayes model excluded for insufficient numerical results.</li>
+<li>The cross-reference at logical record 21 points to Yu 2022 record 29; it is not counted as a seventh exclusion from the 26 populated models and is not forward-filled into an extra result.</li>
+<li>Retained: <strong>5 studies, 20 models</strong>, four conservative potential cohort groups (Yu 2022/2023 grouped for possible reuse).</li>
+<li>Numerical AUROC: 21 estimates across 20 retained models; Bose contributes distinct training and held-out test values. Only 1 estimate has a labelled 95% CI. Eleven Lu values have unspecified +/- variation.</li>
+<li>Seven complete candidate 2x2 tables: six Kenet models and one Yu 2023 representative fold; two study sources, zero confirmed independent patient-level tables eligible for pooling.</li>
+</ul>
+<p>The preliminary “one blank row” checkpoint is corrected to a cross-reference with two non-empty cells. All other preliminary study/model counts reconcile. Source row denotes the <strong>logical record</strong> starting with header record 1; physical multiline spans are retained in <code>data_audit.csv</code> and the curated JSON.</p>
+<h2 id="record-decisions">Record decisions</h2>
+<table>
+<thead>
+<tr>
+<th>source_row</th>
+<th>study_id</th>
+<th>model_id</th>
+<th>record_type</th>
+<th>retained</th>
+<th>exclusion_reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>yu_2026</td>
+<td>yu_2026_decision_tree</td>
+<td>populated_model</td>
+<td>False</td>
+<td>Composite adverse event performance, not cardiac arrest alone</td>
+</tr>
+<tr>
+<td>4</td>
+<td>yu_2026</td>
+<td>yu_2026_random_forest</td>
+<td>populated_model</td>
+<td>False</td>
+<td>Composite adverse event performance, not cardiac arrest alone</td>
+</tr>
+<tr>
+<td>5</td>
+<td>yu_2026</td>
+<td>yu_2026_xgboost</td>
+<td>populated_model</td>
+<td>False</td>
+<td>Composite adverse event performance, not cardiac arrest alone</td>
+</tr>
+<tr>
+<td>6</td>
+<td>yu_2026</td>
+<td>yu_2026_logistic</td>
+<td>populated_model</td>
+<td>False</td>
+<td>Composite adverse event performance, not cardiac arrest alone</td>
+</tr>
+<tr>
+<td>7</td>
+<td>yu_2026</td>
+<td>yu_2026_svm</td>
+<td>populated_model</td>
+<td>False</td>
+<td>Composite adverse event performance, not cardiac arrest alone</td>
+</tr>
+<tr>
+<td>8</td>
+<td>lu_2025</td>
+<td>lu_2025_knn_dtw</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>lu_2025</td>
+<td>lu_2025_svc_gak</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>lu_2025</td>
+<td>lu_2025_knn_unif</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>lu_2025</td>
+<td>lu_2025_logistic</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>lu_2025</td>
+<td>lu_2025_rf_gini</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>lu_2025</td>
+<td>lu_2025_xgboost</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>lu_2025</td>
+<td>lu_2025_lightgbm</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>lu_2025</td>
+<td>lu_2025_tabnn</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>lu_2025</td>
+<td>lu_2025_tresnet</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>lu_2025</td>
+<td>lu_2025_gmlp</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td>lu_2025</td>
+<td>lu_2025_pedca_ft</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>bose_2019</td>
+<td>bose_2019_glm</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>yu_2023</td>
+<td>yu_2023_rdn_boost</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td>yu_2023</td>
+<td>yu_2023_logistic_reference</td>
+<td>cross_reference</td>
+<td>False</td>
+<td>Cross-reference only; no extracted result; links to populated Yu 2022 record 29</td>
+</tr>
+<tr>
+<td>22</td>
+<td>yu_2023</td>
+<td>yu_2023_gnb</td>
+<td>populated_model</td>
+<td>False</td>
+<td>Graphical results without adequately extractable numerical estimates</td>
+</tr>
+<tr>
+<td>23</td>
+<td>kenet_2023</td>
+<td>kenet_2023_logistic</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>kenet_2023</td>
+<td>kenet_2023_svm</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td>kenet_2023</td>
+<td>kenet_2023_random_forest</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td>kenet_2023</td>
+<td>kenet_2023_xgboost</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>kenet_2023</td>
+<td>kenet_2023_lightgbm</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td>kenet_2023</td>
+<td>kenet_2023_soft_voting</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>29</td>
+<td>yu_2022</td>
+<td>yu_2022_logistic</td>
+<td>populated_model</td>
+<td>True</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="scope-and-metrics">Scope and metrics</h2>
+<p>Inventories enumerate every populated original model, study, metric text, outcome context, horizon, validation and dependency identifier. <code>source_cell_states.csv</code> audits all 27 x 42 = 1,134 data cells without publishing private text. Excluded results are not used for descriptive working-cohort performance ranges. No 2x2 reconstruction or CI imputation was made.</p>
+<p>The supplied framework prioritizes TP/FP/FN/TN and repeated-model extraction. The CSV adds AUROC but lacks dedicated AUROC CI-method, threshold-specific evaluation-unit and cluster-covariance fields. See the complete dictionary and feasibility reports for the consequences.</p>
+<h2 id="numerical-validation">Numerical validation</h2>
+<p>1 retained model/metric discrepancy exceeds the documented rounding tolerance: Kenet random-forest specificity, reported 0.778 versus 0.77563202 from counts (difference -0.00236798). Yu 2023 specificity 65% and PPV/NPV 36%/97% agree with exact count-derived values within integer-percentage rounding. Source values are never overwritten.</p>
+<p>Other flags include probable Dallas cohort reuse; missing external validation; Kenet repeated-window clustering and 38 adult participants; graph-read Lu operating points; duplicated KNN quality text across Lu models; conflicting recruitment dates; approximate distal AUROC ranges; and uncertain linkage of the Yu 2023 representative-fold table.</p></body></html>

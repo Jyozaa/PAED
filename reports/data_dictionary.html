@@ -1,0 +1,324 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>data dictionary</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="data-dictionary">Data dictionary</h1>
+<p>Source CSV has 42 columns, two header records and multiline cells. Both exact header rows are preserved in <code>config/source_schema.json</code>; section labels are forward-filled only as metadata. Source row means <strong>1-based logical CSV record including both headers</strong>. Physical start/end line numbers are separately retained; these are not interchangeable.</p>
+<h2 id="source-to-analysis-mapping">Source-to-analysis mapping</h2>
+<table>
+<thead>
+<tr>
+<th>source_column_index</th>
+<th>section</th>
+<th>original_column_name</th>
+<th>analysis_field</th>
+<th>publication_policy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Basic information</td>
+<td>Title</td>
+<td>title</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Basic information</td>
+<td>Full text URL</td>
+<td>full_text_url</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Basic information</td>
+<td>DOI</td>
+<td>doi</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Basic information</td>
+<td>Study ID (First Author, Date)</td>
+<td>study_label</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Basic information</td>
+<td>Authors</td>
+<td>authors</td>
+<td>withheld or separately curated</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Basic information</td>
+<td>Year</td>
+<td>year</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Basic information</td>
+<td>Country published</td>
+<td>country</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Paper details</td>
+<td>Study aim</td>
+<td>study_aim</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Paper details</td>
+<td>Study design</td>
+<td>design</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Paper details</td>
+<td>Setting</td>
+<td>setting</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Paper details</td>
+<td>Recruitment period (dd/mm/yyyy)</td>
+<td>recruitment</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Population Characteristics</td>
+<td>Mean/ median age</td>
+<td>age</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Population Characteristics</td>
+<td>Age group  <br>○Neonates (≤28 days) <br>○ Infants (29-365 days) <br>○ Children (1-18 years)</td>
+<td>age_groups</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Population Characteristics</td>
+<td>Sex (no. and % female)</td>
+<td>sex</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Population Characteristics</td>
+<td>Sample size</td>
+<td>sample_size</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Population Characteristics</td>
+<td>Cardiac arrest prevalence</td>
+<td>ca_prevalence</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Population Characteristics</td>
+<td>Underlying conditions <br>e.g. Congenital heart disease, Sepsis, Resp failure</td>
+<td>conditions</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Model characteristics</td>
+<td>Model type <br>○ Logistic regression (baseline comparator) <br>○ Random forest <br>○ Neural network <br>○ Gradient boosting <br>○ Deep learning architectures</td>
+<td>architecture_raw</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Model characteristics</td>
+<td>Input data modality: <br>- Vital signs<br>- ECG<br>- Labs<br>- Multimodal</td>
+<td>modality_raw</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Model characteristics</td>
+<td>Feature selection method (if reported)</td>
+<td>feature_selection</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Model characteristics</td>
+<td>Number of predictors</td>
+<td>predictors</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Model characteristics</td>
+<td>Whether time-series data is used</td>
+<td>time_series</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Validation details</td>
+<td>Internal validation, e.g. CV, bootstrapping</td>
+<td>internal_validation</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Validation details</td>
+<td>External validation</td>
+<td>external_validation_raw</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Validation details</td>
+<td>Training vs validation dataset sizes</td>
+<td>split_sizes</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Timing and clinical usability</td>
+<td>Prediction lead time: E.g., 1h, 6h, 12h before arrest</td>
+<td>lead_time_raw</td>
+<td>withheld or separately curated</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Timing and clinical usability</td>
+<td>Outcome definition: <br>“Impending arrest” vs “actual arrest”</td>
+<td>outcome_raw</td>
+<td>withheld or separately curated</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Timing and clinical usability</td>
+<td>Frequency of predictions (continuous vs snapshot)</td>
+<td>frequency_raw</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Essential outcome data</td>
+<td>True positives (TP)</td>
+<td>tp_raw</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Essential outcome data</td>
+<td>False positives (FP)</td>
+<td>fp_raw</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Essential outcome data</td>
+<td>False negatives (FN)</td>
+<td>fn_raw</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Essential outcome data</td>
+<td>True negatives (TN)</td>
+<td>tn_raw</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Essential outcome data</td>
+<td>Sensitivity</td>
+<td>sensitivity_raw</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Essential outcome data</td>
+<td>Specificity</td>
+<td>specificity_raw</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Essential outcome data</td>
+<td>AUROC</td>
+<td>auroc_raw</td>
+<td>whitelisted aggregate</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Features used in Models</td>
+<td><br>Thematic analysis: <br>- Vital signs (HR, RR, BP, SpO2) <br>- Lab values <br>- Demographic (even if later excluded analytically) <br>- Clinical events</td>
+<td>feature_themes_raw</td>
+<td>withheld or separately curated</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Secondary objectives</td>
+<td>Comparator Data <br>Where available: <br>- PEWS <br>- Other monitoring systems <br> + their respective TP/FP/FN/TN, sensitivity, specificity, AUROC</td>
+<td>comparator_raw</td>
+<td>withheld or separately curated</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Secondary objectives</td>
+<td>Risk of bias/quality (QUADAS-2 inputs) <br>- Patient selection criteria <br>- Index test (ML model) <br>- Reference standard (definition of cardiac arrest) <br>- Flow and timing <br>Note: <br>- Missing data handling  <br>- Blinding (if any is blinded)</td>
+<td>raw_risk_of_bias</td>
+<td>withheld or separately curated</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Secondary objectives</td>
+<td>Meta-regression: <br>Covariates: <br>- Mean/median age <br>-  % neonates <br>- Prevalence of cardiac arrest <br>- % congenital heart disease <br> For heterogeneity: <br>- Threshold used <br>- Data imbalance handling (oversampling, etc) <br>- Study setting differences</td>
+<td>raw_meta_regression</td>
+<td>withheld or separately curated</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Other</td>
+<td>Limitations of paper</td>
+<td>raw_limitations</td>
+<td>withheld or separately curated</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Other</td>
+<td>Additional notes about the paper</td>
+<td>additional_notes</td>
+<td>withheld or separately curated</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Other</td>
+<td>Any assumptions made?</td>
+<td>assumptions</td>
+<td>withheld or separately curated</td>
+</tr>
+</tbody>
+</table>
+<h2 id="derived-fields-and-table-schemas">Derived fields and table schemas</h2>
+<p>Every generated result column, its observed data type, missing-value encoding and meaning is enumerated in <a href="../results/data_dictionary_derived.csv">data_dictionary_derived.csv</a>. This complements the original 42-field mapping. Public minimum aggregate records reside in <code>data/curated/source_rows.json</code>; no private notes are needed to rerun the analysis.</p>
+<ul>
+<li><code>auroc</code> is discrimination on 0-1. <code>reported_variation</code> is the scaled +/- quantity, <strong>not</strong> a sampling standard error unless its type is established. Here it is unspecified.</li>
+<li><code>se_raw_approx=(upper-lower)/(2*1.95996398454)</code>; <code>se_logit_approx=(logit(upper)-logit(lower))/(2*1.95996398454)</code> only for a labelled 95% CI with interior endpoints. Endpoint method and asymmetry remain limitations.</li>
+<li>Sensitivity = TP/(TP+FN); specificity = TN/(TN+FP); PPV = TP/(TP+FP); NPV = TN/(TN+FN); accuracy = (TP+TN)/N. Zero denominators yield missing, not zero.</li>
+<li>Proportions and percentages are 0-1; counts are nonnegative integers in their recorded <strong>analysis unit</strong>. Cohort patients, arrests and repeated windows have distinct denominators.</li>
+<li>Empty CSV cells mean unavailable. <code>missing_state</code> distinguishes missing, not_reported, not_applicable, ambiguous, observed_zero and observed. Raw missing markers are retained. A numeric 0 is genuine only when supplied or validly derived.</li>
+<li><code>source_nonempty_cells</code> counts all nonempty cells in each original record; <code>nonempty_public_fields</code> counts a different, sanitized export and must not be interpreted as raw extraction completeness.</li>
+<li><code>cohort_id</code> identifies a study-reported cohort; <code>dependency_group</code> conservatively groups probable overlaps. This does not assert the exact overlap fraction.</li>
+<li><code>pooled_eligible=False</code> means the current evidence does not support inferential contribution; it is not a judgement that a model performs poorly.</li>
+<li>Rounding tolerance is 0.00055 for Kenet percentage comparisons (allowing effective 0.1 percentage-point rounding) and 0.005 for Yu 2023 integer percentages. Both reported and exact derived values remain available. No statistical test of these differences is implied.</li>
+<li>Lu correspondence-derived outcome/horizon text and free-text notes are withheld. <code>withheld</code> is not numerical missingness and does not constitute a public-source verification. Domain evidence summaries are analyst-curated from the extraction with column provenance, not independent full-text verification.</li>
+</ul></body></html>

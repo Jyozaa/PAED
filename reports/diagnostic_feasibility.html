@@ -1,0 +1,129 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>diagnostic feasibility</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="analysis-b-bivariatehsroc-diagnostic-synthesis">Analysis B: bivariate/HSROC diagnostic synthesis</h1>
+<p><strong>Status: Not statistically defensible from the supplied data.</strong> Count validation and the hierarchical eligibility workflow completed. There is no fitted bivariate model, HSROC curve, pooled sensitivity/specificity, convergence assessment, CI or heterogeneity estimate.</p>
+<h2 id="seven-tables-two-study-sources-no-confirmed-eligible-independent-patient-level-tables">Seven tables, two study sources, no confirmed eligible independent patient-level tables</h2>
+<table>
+<thead>
+<tr>
+<th>study_id</th>
+<th>model_name</th>
+<th>tp</th>
+<th>fp</th>
+<th>fn</th>
+<th>tn</th>
+<th>sensitivity_recalculated</th>
+<th>specificity_recalculated</th>
+<th>ppv_recalculated</th>
+<th>npv_recalculated</th>
+<th>analysis_unit</th>
+<th>table_horizon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>yu_2023</td>
+<td>rdn boost</td>
+<td>36</td>
+<td>63</td>
+<td>4</td>
+<td>115</td>
+<td>0.9</td>
+<td>0.6460674157303371</td>
+<td>0.36363636363636365</td>
+<td>0.9663865546218487</td>
+<td>representative_fold_table_unit_unverified</td>
+<td>not_established</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>logistic</td>
+<td>184</td>
+<td>944</td>
+<td>27</td>
+<td>1904</td>
+<td>0.8720379146919431</td>
+<td>0.6685393258426966</td>
+<td>0.16312056737588654</td>
+<td>0.9860176074572761</td>
+<td>repeated_5_minute_window</td>
+<td>within_3h_window_label</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>svm</td>
+<td>206</td>
+<td>965</td>
+<td>5</td>
+<td>1883</td>
+<td>0.976303317535545</td>
+<td>0.6611657303370787</td>
+<td>0.17591801878736124</td>
+<td>0.9973516949152542</td>
+<td>repeated_5_minute_window</td>
+<td>within_3h_window_label</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>random forest</td>
+<td>195</td>
+<td>639</td>
+<td>16</td>
+<td>2209</td>
+<td>0.9241706161137441</td>
+<td>0.7756320224719101</td>
+<td>0.23381294964028776</td>
+<td>0.992808988764045</td>
+<td>repeated_5_minute_window</td>
+<td>within_3h_window_label</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>xgboost</td>
+<td>210</td>
+<td>866</td>
+<td>1</td>
+<td>1982</td>
+<td>0.995260663507109</td>
+<td>0.6959269662921348</td>
+<td>0.19516728624535315</td>
+<td>0.9994957135653051</td>
+<td>repeated_5_minute_window</td>
+<td>within_3h_window_label</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>lightgbm</td>
+<td>205</td>
+<td>850</td>
+<td>6</td>
+<td>1998</td>
+<td>0.9715639810426541</td>
+<td>0.7015449438202247</td>
+<td>0.1943127962085308</td>
+<td>0.9970059880239521</td>
+<td>repeated_5_minute_window</td>
+<td>within_3h_window_label</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>soft voting</td>
+<td>192</td>
+<td>345</td>
+<td>19</td>
+<td>2503</td>
+<td>0.909952606635071</td>
+<td>0.8788623595505618</td>
+<td>0.3575418994413408</td>
+<td>0.992466296590008</td>
+<td>repeated_5_minute_window</td>
+<td>within_3h_window_label</td>
+</tr>
+</tbody>
+</table>
+<p>Each Kenet table totals <strong>3,059 windows = 211 positive + 2,848 negative</strong>, shared across six algorithms. These belong to a <strong>229-patient test set with five CA patients</strong>, not 3,059 independent patients or 211 independent arrests. Overall cohort totals (1,145 patients, 15 CA; 14,714 windows, 516 positive) are distinct from test totals. Patient-disjoint train/test splitting prevents certain leakage but does not remove within-patient dependence among test windows. A further denominator-reconciliation question is that 211 positive windows exceed 5 x 36 = 180 under an <strong>unstated one-arrest-per-patient assumption</strong> and a 3h/five-minute labeling rule. Repeated arrests, exact labeling and segment inclusion must be checked; this is a conditional consistency flag, not proof of an error or a reconstructed event count. No intrapatient correlation, cluster-adjusted covariance, patient-level predictions or patient-level confusion table is supplied. No Wilson/binomial interval is displayed for windows.</p>
+<p>The Yu 2023 matrix is a representative fold: <strong>36 TP, 63 FP, 4 FN, 115 TN</strong>, total <strong>218 units</strong>. Sensitivity = 0.9000; specificity = 0.646067; PPV = 0.363636; NPV = 0.966387. The extractor <strong>assumed</strong> model attribution to RDN Boost; exact fold, threshold, horizon and whether units are patients/events/windows are not established. Its 40 positive units exceed 160/5 = 32, so a simple equally divided patient-fold reconstruction is not justified; this does not prove an error. The matrix is not silently linked to the 1-hour AUROC. It cannot be reconstructed or reweighted from cohort totals.</p>
+<h2 id="thresholds-and-conditional-synthesis">Thresholds and conditional synthesis</h2>
+<p>Kenet thresholds were chosen at validation-ROC operating points, with numeric values unavailable. Bose uses bootstrap-dependent ROC thresholds; example scores 0.5/0.56 are not a common operating point. Yu thresholds are missing; Yu 2022's NIRS predictor cutoff is not a multivariable classifier threshold. Lu's three operating points are graph-read and have no verified count denominators or thresholds. These points are descriptive only.</p>
+<p>A full bivariate model has two mean logits, two between-study variances and a correlation. Even granting independence to the <strong>two source cohorts</strong>, covariance estimation would be exceptionally fragile. Here Kenet clustering and Yu linkage fail before this statistical question arises: <strong>0 eligible datasets; 0 independent studies / 0 model estimates contribute to an inferential fit</strong>. Models are not separate studies. Separate univariate pooling cannot solve this dependency or recover a universal threshold.</p>
+<p>The conditional R code implements established <code>mada::reitsma</code> for eligible interior proportions with REML and zero continuity correction, requires at least five independent datasets plus explicit model/unit/comparability confirmation, checks finite covariance, and records the true summary and fitted SROC only after a successful model. The minimum is an analyst safeguard, not an identifiability theorem. For zero-cell sparse independent data it stops and calls for a binomial HSROC implementation rather than silently correcting counts. No zero cells exist in these seven tables, but their analysis units fail the gate. No artificial convergence attempt or fixed correlation is used.</p>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5564999/">Primary simulation research</a> shows that complex hierarchical fits can be problematic with few/sparse studies; simpler models may be considered when scientifically suitable, but cannot make clustered or unlinked extraction rows independent. <a href="https://rdrr.io/cran/mada/man/reitsma.html">Package documentation</a> defines the candidate bivariate implementation.</p>
+<p>Sensitivity/specificity forest-style point plots and a <strong>non-pooled</strong> ROC-space scatter are generated. No smooth curve is drawn through heterogeneous model points. Denominator or clustering uncertainty is not disguised as narrow error bars.</p></body></html>

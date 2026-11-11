@@ -1,0 +1,115 @@
+study_id,model_id,source_row,code,metric,severity,detail
+lu_2025,lu_2025_knn_dtw,8,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
+lu_2025,lu_2025_knn_dtw,8,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+lu_2025,lu_2025_knn_dtw,8,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
+lu_2025,lu_2025_knn_dtw,8,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
+lu_2025,lu_2025_knn_dtw,8,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+lu_2025,lu_2025_svc_gak,9,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
+lu_2025,lu_2025_svc_gak,9,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+lu_2025,lu_2025_svc_gak,9,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
+lu_2025,lu_2025_svc_gak,9,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
+lu_2025,lu_2025_svc_gak,9,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+lu_2025,lu_2025_knn_unif,10,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
+lu_2025,lu_2025_knn_unif,10,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+lu_2025,lu_2025_knn_unif,10,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
+lu_2025,lu_2025_knn_unif,10,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
+lu_2025,lu_2025_knn_unif,10,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+lu_2025,lu_2025_logistic,11,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
+lu_2025,lu_2025_logistic,11,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+lu_2025,lu_2025_logistic,11,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
+lu_2025,lu_2025_logistic,11,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
+lu_2025,lu_2025_logistic,11,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+lu_2025,lu_2025_rf_gini,12,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
+lu_2025,lu_2025_rf_gini,12,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+lu_2025,lu_2025_rf_gini,12,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
+lu_2025,lu_2025_rf_gini,12,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
+lu_2025,lu_2025_rf_gini,12,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+lu_2025,lu_2025_xgboost,13,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
+lu_2025,lu_2025_xgboost,13,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+lu_2025,lu_2025_xgboost,13,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
+lu_2025,lu_2025_xgboost,13,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
+lu_2025,lu_2025_xgboost,13,GRAPH_READ_OPERATING_POINT,sensitivity_specificity,warning,Operating point read from bar chart according to extraction; values are approximate; no integer denominators or threshold verified
+lu_2025,lu_2025_xgboost,13,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+lu_2025,lu_2025_lightgbm,14,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
+lu_2025,lu_2025_lightgbm,14,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+lu_2025,lu_2025_lightgbm,14,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
+lu_2025,lu_2025_lightgbm,14,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
+lu_2025,lu_2025_lightgbm,14,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+lu_2025,lu_2025_tabnn,15,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
+lu_2025,lu_2025_tabnn,15,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+lu_2025,lu_2025_tabnn,15,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
+lu_2025,lu_2025_tabnn,15,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
+lu_2025,lu_2025_tabnn,15,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+lu_2025,lu_2025_tresnet,16,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
+lu_2025,lu_2025_tresnet,16,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+lu_2025,lu_2025_tresnet,16,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
+lu_2025,lu_2025_tresnet,16,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
+lu_2025,lu_2025_tresnet,16,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+lu_2025,lu_2025_gmlp,17,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
+lu_2025,lu_2025_gmlp,17,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+lu_2025,lu_2025_gmlp,17,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
+lu_2025,lu_2025_gmlp,17,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
+lu_2025,lu_2025_gmlp,17,GRAPH_READ_OPERATING_POINT,sensitivity_specificity,warning,Operating point read from bar chart according to extraction; values are approximate; no integer denominators or threshold verified
+lu_2025,lu_2025_gmlp,17,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+lu_2025,lu_2025_pedca_ft,18,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
+lu_2025,lu_2025_pedca_ft,18,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+lu_2025,lu_2025_pedca_ft,18,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
+lu_2025,lu_2025_pedca_ft,18,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
+lu_2025,lu_2025_pedca_ft,18,GRAPH_READ_OPERATING_POINT,sensitivity_specificity,warning,Operating point read from bar chart according to extraction; values are approximate; no integer denominators or threshold verified
+lu_2025,lu_2025_pedca_ft,18,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+bose_2019,bose_2019_glm,19,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+bose_2019,bose_2019_glm,19,RECRUITMENT_DISCREPANCY,all,warning,January vs November 2013 recruitment start recorded
+bose_2019,bose_2019_glm,19,PATIENT_TABLE_NOT_RECONSTRUCTABLE,2x2,warning,60.6% test sensitivity incompatible with a simple integer table of five test CA patients; bootstrap/minute-score estimand needs verification
+bose_2019,bose_2019_glm,19,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
+yu_2023,yu_2023_rdn_boost,20,CI_TRANSFORM_APPROXIMATION,auroc,information,Logit SE from 95% CI endpoints assumes approximately normal logit AUROC; CI method not supplied
+yu_2023,yu_2023_rdn_boost,20,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+yu_2023,yu_2023_rdn_boost,20,POTENTIAL_COHORT_OVERLAP,all,warning,"Same Dallas institution, 2010-2019 and 160 CA/711 controls; shared dependency group pending verification"
+yu_2023,yu_2023_rdn_boost,20,TABLE_LINKAGE_UNVERIFIED,2x2,warning,"Representative fold; model attribution assumed; horizon, threshold and analysis unit not established"
+yu_2023,yu_2023_rdn_boost,20,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: not_reported; strict protocol eligibility not established
+kenet_2023,kenet_2023_logistic,23,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+kenet_2023,kenet_2023_logistic,23,WINDOW_EVENT_COUNT_RECONCILIATION,all,warning,211 positive windows exceed 5 x 36 = 180 under an unstated one-event-per-test-CA-patient assumption; verify repeated arrests and window labeling; no error asserted
+kenet_2023,kenet_2023_logistic,23,WINDOW_CLUSTERING,all,warning,"Six matrices count repeated five-minute windows; five test CA patients, 211 positive windows per matrix; no cluster adjustment"
+kenet_2023,kenet_2023_logistic,23,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats logistic-regression index description across all six models
+kenet_2023,kenet_2023_logistic,23,MIXED_AGE_COHORT,all,warning,38 patients aged 18+; no paediatric-only diagnostic table supplied
+kenet_2023,kenet_2023_logistic,23,RECRUITMENT_DISCREPANCY,all,warning,End date July vs August 2021 across model records
+kenet_2023,kenet_2023_logistic,23,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: not_reported; strict protocol eligibility not established
+kenet_2023,kenet_2023_svm,24,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+kenet_2023,kenet_2023_svm,24,WINDOW_EVENT_COUNT_RECONCILIATION,all,warning,211 positive windows exceed 5 x 36 = 180 under an unstated one-event-per-test-CA-patient assumption; verify repeated arrests and window labeling; no error asserted
+kenet_2023,kenet_2023_svm,24,WINDOW_CLUSTERING,all,warning,"Six matrices count repeated five-minute windows; five test CA patients, 211 positive windows per matrix; no cluster adjustment"
+kenet_2023,kenet_2023_svm,24,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats logistic-regression index description across all six models
+kenet_2023,kenet_2023_svm,24,MIXED_AGE_COHORT,all,warning,38 patients aged 18+; no paediatric-only diagnostic table supplied
+kenet_2023,kenet_2023_svm,24,RECRUITMENT_DISCREPANCY,all,warning,End date July vs August 2021 across model records
+kenet_2023,kenet_2023_svm,24,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: not_reported; strict protocol eligibility not established
+kenet_2023,kenet_2023_random_forest,25,REPORTED_RECALCULATED_DISCREPANCY,specificity,warning,specificity: reported 0.778000; counts 0.775632; difference -0.002368; source unchanged
+kenet_2023,kenet_2023_random_forest,25,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+kenet_2023,kenet_2023_random_forest,25,WINDOW_EVENT_COUNT_RECONCILIATION,all,warning,211 positive windows exceed 5 x 36 = 180 under an unstated one-event-per-test-CA-patient assumption; verify repeated arrests and window labeling; no error asserted
+kenet_2023,kenet_2023_random_forest,25,WINDOW_CLUSTERING,all,warning,"Six matrices count repeated five-minute windows; five test CA patients, 211 positive windows per matrix; no cluster adjustment"
+kenet_2023,kenet_2023_random_forest,25,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats logistic-regression index description across all six models
+kenet_2023,kenet_2023_random_forest,25,MIXED_AGE_COHORT,all,warning,38 patients aged 18+; no paediatric-only diagnostic table supplied
+kenet_2023,kenet_2023_random_forest,25,RECRUITMENT_DISCREPANCY,all,warning,End date July vs August 2021 across model records
+kenet_2023,kenet_2023_random_forest,25,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: not_reported; strict protocol eligibility not established
+kenet_2023,kenet_2023_xgboost,26,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+kenet_2023,kenet_2023_xgboost,26,WINDOW_EVENT_COUNT_RECONCILIATION,all,warning,211 positive windows exceed 5 x 36 = 180 under an unstated one-event-per-test-CA-patient assumption; verify repeated arrests and window labeling; no error asserted
+kenet_2023,kenet_2023_xgboost,26,WINDOW_CLUSTERING,all,warning,"Six matrices count repeated five-minute windows; five test CA patients, 211 positive windows per matrix; no cluster adjustment"
+kenet_2023,kenet_2023_xgboost,26,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats logistic-regression index description across all six models
+kenet_2023,kenet_2023_xgboost,26,MIXED_AGE_COHORT,all,warning,38 patients aged 18+; no paediatric-only diagnostic table supplied
+kenet_2023,kenet_2023_xgboost,26,RECRUITMENT_DISCREPANCY,all,warning,End date July vs August 2021 across model records
+kenet_2023,kenet_2023_xgboost,26,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: not_reported; strict protocol eligibility not established
+kenet_2023,kenet_2023_lightgbm,27,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+kenet_2023,kenet_2023_lightgbm,27,WINDOW_EVENT_COUNT_RECONCILIATION,all,warning,211 positive windows exceed 5 x 36 = 180 under an unstated one-event-per-test-CA-patient assumption; verify repeated arrests and window labeling; no error asserted
+kenet_2023,kenet_2023_lightgbm,27,WINDOW_CLUSTERING,all,warning,"Six matrices count repeated five-minute windows; five test CA patients, 211 positive windows per matrix; no cluster adjustment"
+kenet_2023,kenet_2023_lightgbm,27,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats logistic-regression index description across all six models
+kenet_2023,kenet_2023_lightgbm,27,MIXED_AGE_COHORT,all,warning,38 patients aged 18+; no paediatric-only diagnostic table supplied
+kenet_2023,kenet_2023_lightgbm,27,RECRUITMENT_DISCREPANCY,all,warning,End date July vs August 2021 across model records
+kenet_2023,kenet_2023_lightgbm,27,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: not_reported; strict protocol eligibility not established
+kenet_2023,kenet_2023_soft_voting,28,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+kenet_2023,kenet_2023_soft_voting,28,WINDOW_EVENT_COUNT_RECONCILIATION,all,warning,211 positive windows exceed 5 x 36 = 180 under an unstated one-event-per-test-CA-patient assumption; verify repeated arrests and window labeling; no error asserted
+kenet_2023,kenet_2023_soft_voting,28,WINDOW_CLUSTERING,all,warning,"Six matrices count repeated five-minute windows; five test CA patients, 211 positive windows per matrix; no cluster adjustment"
+kenet_2023,kenet_2023_soft_voting,28,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats logistic-regression index description across all six models
+kenet_2023,kenet_2023_soft_voting,28,MIXED_AGE_COHORT,all,warning,38 patients aged 18+; no paediatric-only diagnostic table supplied
+kenet_2023,kenet_2023_soft_voting,28,RECRUITMENT_DISCREPANCY,all,warning,End date July vs August 2021 across model records
+kenet_2023,kenet_2023_soft_voting,28,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: not_reported; strict protocol eligibility not established
+yu_2022,yu_2022_logistic,29,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
+yu_2022,yu_2022_logistic,29,POTENTIAL_COHORT_OVERLAP,all,warning,"Same Dallas institution, 2010-2019 and 160 CA/711 controls; shared dependency group pending verification"
+yu_2022,yu_2022_logistic,29,DISTAL_AUROC_APPROXIMATE,auroc,warning,Approximate 0.72-0.74 graphical range not extracted as exact hourly point estimates
+yu_2022,yu_2022_logistic,29,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: not_reported; strict protocol eligibility not established

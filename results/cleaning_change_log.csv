@@ -1,0 +1,117 @@
+study_id,model_id,source_row,field,original,standardised,action
+lu_2025,lu_2025_knn_dtw,8,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_knn_dtw,8,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_knn_dtw,8,auroc,55.27 ± 4.21,0.5527000000000001,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
+lu_2025,lu_2025_svc_gak,9,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_svc_gak,9,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_svc_gak,9,auroc,54.72 ± 3.80,0.5472,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
+lu_2025,lu_2025_knn_unif,10,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_knn_unif,10,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_knn_unif,10,auroc,57.41 ± 2.99,0.5740999999999999,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
+lu_2025,lu_2025_logistic,11,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_logistic,11,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_logistic,11,auroc,62.92 ± 1.92,0.6292,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
+lu_2025,lu_2025_rf_gini,12,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_rf_gini,12,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_rf_gini,12,auroc,73.29 ± 2.47,0.7329000000000001,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
+lu_2025,lu_2025_xgboost,13,sensitivity,39.04%,[0.39039999999999997],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_xgboost,13,specificity,83.14%,[0.8314],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_xgboost,13,auroc,72.35 ± 4.00,0.7234999999999999,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
+lu_2025,lu_2025_lightgbm,14,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_lightgbm,14,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_lightgbm,14,auroc,61.42 ± 11.06,0.6142,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
+lu_2025,lu_2025_tabnn,15,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_tabnn,15,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_tabnn,15,auroc,62.16 ± 3.64,0.6215999999999999,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
+lu_2025,lu_2025_tresnet,16,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_tresnet,16,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_tresnet,16,auroc,72.21 ± 7.22,0.7221,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
+lu_2025,lu_2025_gmlp,17,sensitivity,8.22%,[0.08220000000000001],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_gmlp,17,specificity,97%,[0.97],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_gmlp,17,auroc,75.04 ± 3.52,0.7504000000000001,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
+lu_2025,lu_2025_pedca_ft,18,sensitivity,42.47%,[0.42469999999999997],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_pedca_ft,18,specificity,84.69%,[0.8469],Semantic parse; percent/proportion conversion; retain every named evaluation
+lu_2025,lu_2025_pedca_ft,18,auroc,73.99 ± 3.16,0.7399,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
+bose_2019,bose_2019_glm,19,sensitivity,60.6% (test set; unchanged when evaluated on entire dataset excluding patients with <2h data),[0.606],Semantic parse; percent/proportion conversion; retain every named evaluation
+bose_2019,bose_2019_glm,19,specificity,74.1% (test set); 80.2% (entire dataset),"[0.741, 0.802]",Semantic parse; percent/proportion conversion; retain every named evaluation
+bose_2019,bose_2019_glm,19,auroc,0.91 (training set); 0.75 (test set),0.91,Semantic parse; training; horizon warning_time_variable; uncertainty not_reported
+bose_2019,bose_2019_glm,19,auroc,0.91 (training set); 0.75 (test set),0.75,Semantic parse; internal_held_out_test; horizon warning_time_variable; uncertainty not_reported
+yu_2023,yu_2023_rdn_boost,20,sensitivity,90%,[0.9],Semantic parse; percent/proportion conversion; retain every named evaluation
+yu_2023,yu_2023_rdn_boost,20,specificity,65%,[0.65],Semantic parse; percent/proportion conversion; retain every named evaluation
+yu_2023,yu_2023_rdn_boost,20,auroc,"0.85 [95% CI 0.79, 0.90] at 1 hour prior to CA (peak performance); values also reported at 13, 9, and 5 hours prior (see Table 1 subgroup analyses; overall model AUROC lower at more distal time points, improving as time to arrest decreased)",0.85,Semantic parse; internal_cross_validation; horizon 1h; uncertainty 95%_confidence_interval
+yu_2023,yu_2023_rdn_boost,20,sensitivity_recalculated,0.9,0.9,Derived from complete counts; reported value preserved separately
+yu_2023,yu_2023_rdn_boost,20,specificity_recalculated,0.65,0.6460674157303371,Derived from complete counts; reported value preserved separately
+yu_2023,yu_2023_rdn_boost,20,ppv_recalculated,0.36,0.36363636363636365,Derived from complete counts; reported value preserved separately
+yu_2023,yu_2023_rdn_boost,20,npv_recalculated,0.97,0.9663865546218487,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_logistic,23,sensitivity,87.20%,[0.872],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_logistic,23,specificity,66.90%,[0.669],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_logistic,23,auroc,0.867 (auPRC 0.529; accuracy 68.3%; PPV 16.3%; NPV 98.6%),0.867,Semantic parse; internal_held_out_test; horizon within_3h_window_label; uncertainty not_reported
+kenet_2023,kenet_2023_logistic,23,sensitivity_recalculated,0.872,0.8720379146919431,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_logistic,23,specificity_recalculated,0.669,0.6685393258426966,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_logistic,23,ppv_recalculated,0.163,0.16312056737588654,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_logistic,23,npv_recalculated,0.986,0.9860176074572761,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_svm,24,sensitivity,97.60%,[0.976],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_svm,24,specificity,66.10%,[0.6609999999999999],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_svm,24,auroc,0.955 (auPRC 0.614; accuracy 68.3%; PPV 17.6%; NPV 99.7%),0.955,Semantic parse; internal_held_out_test; horizon within_3h_window_label; uncertainty not_reported
+kenet_2023,kenet_2023_svm,24,sensitivity_recalculated,0.976,0.976303317535545,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_svm,24,specificity_recalculated,0.6609999999999999,0.6611657303370787,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_svm,24,ppv_recalculated,0.17600000000000002,0.17591801878736124,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_svm,24,npv_recalculated,0.997,0.9973516949152542,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_random_forest,25,sensitivity,92.40%,[0.924],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_random_forest,25,specificity,77.80%,[0.778],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_random_forest,25,auroc,0.936 (auPRC 0.597; accuracy 78.6%; PPV 23.4%; NPV 99.3%),0.936,Semantic parse; internal_held_out_test; horizon within_3h_window_label; uncertainty not_reported
+kenet_2023,kenet_2023_random_forest,25,sensitivity_recalculated,0.924,0.9241706161137441,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_random_forest,25,specificity_recalculated,0.778,0.7756320224719101,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_random_forest,25,ppv_recalculated,0.23399999999999999,0.23381294964028776,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_random_forest,25,npv_recalculated,0.993,0.992808988764045,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_xgboost,26,sensitivity,99.50%,[0.995],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_xgboost,26,specificity,69.60%,[0.696],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_xgboost,26,auroc,0.971 (auPRC 0.797 — best of all six models on both metrics; accuracy 71.7%; PPV 19.5%; NPV 99.9%),0.971,Semantic parse; internal_held_out_test; horizon within_3h_window_label; uncertainty not_reported
+kenet_2023,kenet_2023_xgboost,26,sensitivity_recalculated,0.995,0.995260663507109,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_xgboost,26,specificity_recalculated,0.696,0.6959269662921348,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_xgboost,26,ppv_recalculated,0.195,0.19516728624535315,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_xgboost,26,npv_recalculated,0.9990000000000001,0.9994957135653051,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_lightgbm,27,sensitivity,97.20%,[0.972],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_lightgbm,27,specificity,70.20%,[0.7020000000000001],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_lightgbm,27,auroc,0.950 (auPRC 0.727; accuracy 72.0%; PPV 19.4%; NPV 99.7%),0.95,Semantic parse; internal_held_out_test; horizon within_3h_window_label; uncertainty not_reported
+kenet_2023,kenet_2023_lightgbm,27,sensitivity_recalculated,0.972,0.9715639810426541,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_lightgbm,27,specificity_recalculated,0.7020000000000001,0.7015449438202247,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_lightgbm,27,ppv_recalculated,0.19399999999999998,0.1943127962085308,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_lightgbm,27,npv_recalculated,0.997,0.9970059880239521,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_soft_voting,28,sensitivity,91.00%,[0.91],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_soft_voting,28,specificity,87.90%,[0.879],Semantic parse; percent/proportion conversion; retain every named evaluation
+kenet_2023,kenet_2023_soft_voting,28,auroc,0.957 (auPRC 0.733; accuracy 88.1% — highest of all six models; PPV 35.8% — highest of all six models; NPV 99.2%),0.957,Semantic parse; internal_held_out_test; horizon within_3h_window_label; uncertainty not_reported
+kenet_2023,kenet_2023_soft_voting,28,sensitivity_recalculated,0.91,0.909952606635071,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_soft_voting,28,specificity_recalculated,0.879,0.8788623595505618,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_soft_voting,28,ppv_recalculated,0.358,0.3575418994413408,Derived from complete counts; reported value preserved separately
+kenet_2023,kenet_2023_soft_voting,28,npv_recalculated,0.992,0.992466296590008,Derived from complete counts; reported value preserved separately
+yu_2022,yu_2022_logistic,29,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+yu_2022,yu_2022_logistic,29,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
+yu_2022,yu_2022_logistic,29,auroc,"0.83 at 1 hour before CA (best/peak performance); AUROC increased over time as it approached the arrest, ranging from approximately 0.72–0.74 at 15–10 hours prior, rising to 0.83 at 1 hour prior (see Figure 1 for full hourly trend)",0.83,Semantic parse; validation_unreported; horizon 1h; uncertainty not_reported
+yu_2026,,3,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+yu_2026,,4,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+yu_2026,,5,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+yu_2026,,6,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+yu_2026,,7,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+lu_2025,,8,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+lu_2025,,9,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+lu_2025,,10,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+lu_2025,,11,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+lu_2025,,12,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+lu_2025,,13,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+lu_2025,,14,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+lu_2025,,15,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+lu_2025,,16,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+lu_2025,,17,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+lu_2025,,18,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+bose_2019,,19,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+yu_2023,,20,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+yu_2023,,21,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+yu_2023,,22,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+kenet_2023,,23,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+kenet_2023,,24,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+kenet_2023,,25,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+kenet_2023,,26,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+kenet_2023,,27,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+kenet_2023,,28,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld
+yu_2022,,29,public_source_sanitization,[private narrative fields withheld],Aggregate whitelist plus analyst-curated evidence,Exclude authors/personal details and narrative quality/notes/assumptions; Lu correspondence-derived horizon/outcome withheld

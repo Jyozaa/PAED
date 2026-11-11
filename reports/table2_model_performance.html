@@ -1,0 +1,218 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>table2 model performance</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="table-2-retained-model-results">Table 2. Retained model results</h1>
+<p>20 models are dependent within studies. NR means unavailable, not zero or poor performance. Source percentages remain separate from count-derived values in the full CSV. Original +/- quantities are not confidence intervals.</p>
+<table>
+<thead>
+<tr>
+<th>study</th>
+<th>model</th>
+<th>row</th>
+<th>AUROC (source text)</th>
+<th>sensitivity (source)</th>
+<th>specificity (source)</th>
+<th>TP/FP/FN/TN</th>
+<th>AUPRC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lu_2025</td>
+<td>knn dtw</td>
+<td>8</td>
+<td>55.27 ± 4.21</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>svc gak</td>
+<td>9</td>
+<td>54.72 ± 3.80</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>knn unif</td>
+<td>10</td>
+<td>57.41 ± 2.99</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>logistic</td>
+<td>11</td>
+<td>62.92 ± 1.92</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>rf gini</td>
+<td>12</td>
+<td>73.29 ± 2.47</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>xgboost</td>
+<td>13</td>
+<td>72.35 ± 4.00</td>
+<td>39.04%</td>
+<td>83.14%</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>lightgbm</td>
+<td>14</td>
+<td>61.42 ± 11.06</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>tabnn</td>
+<td>15</td>
+<td>62.16 ± 3.64</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>tresnet</td>
+<td>16</td>
+<td>72.21 ± 7.22</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>gmlp</td>
+<td>17</td>
+<td>75.04 ± 3.52</td>
+<td>8.22%</td>
+<td>97%</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>pedca ft</td>
+<td>18</td>
+<td>73.99 ± 3.16</td>
+<td>42.47%</td>
+<td>84.69%</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>bose_2019</td>
+<td>glm</td>
+<td>19</td>
+<td>0.91 (training set); 0.75 (test set)</td>
+<td>60.6% (test set; unchanged when evaluated on entire dataset excluding patients with &lt;2h data)</td>
+<td>74.1% (test set); 80.2% (entire dataset)</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>yu_2023</td>
+<td>rdn boost</td>
+<td>20</td>
+<td>0.85 [95% CI 0.79, 0.90] at 1 hour prior to CA (peak performance); values also reported at 13, 9, and 5 hours prior (see Table 1 subgroup analyses; overall model AUROC lower at more distal time points, improving as time to arrest decreased)</td>
+<td>90%</td>
+<td>65%</td>
+<td>36/63/4/115</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>logistic</td>
+<td>23</td>
+<td>0.867 (auPRC 0.529; accuracy 68.3%; PPV 16.3%; NPV 98.6%)</td>
+<td>87.20%</td>
+<td>66.90%</td>
+<td>184/944/27/1904</td>
+<td>0.529</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>svm</td>
+<td>24</td>
+<td>0.955 (auPRC 0.614; accuracy 68.3%; PPV 17.6%; NPV 99.7%)</td>
+<td>97.60%</td>
+<td>66.10%</td>
+<td>206/965/5/1883</td>
+<td>0.614</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>random forest</td>
+<td>25</td>
+<td>0.936 (auPRC 0.597; accuracy 78.6%; PPV 23.4%; NPV 99.3%)</td>
+<td>92.40%</td>
+<td>77.80%</td>
+<td>195/639/16/2209</td>
+<td>0.597</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>xgboost</td>
+<td>26</td>
+<td>0.971 (auPRC 0.797 — best of all six models on both metrics; accuracy 71.7%; PPV 19.5%; NPV 99.9%)</td>
+<td>99.50%</td>
+<td>69.60%</td>
+<td>210/866/1/1982</td>
+<td>0.797</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>lightgbm</td>
+<td>27</td>
+<td>0.950 (auPRC 0.727; accuracy 72.0%; PPV 19.4%; NPV 99.7%)</td>
+<td>97.20%</td>
+<td>70.20%</td>
+<td>205/850/6/1998</td>
+<td>0.727</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>soft voting</td>
+<td>28</td>
+<td>0.957 (auPRC 0.733; accuracy 88.1% — highest of all six models; PPV 35.8% — highest of all six models; NPV 99.2%)</td>
+<td>91.00%</td>
+<td>87.90%</td>
+<td>192/345/19/2503</td>
+<td>0.733</td>
+</tr>
+<tr>
+<td>yu_2022</td>
+<td>logistic</td>
+<td>29</td>
+<td>0.83 at 1 hour before CA (best/peak performance); AUROC increased over time as it approached the arrest, ranging from approximately 0.72–0.74 at 15–10 hours prior, rising to 0.83 at 1 hour prior (see Figure 1 for full hourly trend)</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+</tbody>
+</table></body></html>

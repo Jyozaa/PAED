@@ -1,0 +1,6 @@
+study_id,dependency_group,representative_model,selection_reason,selected_candidate_estimate_ids,genuine_variance_estimates,pooled_eligible,reason
+lu_2025,choa_2018_2023,lu_2025_pedca_ft,"Named index tool PEDCA-FT in study aim, despite gMLP having higher AUROC",lu_2025_pedca_ft_a1,0,False,No usable genuine AUROC variance
+bose_2019,jhach_2013_2015,bose_2019_glm,"Single model; select held-out test AUROC, retain training AUROC descriptively",bose_2019_glm_a2,0,False,No usable genuine AUROC variance
+yu_2023,dallas_2010_2019_potential_overlap,yu_2023_rdn_boost,"Named index RDN Boost; numerical AUROC at extracted 1h peak, not chosen by cross-model ranking",yu_2023_rdn_boost_a1,1,False,Only one variance-bearing cohort in entire dataset
+kenet_2023,jhh_2020_2021,selection_required,"XGBoost called best based on performance; no clearly prospectively designated primary model, so do not automatically select it",,0,False,No usable genuine AUROC variance
+yu_2022,dallas_2010_2019_potential_overlap,yu_2022_logistic,Single multivariable model; validation unclear and potential overlap blocks pooling alongside Yu 2023,yu_2022_logistic_a1,0,False,No usable genuine AUROC variance

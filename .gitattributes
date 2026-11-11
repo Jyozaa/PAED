@@ -1,0 +1,4 @@
+# Generated SVG path strings and RFC-style CSV line endings carry serializer
+# whitespace. Preserve them; apply ordinary whitespace checks to source code.
+figures/*.svg -whitespace
+results/*.csv -whitespace

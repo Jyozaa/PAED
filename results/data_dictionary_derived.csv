@@ -1,0 +1,350 @@
+table,field,type,missing_encoding,meaning
+analysis_feasibility.csv,analysis,string,"empty cell, never imputed zero","Descriptive audit/context field: analysis; supplied extraction or documented analyst rule, no inferred patient data"
+analysis_feasibility.csv,status,string,"empty cell, never imputed zero","Descriptive audit/context field: status; supplied extraction or documented analyst rule, no inferred patient data"
+analysis_feasibility.csv,pooled_estimate_produced,boolean,"empty cell, never imputed zero","Descriptive audit/context field: pooled estimate produced; supplied extraction or documented analyst rule, no inferred patient data"
+analysis_feasibility.csv,reason,string,"empty cell, never imputed zero","Descriptive audit/context field: reason; supplied extraction or documented analyst rule, no inferred patient data"
+auroc_estimates.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+auroc_estimates.csv,model_id,string,"empty cell, never imputed zero",Study identifier plus normalized architecture; not an independent study
+auroc_estimates.csv,model_name,string,"empty cell, never imputed zero","Descriptive audit/context field: model name; supplied extraction or documented analyst rule, no inferred patient data"
+auroc_estimates.csv,source_row,integer,"empty cell, never imputed zero","1-based logical CSV record, including 2 header records"
+auroc_estimates.csv,cohort_id,string,"empty cell, never imputed zero",Study-reported population identifier
+auroc_estimates.csv,dependency_group,string,"empty cell, never imputed zero",Conservative identifier grouping shared/probably overlapping patients
+auroc_estimates.csv,analysis_unit,string,"empty cell, never imputed zero",Unit counted or evaluated; not necessarily independent patients
+auroc_estimates.csv,prediction_horizon,string,"empty cell, never imputed zero","Clinical lead-time context, not necessarily confusion-matrix horizon"
+auroc_estimates.csv,validation_type,string,"empty cell, never imputed zero",Source-reported internal validation method
+auroc_estimates.csv,metric_source,string,"empty cell, never imputed zero",Extraction record and metric column provenance
+auroc_estimates.csv,auroc,number,"empty cell, never imputed zero",AUROC normalized to 0-1
+auroc_estimates.csv,ci_lower,number,"empty cell, never imputed zero",Lower genuine 95% AUROC confidence limit when supplied
+auroc_estimates.csv,ci_upper,number,"empty cell, never imputed zero",Upper genuine 95% AUROC confidence limit when supplied
+auroc_estimates.csv,reported_variation,number,"empty cell, never imputed zero",Scaled +/- quantity; type specified separately
+auroc_estimates.csv,uncertainty_type,string,"empty cell, never imputed zero",Explicit CI vs unspecified variation vs not reported
+auroc_estimates.csv,se_raw_approx,number,"empty cell, never imputed zero",Approximate original-scale SE from genuine 95% CI endpoints
+auroc_estimates.csv,se_logit_approx,number,"empty cell, never imputed zero",Approximate logit SE from genuine 95% CI endpoints; no imputed variance
+auroc_estimates.csv,horizon,string,"empty cell, never imputed zero","Descriptive audit/context field: horizon; supplied extraction or documented analyst rule, no inferred patient data"
+auroc_estimates.csv,evaluation,string,"empty cell, never imputed zero","Descriptive audit/context field: evaluation; supplied extraction or documented analyst rule, no inferred patient data"
+auroc_estimates.csv,estimate_id,string,"empty cell, never imputed zero",Model identifier plus evaluation-specific AUROC suffix
+auroc_estimates.csv,original_text,string,"empty cell, never imputed zero","Descriptive audit/context field: original text; supplied extraction or documented analyst rule, no inferred patient data"
+auroc_estimates.csv,sampling_variance_available,boolean,"empty cell, never imputed zero","Descriptive audit/context field: sampling variance available; supplied extraction or documented analyst rule, no inferred patient data"
+auroc_estimates.csv,selection_status,string,"empty cell, never imputed zero","Descriptive audit/context field: selection status; supplied extraction or documented analyst rule, no inferred patient data"
+auroc_estimates.csv,pooled_eligible,boolean,"empty cell, never imputed zero",Whether evidence and independence checks support inferential pooling
+cleaned_models.csv,source_row,integer,"empty cell, never imputed zero","1-based logical CSV record, including 2 header records"
+cleaned_models.csv,source_line_start,integer,"empty cell, never imputed zero",First physical line of the multiline CSV record
+cleaned_models.csv,source_line_end,integer,"empty cell, never imputed zero",Last physical line of the multiline CSV record
+cleaned_models.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+cleaned_models.csv,source_nonempty_cells,integer,"empty cell, never imputed zero","Descriptive audit/context field: source nonempty cells; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,record_type,string,"empty cell, never imputed zero","Descriptive audit/context field: record type; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,title,string,"empty cell, never imputed zero","Descriptive audit/context field: title; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,full_text_url,string,"empty cell, never imputed zero","Descriptive audit/context field: full text url; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,doi,string,"empty cell, never imputed zero","Descriptive audit/context field: doi; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,study_label,string,"empty cell, never imputed zero","Descriptive audit/context field: study label; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,year,integer,"empty cell, never imputed zero","Descriptive audit/context field: year; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,country,string,"empty cell, never imputed zero","Descriptive audit/context field: country; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,study_aim,string,"empty cell, never imputed zero","Descriptive audit/context field: study aim; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,design,string,"empty cell, never imputed zero","Descriptive audit/context field: design; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,setting,string,"empty cell, never imputed zero","Descriptive audit/context field: setting; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,recruitment,string,"empty cell, never imputed zero","Descriptive audit/context field: recruitment; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,age,string,"empty cell, never imputed zero","Descriptive audit/context field: age; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,age_groups,string,"empty cell, never imputed zero","Descriptive audit/context field: age groups; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,sex,string,"empty cell, never imputed zero","Descriptive audit/context field: sex; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,sample_size,string,"empty cell, never imputed zero","Descriptive audit/context field: sample size; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,ca_prevalence,string,"empty cell, never imputed zero","Descriptive audit/context field: ca prevalence; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,conditions,string,"empty cell, never imputed zero","Descriptive audit/context field: conditions; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,architecture_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,modality_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,feature_selection,string,"empty cell, never imputed zero","Descriptive audit/context field: feature selection; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,predictors,string,"empty cell, never imputed zero","Descriptive audit/context field: predictors; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,time_series,string,"empty cell, never imputed zero","Descriptive audit/context field: time series; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,internal_validation,string,"empty cell, never imputed zero","Descriptive audit/context field: internal validation; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,external_validation_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,split_sizes,string,"empty cell, never imputed zero","Descriptive audit/context field: split sizes; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,frequency_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,tp_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,fp_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,fn_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,tn_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,sensitivity_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,specificity_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,auroc_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,lead_time_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,outcome_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,comparator_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+cleaned_models.csv,model_id,string,"empty cell, never imputed zero",Study identifier plus normalized architecture; not an independent study
+cleaned_models.csv,model_name,string,"empty cell, never imputed zero","Descriptive audit/context field: model name; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,retained,boolean,"empty cell, never imputed zero",Included in team-agreed exploratory working dataset
+cleaned_models.csv,exclusion_reason,string,"empty cell, never imputed zero","Descriptive audit/context field: exclusion reason; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,cohort_id,string,"empty cell, never imputed zero",Study-reported population identifier
+cleaned_models.csv,dependency_group,string,"empty cell, never imputed zero",Conservative identifier grouping shared/probably overlapping patients
+cleaned_models.csv,analysis_unit,string,"empty cell, never imputed zero",Unit counted or evaluated; not necessarily independent patients
+cleaned_models.csv,validation_type,string,"empty cell, never imputed zero",Source-reported internal validation method
+cleaned_models.csv,prediction_horizon,string,"empty cell, never imputed zero","Clinical lead-time context, not necessarily confusion-matrix horizon"
+cleaned_models.csv,threshold,string,"empty cell, never imputed zero",Reported threshold context; not an invented numerical cutoff
+cleaned_models.csv,metric_source,string,"empty cell, never imputed zero",Extraction record and metric column provenance
+cleaned_models.csv,auroc_point_estimates,string,"empty cell, never imputed zero","Descriptive audit/context field: auroc point estimates; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,auprc,number,"empty cell, never imputed zero","Source-reported area under precision-recall curve, not AUROC"
+cleaned_models.csv,accuracy_reported,number,"empty cell, never imputed zero","accuracy reported on 0-1 scale, preserved separately from recalculation"
+cleaned_models.csv,ppv_reported,number,"empty cell, never imputed zero","ppv reported on 0-1 scale, preserved separately from recalculation"
+cleaned_models.csv,npv_reported,number,"empty cell, never imputed zero","npv reported on 0-1 scale, preserved separately from recalculation"
+cleaned_models.csv,sensitivity_reported,number,"empty cell, never imputed zero","sensitivity reported on 0-1 scale, preserved separately from recalculation"
+cleaned_models.csv,sensitivity_missing_state,string,"empty cell, never imputed zero","Descriptive audit/context field: sensitivity missing state; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,specificity_reported,number,"empty cell, never imputed zero","specificity reported on 0-1 scale, preserved separately from recalculation"
+cleaned_models.csv,specificity_missing_state,string,"empty cell, never imputed zero","Descriptive audit/context field: specificity missing state; supplied extraction or documented analyst rule, no inferred patient data"
+cleaned_models.csv,tp,integer,"empty cell, never imputed zero",True positive count in the recorded analysis unit
+cleaned_models.csv,fp,integer,"empty cell, never imputed zero",False positive count in the recorded analysis unit
+cleaned_models.csv,fn,integer,"empty cell, never imputed zero",False negative count in the recorded analysis unit
+cleaned_models.csv,tn,integer,"empty cell, never imputed zero",True negative count in the recorded analysis unit
+cleaning_change_log.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+cleaning_change_log.csv,model_id,string,"empty cell, never imputed zero",Study identifier plus normalized architecture; not an independent study
+cleaning_change_log.csv,source_row,integer,"empty cell, never imputed zero","1-based logical CSV record, including 2 header records"
+cleaning_change_log.csv,field,string,"empty cell, never imputed zero","Descriptive audit/context field: field; supplied extraction or documented analyst rule, no inferred patient data"
+cleaning_change_log.csv,original,string,"empty cell, never imputed zero","Descriptive audit/context field: original; supplied extraction or documented analyst rule, no inferred patient data"
+cleaning_change_log.csv,standardised,string,"empty cell, never imputed zero","Descriptive audit/context field: standardised; supplied extraction or documented analyst rule, no inferred patient data"
+cleaning_change_log.csv,action,string,"empty cell, never imputed zero","Descriptive audit/context field: action; supplied extraction or documented analyst rule, no inferred patient data"
+data_audit.csv,source_row,integer,"empty cell, never imputed zero","1-based logical CSV record, including 2 header records"
+data_audit.csv,source_line_start,integer,"empty cell, never imputed zero",First physical line of the multiline CSV record
+data_audit.csv,source_line_end,integer,"empty cell, never imputed zero",Last physical line of the multiline CSV record
+data_audit.csv,source_nonempty_cells,integer,"empty cell, never imputed zero","Descriptive audit/context field: source nonempty cells; supplied extraction or documented analyst rule, no inferred patient data"
+data_audit.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+data_audit.csv,model_id,string,"empty cell, never imputed zero",Study identifier plus normalized architecture; not an independent study
+data_audit.csv,record_type,string,"empty cell, never imputed zero","Descriptive audit/context field: record type; supplied extraction or documented analyst rule, no inferred patient data"
+data_audit.csv,retained,boolean,"empty cell, never imputed zero",Included in team-agreed exploratory working dataset
+data_audit.csv,exclusion_reason,string,"empty cell, never imputed zero","Descriptive audit/context field: exclusion reason; supplied extraction or documented analyst rule, no inferred patient data"
+data_audit.csv,nonempty_public_fields,integer,"empty cell, never imputed zero","Descriptive audit/context field: nonempty public fields; supplied extraction or documented analyst rule, no inferred patient data"
+data_audit.csv,auroc_text_present,boolean,"empty cell, never imputed zero","Descriptive audit/context field: auroc text present; supplied extraction or documented analyst rule, no inferred patient data"
+data_audit.csv,has_complete_2x2,boolean,"empty cell, never imputed zero","Descriptive audit/context field: has complete 2x2; supplied extraction or documented analyst rule, no inferred patient data"
+data_quality_flags.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+data_quality_flags.csv,model_id,string,"empty cell, never imputed zero",Study identifier plus normalized architecture; not an independent study
+data_quality_flags.csv,source_row,integer,"empty cell, never imputed zero","1-based logical CSV record, including 2 header records"
+data_quality_flags.csv,code,string,"empty cell, never imputed zero","Descriptive audit/context field: code; supplied extraction or documented analyst rule, no inferred patient data"
+data_quality_flags.csv,metric,string,"empty cell, never imputed zero","Descriptive audit/context field: metric; supplied extraction or documented analyst rule, no inferred patient data"
+data_quality_flags.csv,severity,string,"empty cell, never imputed zero","Descriptive audit/context field: severity; supplied extraction or documented analyst rule, no inferred patient data"
+data_quality_flags.csv,detail,string,"empty cell, never imputed zero","Descriptive audit/context field: detail; supplied extraction or documented analyst rule, no inferred patient data"
+descriptive_summary.csv,measure,string,"empty cell, never imputed zero","Descriptive audit/context field: measure; supplied extraction or documented analyst rule, no inferred patient data"
+descriptive_summary.csv,value,number,"empty cell, never imputed zero","Descriptive audit/context field: value; supplied extraction or documented analyst rule, no inferred patient data"
+descriptive_summary.csv,unit,string,"empty cell, never imputed zero","Descriptive audit/context field: unit; supplied extraction or documented analyst rule, no inferred patient data"
+diagnostic_2x2.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+diagnostic_2x2.csv,model_id,string,"empty cell, never imputed zero",Study identifier plus normalized architecture; not an independent study
+diagnostic_2x2.csv,model_name,string,"empty cell, never imputed zero","Descriptive audit/context field: model name; supplied extraction or documented analyst rule, no inferred patient data"
+diagnostic_2x2.csv,source_row,integer,"empty cell, never imputed zero","1-based logical CSV record, including 2 header records"
+diagnostic_2x2.csv,cohort_id,string,"empty cell, never imputed zero",Study-reported population identifier
+diagnostic_2x2.csv,dependency_group,string,"empty cell, never imputed zero",Conservative identifier grouping shared/probably overlapping patients
+diagnostic_2x2.csv,analysis_unit,string,"empty cell, never imputed zero",Unit counted or evaluated; not necessarily independent patients
+diagnostic_2x2.csv,prediction_horizon,string,"empty cell, never imputed zero","Clinical lead-time context, not necessarily confusion-matrix horizon"
+diagnostic_2x2.csv,validation_type,string,"empty cell, never imputed zero",Source-reported internal validation method
+diagnostic_2x2.csv,threshold,string,"empty cell, never imputed zero",Reported threshold context; not an invented numerical cutoff
+diagnostic_2x2.csv,metric_source,string,"empty cell, never imputed zero",Extraction record and metric column provenance
+diagnostic_2x2.csv,tp,integer,"empty cell, never imputed zero",True positive count in the recorded analysis unit
+diagnostic_2x2.csv,fp,integer,"empty cell, never imputed zero",False positive count in the recorded analysis unit
+diagnostic_2x2.csv,fn,integer,"empty cell, never imputed zero",False negative count in the recorded analysis unit
+diagnostic_2x2.csv,tn,integer,"empty cell, never imputed zero",True negative count in the recorded analysis unit
+diagnostic_2x2.csv,sensitivity_reported,number,"empty cell, never imputed zero","sensitivity reported on 0-1 scale, preserved separately from recalculation"
+diagnostic_2x2.csv,specificity_reported,number,"empty cell, never imputed zero","specificity reported on 0-1 scale, preserved separately from recalculation"
+diagnostic_2x2.csv,ppv_reported,number,"empty cell, never imputed zero","ppv reported on 0-1 scale, preserved separately from recalculation"
+diagnostic_2x2.csv,npv_reported,number,"empty cell, never imputed zero","npv reported on 0-1 scale, preserved separately from recalculation"
+diagnostic_2x2.csv,sensitivity_recalculated,number,"empty cell, never imputed zero",sensitivity derived from complete TP/FP/FN/TN using documented formula
+diagnostic_2x2.csv,specificity_recalculated,number,"empty cell, never imputed zero",specificity derived from complete TP/FP/FN/TN using documented formula
+diagnostic_2x2.csv,ppv_recalculated,number,"empty cell, never imputed zero",ppv derived from complete TP/FP/FN/TN using documented formula
+diagnostic_2x2.csv,npv_recalculated,number,"empty cell, never imputed zero",npv derived from complete TP/FP/FN/TN using documented formula
+diagnostic_2x2.csv,accuracy_recalculated,number,"empty cell, never imputed zero",accuracy derived from complete TP/FP/FN/TN using documented formula
+diagnostic_2x2.csv,positive_units,integer,"empty cell, never imputed zero",TP+FN in the recorded analysis unit
+diagnostic_2x2.csv,negative_units,integer,"empty cell, never imputed zero",TN+FP in the recorded analysis unit
+diagnostic_2x2.csv,total_units,integer,"empty cell, never imputed zero",TP+FP+FN+TN in the recorded analysis unit
+diagnostic_2x2.csv,table_horizon,string,"empty cell, never imputed zero",Verified or unresolved lead time for the confusion matrix
+diagnostic_2x2.csv,table_model_attribution,string,"empty cell, never imputed zero","Descriptive audit/context field: table model attribution; supplied extraction or documented analyst rule, no inferred patient data"
+diagnostic_2x2.csv,threshold_numeric,string,"empty cell, never imputed zero","Descriptive audit/context field: threshold numeric; supplied extraction or documented analyst rule, no inferred patient data"
+diagnostic_2x2.csv,cluster_adjustment_available,boolean,"empty cell, never imputed zero","Descriptive audit/context field: cluster adjustment available; supplied extraction or documented analyst rule, no inferred patient data"
+diagnostic_2x2.csv,pairing_with_auroc_verified,boolean,"empty cell, never imputed zero","Descriptive audit/context field: pairing with auroc verified; supplied extraction or documented analyst rule, no inferred patient data"
+diagnostic_2x2.csv,model_threshold_unit_linkage_verified,boolean,"empty cell, never imputed zero","Descriptive audit/context field: model threshold unit linkage verified; supplied extraction or documented analyst rule, no inferred patient data"
+diagnostic_2x2.csv,pooled_eligible,boolean,"empty cell, never imputed zero",Whether evidence and independence checks support inferential pooling
+diagnostic_2x2.csv,ci_status,string,"empty cell, never imputed zero","Descriptive audit/context field: ci status; supplied extraction or documented analyst rule, no inferred patient data"
+diagnostic_2x2.csv,sensitivity_difference,number,"empty cell, never imputed zero",Recalculated minus reported proportion; not a hypothesis test
+diagnostic_2x2.csv,sensitivity_rounding_tolerance,number,"empty cell, never imputed zero",Absolute proportion difference allowed for reporting precision
+diagnostic_2x2.csv,sensitivity_within_tolerance,boolean,"empty cell, never imputed zero",Absolute difference no greater than documented rounding tolerance
+diagnostic_2x2.csv,specificity_difference,number,"empty cell, never imputed zero",Recalculated minus reported proportion; not a hypothesis test
+diagnostic_2x2.csv,specificity_rounding_tolerance,number,"empty cell, never imputed zero",Absolute proportion difference allowed for reporting precision
+diagnostic_2x2.csv,specificity_within_tolerance,boolean,"empty cell, never imputed zero",Absolute difference no greater than documented rounding tolerance
+diagnostic_2x2.csv,ppv_difference,number,"empty cell, never imputed zero",Recalculated minus reported proportion; not a hypothesis test
+diagnostic_2x2.csv,ppv_rounding_tolerance,number,"empty cell, never imputed zero",Absolute proportion difference allowed for reporting precision
+diagnostic_2x2.csv,ppv_within_tolerance,boolean,"empty cell, never imputed zero",Absolute difference no greater than documented rounding tolerance
+diagnostic_2x2.csv,npv_difference,number,"empty cell, never imputed zero",Recalculated minus reported proportion; not a hypothesis test
+diagnostic_2x2.csv,npv_rounding_tolerance,number,"empty cell, never imputed zero",Absolute proportion difference allowed for reporting precision
+diagnostic_2x2.csv,npv_within_tolerance,boolean,"empty cell, never imputed zero",Absolute difference no greater than documented rounding tolerance
+exclusion_log.csv,source_row,integer,"empty cell, never imputed zero","1-based logical CSV record, including 2 header records"
+exclusion_log.csv,source_line_start,integer,"empty cell, never imputed zero",First physical line of the multiline CSV record
+exclusion_log.csv,source_line_end,integer,"empty cell, never imputed zero",Last physical line of the multiline CSV record
+exclusion_log.csv,source_nonempty_cells,integer,"empty cell, never imputed zero","Descriptive audit/context field: source nonempty cells; supplied extraction or documented analyst rule, no inferred patient data"
+exclusion_log.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+exclusion_log.csv,model_id,string,"empty cell, never imputed zero",Study identifier plus normalized architecture; not an independent study
+exclusion_log.csv,record_type,string,"empty cell, never imputed zero","Descriptive audit/context field: record type; supplied extraction or documented analyst rule, no inferred patient data"
+exclusion_log.csv,retained,boolean,"empty cell, never imputed zero",Included in team-agreed exploratory working dataset
+exclusion_log.csv,exclusion_reason,string,"empty cell, never imputed zero","Descriptive audit/context field: exclusion reason; supplied extraction or documented analyst rule, no inferred patient data"
+exclusion_log.csv,nonempty_public_fields,integer,"empty cell, never imputed zero","Descriptive audit/context field: nonempty public fields; supplied extraction or documented analyst rule, no inferred patient data"
+exclusion_log.csv,auroc_text_present,boolean,"empty cell, never imputed zero","Descriptive audit/context field: auroc text present; supplied extraction or documented analyst rule, no inferred patient data"
+exclusion_log.csv,has_complete_2x2,boolean,"empty cell, never imputed zero","Descriptive audit/context field: has complete 2x2; supplied extraction or documented analyst rule, no inferred patient data"
+heterogeneity_matrix.csv,study_1,string,"empty cell, never imputed zero","Descriptive audit/context field: study 1; supplied extraction or documented analyst rule, no inferred patient data"
+heterogeneity_matrix.csv,study_2,string,"empty cell, never imputed zero","Descriptive audit/context field: study 2; supplied extraction or documented analyst rule, no inferred patient data"
+heterogeneity_matrix.csv,setting_comparable,boolean,"empty cell, never imputed zero","Descriptive audit/context field: setting comparable; supplied extraction or documented analyst rule, no inferred patient data"
+heterogeneity_matrix.csv,analysis_unit_comparable,boolean,"empty cell, never imputed zero","Descriptive audit/context field: analysis unit comparable; supplied extraction or documented analyst rule, no inferred patient data"
+heterogeneity_matrix.csv,horizon_comparable,boolean,"empty cell, never imputed zero","Descriptive audit/context field: horizon comparable; supplied extraction or documented analyst rule, no inferred patient data"
+heterogeneity_matrix.csv,same_dependency_group,boolean,"empty cell, never imputed zero","Descriptive audit/context field: same dependency group; supplied extraction or documented analyst rule, no inferred patient data"
+heterogeneity_matrix.csv,independence,string,"empty cell, never imputed zero","Descriptive audit/context field: independence; supplied extraction or documented analyst rule, no inferred patient data"
+heterogeneity_matrix.csv,pooling_supported,boolean,"empty cell, never imputed zero","Descriptive audit/context field: pooling supported; supplied extraction or documented analyst rule, no inferred patient data"
+heterogeneity_matrix.csv,reason,string,"empty cell, never imputed zero","Descriptive audit/context field: reason; supplied extraction or documented analyst rule, no inferred patient data"
+heterogeneity_matrix.csv,comparison,string,"empty cell, never imputed zero","Descriptive audit/context field: comparison; supplied extraction or documented analyst rule, no inferred patient data"
+model_inventory.csv,source_row,integer,"empty cell, never imputed zero","1-based logical CSV record, including 2 header records"
+model_inventory.csv,source_line_start,integer,"empty cell, never imputed zero",First physical line of the multiline CSV record
+model_inventory.csv,source_line_end,integer,"empty cell, never imputed zero",Last physical line of the multiline CSV record
+model_inventory.csv,source_nonempty_cells,integer,"empty cell, never imputed zero","Descriptive audit/context field: source nonempty cells; supplied extraction or documented analyst rule, no inferred patient data"
+model_inventory.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+model_inventory.csv,model_id,string,"empty cell, never imputed zero",Study identifier plus normalized architecture; not an independent study
+model_inventory.csv,record_type,string,"empty cell, never imputed zero","Descriptive audit/context field: record type; supplied extraction or documented analyst rule, no inferred patient data"
+model_inventory.csv,retained,boolean,"empty cell, never imputed zero",Included in team-agreed exploratory working dataset
+model_inventory.csv,exclusion_reason,string,"empty cell, never imputed zero","Descriptive audit/context field: exclusion reason; supplied extraction or documented analyst rule, no inferred patient data"
+model_inventory.csv,nonempty_public_fields,integer,"empty cell, never imputed zero","Descriptive audit/context field: nonempty public fields; supplied extraction or documented analyst rule, no inferred patient data"
+model_inventory.csv,auroc_text_present,boolean,"empty cell, never imputed zero","Descriptive audit/context field: auroc text present; supplied extraction or documented analyst rule, no inferred patient data"
+model_inventory.csv,has_complete_2x2,boolean,"empty cell, never imputed zero","Descriptive audit/context field: has complete 2x2; supplied extraction or documented analyst rule, no inferred patient data"
+model_inventory.csv,architecture_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+model_inventory.csv,outcome,string,"empty cell, never imputed zero","Descriptive audit/context field: outcome; supplied extraction or documented analyst rule, no inferred patient data"
+model_inventory.csv,prediction_horizon,string,"empty cell, never imputed zero","Clinical lead-time context, not necessarily confusion-matrix horizon"
+model_inventory.csv,validation_type,string,"empty cell, never imputed zero",Source-reported internal validation method
+model_inventory.csv,analysis_unit,string,"empty cell, never imputed zero",Unit counted or evaluated; not necessarily independent patients
+model_inventory.csv,cohort_id,string,"empty cell, never imputed zero",Study-reported population identifier
+model_inventory.csv,dependency_group,string,"empty cell, never imputed zero",Conservative identifier grouping shared/probably overlapping patients
+model_inventory.csv,auroc_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+model_inventory.csv,sensitivity_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+model_inventory.csv,specificity_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+model_inventory.csv,tp_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+model_inventory.csv,fp_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+model_inventory.csv,fn_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+model_inventory.csv,tn_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+model_selection.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+model_selection.csv,dependency_group,string,"empty cell, never imputed zero",Conservative identifier grouping shared/probably overlapping patients
+model_selection.csv,representative_model,string,"empty cell, never imputed zero","Descriptive audit/context field: representative model; supplied extraction or documented analyst rule, no inferred patient data"
+model_selection.csv,selection_reason,string,"empty cell, never imputed zero","Descriptive audit/context field: selection reason; supplied extraction or documented analyst rule, no inferred patient data"
+model_selection.csv,selected_candidate_estimate_ids,string,"empty cell, never imputed zero","Descriptive audit/context field: selected candidate estimate ids; supplied extraction or documented analyst rule, no inferred patient data"
+model_selection.csv,genuine_variance_estimates,integer,"empty cell, never imputed zero","Descriptive audit/context field: genuine variance estimates; supplied extraction or documented analyst rule, no inferred patient data"
+model_selection.csv,pooled_eligible,boolean,"empty cell, never imputed zero",Whether evidence and independence checks support inferential pooling
+model_selection.csv,reason,string,"empty cell, never imputed zero","Descriptive audit/context field: reason; supplied extraction or documented analyst rule, no inferred patient data"
+operating_points.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+operating_points.csv,model_id,string,"empty cell, never imputed zero",Study identifier plus normalized architecture; not an independent study
+operating_points.csv,model_name,string,"empty cell, never imputed zero","Descriptive audit/context field: model name; supplied extraction or documented analyst rule, no inferred patient data"
+operating_points.csv,source_row,integer,"empty cell, never imputed zero","1-based logical CSV record, including 2 header records"
+operating_points.csv,cohort_id,string,"empty cell, never imputed zero",Study-reported population identifier
+operating_points.csv,dependency_group,string,"empty cell, never imputed zero",Conservative identifier grouping shared/probably overlapping patients
+operating_points.csv,analysis_unit,string,"empty cell, never imputed zero",Unit counted or evaluated; not necessarily independent patients
+operating_points.csv,prediction_horizon,string,"empty cell, never imputed zero","Clinical lead-time context, not necessarily confusion-matrix horizon"
+operating_points.csv,validation_type,string,"empty cell, never imputed zero",Source-reported internal validation method
+operating_points.csv,threshold,string,"empty cell, never imputed zero",Reported threshold context; not an invented numerical cutoff
+operating_points.csv,metric_source,string,"empty cell, never imputed zero",Extraction record and metric column provenance
+operating_points.csv,metric,string,"empty cell, never imputed zero","Descriptive audit/context field: metric; supplied extraction or documented analyst rule, no inferred patient data"
+operating_points.csv,estimate,number,"empty cell, never imputed zero","Descriptive audit/context field: estimate; supplied extraction or documented analyst rule, no inferred patient data"
+operating_points.csv,evaluation,string,"empty cell, never imputed zero","Descriptive audit/context field: evaluation; supplied extraction or documented analyst rule, no inferred patient data"
+operating_points.csv,note,string,"empty cell, never imputed zero","Descriptive audit/context field: note; supplied extraction or documented analyst rule, no inferred patient data"
+operating_points.csv,ci_lower,string,"empty cell, never imputed zero",Lower genuine 95% AUROC confidence limit when supplied
+operating_points.csv,ci_upper,string,"empty cell, never imputed zero",Upper genuine 95% AUROC confidence limit when supplied
+operating_points.csv,uncertainty_status,string,"empty cell, never imputed zero","Descriptive audit/context field: uncertainty status; supplied extraction or documented analyst rule, no inferred patient data"
+operating_points.csv,source_quality,string,"empty cell, never imputed zero","Descriptive audit/context field: source quality; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+risk_of_bias_evidence.csv,domain,string,"empty cell, never imputed zero","Descriptive audit/context field: domain; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,source_rows,string,"empty cell, never imputed zero","Descriptive audit/context field: source rows; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,source_columns,string,"empty cell, never imputed zero","Descriptive audit/context field: source columns; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,evidence_summary,string,"empty cell, never imputed zero","Descriptive audit/context field: evidence summary; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,signalling_question,string,"empty cell, never imputed zero","Descriptive audit/context field: signalling question; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,signalling_answer,string,"empty cell, never imputed zero","Descriptive audit/context field: signalling answer; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,risk_of_bias_rating,string,"empty cell, never imputed zero","Descriptive audit/context field: risk of bias rating; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,applicability_concern,string,"empty cell, never imputed zero","Descriptive audit/context field: applicability concern; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,missing_data_evidence,string,"empty cell, never imputed zero","Descriptive audit/context field: missing data evidence; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,blinding,string,"empty cell, never imputed zero","Descriptive audit/context field: blinding; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,reviewer_1,string,"empty cell, never imputed zero","Descriptive audit/context field: reviewer 1; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,reviewer_2,string,"empty cell, never imputed zero","Descriptive audit/context field: reviewer 2; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,consensus,string,"empty cell, never imputed zero","Descriptive audit/context field: consensus; supplied extraction or documented analyst rule, no inferred patient data"
+risk_of_bias_evidence.csv,decision_needed,string,"empty cell, never imputed zero","Descriptive audit/context field: decision needed; supplied extraction or documented analyst rule, no inferred patient data"
+source_cell_states.csv,source_row,integer,"empty cell, never imputed zero","1-based logical CSV record, including 2 header records"
+source_cell_states.csv,source_column_index,integer,"empty cell, never imputed zero","Descriptive audit/context field: source column index; supplied extraction or documented analyst rule, no inferred patient data"
+source_cell_states.csv,analysis_field,string,"empty cell, never imputed zero","Descriptive audit/context field: analysis field; supplied extraction or documented analyst rule, no inferred patient data"
+source_cell_states.csv,missing_state,string,"empty cell, never imputed zero","Descriptive audit/context field: missing state; supplied extraction or documented analyst rule, no inferred patient data"
+strict_protocol_eligibility.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+strict_protocol_eligibility.csv,populated_models,integer,"empty cell, never imputed zero","Descriptive audit/context field: populated models; supplied extraction or documented analyst rule, no inferred patient data"
+strict_protocol_eligibility.csv,retained_models,integer,"empty cell, never imputed zero","Descriptive audit/context field: retained models; supplied extraction or documented analyst rule, no inferred patient data"
+strict_protocol_eligibility.csv,setting,string,"empty cell, never imputed zero","Descriptive audit/context field: setting; supplied extraction or documented analyst rule, no inferred patient data"
+strict_protocol_eligibility.csv,external_validation,string,"empty cell, never imputed zero","Descriptive audit/context field: external validation; supplied extraction or documented analyst rule, no inferred patient data"
+strict_protocol_eligibility.csv,strict_status,string,"empty cell, never imputed zero","Descriptive audit/context field: strict status; supplied extraction or documented analyst rule, no inferred patient data"
+strict_protocol_eligibility.csv,strict_reason,string,"empty cell, never imputed zero","Descriptive audit/context field: strict reason; supplied extraction or documented analyst rule, no inferred patient data"
+study_inventory.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+study_inventory.csv,populated_models,integer,"empty cell, never imputed zero","Descriptive audit/context field: populated models; supplied extraction or documented analyst rule, no inferred patient data"
+study_inventory.csv,retained_models,integer,"empty cell, never imputed zero","Descriptive audit/context field: retained models; supplied extraction or documented analyst rule, no inferred patient data"
+study_inventory.csv,source_rows,string,"empty cell, never imputed zero","Descriptive audit/context field: source rows; supplied extraction or documented analyst rule, no inferred patient data"
+study_inventory.csv,setting,string,"empty cell, never imputed zero","Descriptive audit/context field: setting; supplied extraction or documented analyst rule, no inferred patient data"
+study_inventory.csv,outcome_context,string,"empty cell, never imputed zero","Descriptive audit/context field: outcome context; supplied extraction or documented analyst rule, no inferred patient data"
+study_inventory.csv,prediction_horizon,string,"empty cell, never imputed zero","Clinical lead-time context, not necessarily confusion-matrix horizon"
+study_inventory.csv,validation_methods,string,"empty cell, never imputed zero","Descriptive audit/context field: validation methods; supplied extraction or documented analyst rule, no inferred patient data"
+study_inventory.csv,external_validation,string,"empty cell, never imputed zero","Descriptive audit/context field: external validation; supplied extraction or documented analyst rule, no inferred patient data"
+study_inventory.csv,analysis_unit,string,"empty cell, never imputed zero",Unit counted or evaluated; not necessarily independent patients
+study_inventory.csv,cohort_id,string,"empty cell, never imputed zero",Study-reported population identifier
+study_inventory.csv,dependency_group,string,"empty cell, never imputed zero",Conservative identifier grouping shared/probably overlapping patients
+study_inventory.csv,working_eligible,boolean,"empty cell, never imputed zero","Descriptive audit/context field: working eligible; supplied extraction or documented analyst rule, no inferred patient data"
+study_inventory.csv,doi,string,"empty cell, never imputed zero","Descriptive audit/context field: doi; supplied extraction or documented analyst rule, no inferred patient data"
+study_inventory.csv,strict_status,string,"empty cell, never imputed zero","Descriptive audit/context field: strict status; supplied extraction or documented analyst rule, no inferred patient data"
+study_inventory.csv,strict_reason,string,"empty cell, never imputed zero","Descriptive audit/context field: strict reason; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+table1_study_characteristics.csv,year,integer,"empty cell, never imputed zero","Descriptive audit/context field: year; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,country,string,"empty cell, never imputed zero","Descriptive audit/context field: country; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,source_rows,string,"empty cell, never imputed zero","Descriptive audit/context field: source rows; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,doi,string,"empty cell, never imputed zero","Descriptive audit/context field: doi; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,design,string,"empty cell, never imputed zero","Descriptive audit/context field: design; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,icu_setting,string,"empty cell, never imputed zero","Descriptive audit/context field: icu setting; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,population,string,"empty cell, never imputed zero","Descriptive audit/context field: population; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,sample_size_and_ca,string,"empty cell, never imputed zero","Descriptive audit/context field: sample size and ca; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,age,string,"empty cell, never imputed zero","Descriptive audit/context field: age; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,sex,string,"empty cell, never imputed zero","Descriptive audit/context field: sex; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,ca_prevalence_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+table1_study_characteristics.csv,outcome,string,"empty cell, never imputed zero","Descriptive audit/context field: outcome; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,model_architectures,string,"empty cell, never imputed zero","Descriptive audit/context field: model architectures; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,retained_models,integer,"empty cell, never imputed zero","Descriptive audit/context field: retained models; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,input_modality,string,"empty cell, never imputed zero","Descriptive audit/context field: input modality; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,feature_themes,string,"empty cell, never imputed zero","Descriptive audit/context field: feature themes; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,training_validation,string,"empty cell, never imputed zero","Descriptive audit/context field: training validation; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,external_validation,string,"empty cell, never imputed zero","Descriptive audit/context field: external validation; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,prediction_horizon,string,"empty cell, never imputed zero","Clinical lead-time context, not necessarily confusion-matrix horizon"
+table1_study_characteristics.csv,prediction_frequency,string,"empty cell, never imputed zero","Descriptive audit/context field: prediction frequency; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,analysis_unit,string,"empty cell, never imputed zero",Unit counted or evaluated; not necessarily independent patients
+table1_study_characteristics.csv,threshold,string,"empty cell, never imputed zero",Reported threshold context; not an invented numerical cutoff
+table1_study_characteristics.csv,recruitment,string,"empty cell, never imputed zero","Descriptive audit/context field: recruitment; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,dependency_group,string,"empty cell, never imputed zero",Conservative identifier grouping shared/probably overlapping patients
+table1_study_characteristics.csv,reporting_limitations,string,"empty cell, never imputed zero","Descriptive audit/context field: reporting limitations; supplied extraction or documented analyst rule, no inferred patient data"
+table1_study_characteristics.csv,age_caveat,string,"empty cell, never imputed zero","Descriptive audit/context field: age caveat; supplied extraction or documented analyst rule, no inferred patient data"
+table2_model_performance.csv,study_id,string,"empty cell, never imputed zero",Stable first-author/year publication identifier
+table2_model_performance.csv,model_id,string,"empty cell, never imputed zero",Study identifier plus normalized architecture; not an independent study
+table2_model_performance.csv,model_name,string,"empty cell, never imputed zero","Descriptive audit/context field: model name; supplied extraction or documented analyst rule, no inferred patient data"
+table2_model_performance.csv,source_row,integer,"empty cell, never imputed zero","1-based logical CSV record, including 2 header records"
+table2_model_performance.csv,doi,string,"empty cell, never imputed zero","Descriptive audit/context field: doi; supplied extraction or documented analyst rule, no inferred patient data"
+table2_model_performance.csv,cohort_id,string,"empty cell, never imputed zero",Study-reported population identifier
+table2_model_performance.csv,dependency_group,string,"empty cell, never imputed zero",Conservative identifier grouping shared/probably overlapping patients
+table2_model_performance.csv,analysis_unit,string,"empty cell, never imputed zero",Unit counted or evaluated; not necessarily independent patients
+table2_model_performance.csv,prediction_horizon,string,"empty cell, never imputed zero","Clinical lead-time context, not necessarily confusion-matrix horizon"
+table2_model_performance.csv,validation_type,string,"empty cell, never imputed zero",Source-reported internal validation method
+table2_model_performance.csv,threshold,string,"empty cell, never imputed zero",Reported threshold context; not an invented numerical cutoff
+table2_model_performance.csv,metric_source,string,"empty cell, never imputed zero",Extraction record and metric column provenance
+table2_model_performance.csv,auroc_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+table2_model_performance.csv,auroc_point_estimates,string,"empty cell, never imputed zero","Descriptive audit/context field: auroc point estimates; supplied extraction or documented analyst rule, no inferred patient data"
+table2_model_performance.csv,sensitivity_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+table2_model_performance.csv,specificity_raw,string,"empty cell, never imputed zero",Original whitelisted extraction text; confidential fields withheld explicitly
+table2_model_performance.csv,sensitivity_reported,number,"empty cell, never imputed zero","sensitivity reported on 0-1 scale, preserved separately from recalculation"
+table2_model_performance.csv,specificity_reported,number,"empty cell, never imputed zero","specificity reported on 0-1 scale, preserved separately from recalculation"
+table2_model_performance.csv,tp,integer,"empty cell, never imputed zero",True positive count in the recorded analysis unit
+table2_model_performance.csv,fp,integer,"empty cell, never imputed zero",False positive count in the recorded analysis unit
+table2_model_performance.csv,fn,integer,"empty cell, never imputed zero",False negative count in the recorded analysis unit
+table2_model_performance.csv,tn,integer,"empty cell, never imputed zero",True negative count in the recorded analysis unit
+table2_model_performance.csv,auprc,number,"empty cell, never imputed zero","Source-reported area under precision-recall curve, not AUROC"
+table2_model_performance.csv,accuracy_reported,number,"empty cell, never imputed zero","accuracy reported on 0-1 scale, preserved separately from recalculation"
+table2_model_performance.csv,ppv_reported,number,"empty cell, never imputed zero","ppv reported on 0-1 scale, preserved separately from recalculation"
+table2_model_performance.csv,npv_reported,number,"empty cell, never imputed zero","npv reported on 0-1 scale, preserved separately from recalculation"
+table2_model_performance.csv,genuine_95ci,string,"empty cell, never imputed zero","Labelled 95% CI supplied for AUROC, else unavailable"
+table2_model_performance.csv,sensitivity_recalculated,number,"empty cell, never imputed zero",sensitivity derived from complete TP/FP/FN/TN using documented formula
+table2_model_performance.csv,specificity_recalculated,number,"empty cell, never imputed zero",specificity derived from complete TP/FP/FN/TN using documented formula
+table2_model_performance.csv,ppv_recalculated,number,"empty cell, never imputed zero",ppv derived from complete TP/FP/FN/TN using documented formula
+table2_model_performance.csv,npv_recalculated,number,"empty cell, never imputed zero",npv derived from complete TP/FP/FN/TN using documented formula
+table2_model_performance.csv,accuracy_recalculated,number,"empty cell, never imputed zero",accuracy derived from complete TP/FP/FN/TN using documented formula
+table2_model_performance.csv,total_units,integer,"empty cell, never imputed zero",TP+FP+FN+TN in the recorded analysis unit
+table2_model_performance.csv,positive_units,integer,"empty cell, never imputed zero",TP+FN in the recorded analysis unit
+table2_model_performance.csv,negative_units,integer,"empty cell, never imputed zero",TN+FP in the recorded analysis unit
+table2_model_performance.csv,other_performance_notes,string,"empty cell, never imputed zero","Descriptive audit/context field: other performance notes; supplied extraction or documented analyst rule, no inferred patient data"

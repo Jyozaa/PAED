@@ -1,0 +1,82 @@
+source_column_index,section,original_column_name,analysis_field,publication_policy
+0,Basic information,Title ,title,whitelisted aggregate
+1,Basic information,Full text URL ,full_text_url,whitelisted aggregate
+2,Basic information,DOI,doi,whitelisted aggregate
+3,Basic information,"Study ID (First Author, Date)",study_label,whitelisted aggregate
+4,Basic information,Authors,authors,withheld or separately curated
+5,Basic information,Year ,year,whitelisted aggregate
+6,Basic information,Country published ,country,whitelisted aggregate
+7,Paper details,Study aim ,study_aim,whitelisted aggregate
+8,Paper details,Study design,design,whitelisted aggregate
+9,Paper details,Setting ,setting,whitelisted aggregate
+10,Paper details,Recruitment period (dd/mm/yyyy),recruitment,whitelisted aggregate
+11,Population Characteristics,Mean/ median age ,age,whitelisted aggregate
+12,Population Characteristics,"Age group  
+○Neonates (≤28 days) 
+○ Infants (29-365 days) 
+○ Children (1-18 years) ",age_groups,whitelisted aggregate
+13,Population Characteristics,Sex (no. and % female),sex,whitelisted aggregate
+14,Population Characteristics,Sample size ,sample_size,whitelisted aggregate
+15,Population Characteristics,Cardiac arrest prevalence,ca_prevalence,whitelisted aggregate
+16,Population Characteristics,"Underlying conditions 
+e.g. Congenital heart disease, Sepsis, Resp failure",conditions,whitelisted aggregate
+17,Model characteristics,"Model type 
+○ Logistic regression (baseline comparator) 
+○ Random forest 
+○ Neural network 
+○ Gradient boosting 
+○ Deep learning architectures",architecture_raw,whitelisted aggregate
+18,Model characteristics,"Input data modality: 
+- Vital signs
+- ECG
+- Labs
+- Multimodal",modality_raw,whitelisted aggregate
+19,Model characteristics,Feature selection method (if reported),feature_selection,whitelisted aggregate
+20,Model characteristics,Number of predictors,predictors,whitelisted aggregate
+21,Model characteristics,Whether time-series data is used,time_series,whitelisted aggregate
+22,Validation details,"Internal validation, e.g. CV, bootstrapping",internal_validation,whitelisted aggregate
+23,Validation details,External validation,external_validation_raw,whitelisted aggregate
+24,Validation details,Training vs validation dataset sizes,split_sizes,whitelisted aggregate
+25,Timing and clinical usability,"Prediction lead time: E.g., 1h, 6h, 12h before arrest",lead_time_raw,withheld or separately curated
+26,Timing and clinical usability,"Outcome definition: 
+“Impending arrest” vs “actual arrest” ",outcome_raw,withheld or separately curated
+27,Timing and clinical usability,Frequency of predictions (continuous vs snapshot) ,frequency_raw,whitelisted aggregate
+28,Essential outcome data,True positives (TP),tp_raw,whitelisted aggregate
+29,Essential outcome data,False positives (FP),fp_raw,whitelisted aggregate
+30,Essential outcome data,False negatives (FN),fn_raw,whitelisted aggregate
+31,Essential outcome data,True negatives (TN),tn_raw,whitelisted aggregate
+32,Essential outcome data,Sensitivity,sensitivity_raw,whitelisted aggregate
+33,Essential outcome data,Specificity,specificity_raw,whitelisted aggregate
+34,Essential outcome data,AUROC,auroc_raw,whitelisted aggregate
+35,Features used in Models,"
+Thematic analysis: 
+- Vital signs (HR, RR, BP, SpO2) 
+- Lab values 
+- Demographic (even if later excluded analytically) 
+- Clinical events",feature_themes_raw,withheld or separately curated
+36,Secondary objectives,"Comparator Data 
+Where available: 
+- PEWS 
+- Other monitoring systems 
+ + their respective TP/FP/FN/TN, sensitivity, specificity, AUROC",comparator_raw,withheld or separately curated
+37,Secondary objectives,"Risk of bias/quality (QUADAS-2 inputs) 
+- Patient selection criteria 
+- Index test (ML model) 
+- Reference standard (definition of cardiac arrest) 
+- Flow and timing 
+Note: 
+- Missing data handling  
+- Blinding (if any is blinded) ",raw_risk_of_bias,withheld or separately curated
+38,Secondary objectives,"Meta-regression: 
+Covariates: 
+- Mean/median age 
+-  % neonates 
+- Prevalence of cardiac arrest 
+- % congenital heart disease 
+ For heterogeneity: 
+- Threshold used 
+- Data imbalance handling (oversampling, etc) 
+- Study setting differences",raw_meta_regression,withheld or separately curated
+39,Other,Limitations of paper ,raw_limitations,withheld or separately curated
+40,Other,Additional notes about the paper,additional_notes,withheld or separately curated
+41,Other,Any assumptions made?,assumptions,withheld or separately curated

@@ -1,0 +1,11 @@
+study_1,study_2,setting_comparable,analysis_unit_comparable,horizon_comparable,same_dependency_group,independence,pooling_supported,reason,comparison
+lu_2025,bose_2019,True,False,False,False,no_overlap_identified_not_proven,False,"Different units/horizons, incomplete variance and/or unverified thresholds",Contextual descriptive comparison only
+lu_2025,yu_2023,True,False,False,False,no_overlap_identified_not_proven,False,"Different units/horizons, incomplete variance and/or unverified thresholds",Contextual descriptive comparison only
+lu_2025,kenet_2023,False,False,False,False,no_overlap_identified_not_proven,False,"Different units/horizons, incomplete variance and/or unverified thresholds",Contextual descriptive comparison only
+lu_2025,yu_2022,True,False,False,False,no_overlap_identified_not_proven,False,"Different units/horizons, incomplete variance and/or unverified thresholds",Contextual descriptive comparison only
+bose_2019,yu_2023,True,False,False,False,no_overlap_identified_not_proven,False,"Different units/horizons, incomplete variance and/or unverified thresholds",Contextual descriptive comparison only
+bose_2019,kenet_2023,False,False,False,False,no_overlap_identified_not_proven,False,"Different units/horizons, incomplete variance and/or unverified thresholds",Contextual descriptive comparison only
+bose_2019,yu_2022,True,False,False,False,no_overlap_identified_not_proven,False,"Different units/horizons, incomplete variance and/or unverified thresholds",Contextual descriptive comparison only
+yu_2023,kenet_2023,False,False,False,False,no_overlap_identified_not_proven,False,"Different units/horizons, incomplete variance and/or unverified thresholds",Contextual descriptive comparison only
+yu_2023,yu_2022,True,False,True,True,potential_overlap,False,Probable patient overlap; covariance unknown,Contextual descriptive comparison only
+kenet_2023,yu_2022,False,False,False,False,no_overlap_identified_not_proven,False,"Different units/horizons, incomplete variance and/or unverified thresholds",Contextual descriptive comparison only

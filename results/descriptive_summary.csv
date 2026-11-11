@@ -1,0 +1,27 @@
+measure,value,unit
+original_study_reports,6,study reports
+post_header_records,27,logical CSV records
+populated_model_entries,26,models
+cross_reference_records,1,records
+fully_blank_records,0,records
+retained_study_reports,5,reports
+retained_models,20,models
+potential_dependency_groups,4,"conservative groups, not proven overlap"
+numeric_auroc_evaluations,21,evaluations; includes Bose training/test
+genuine_auroc_95ci,1,estimates
+complete_candidate_2x2,7,dependent model tables
+2x2_study_sources,2,"study sources, not eligible independent tables"
+confirmed_independent_patient_tables,0,tables
+strict_demonstrated_eligible_studies,0,reports
+sensitivity_reporting_models,11,models
+specificity_reporting_models,11,models
+lu_2025_nontraining_reported_auroc_min,0.5472,descriptive AUROC
+lu_2025_nontraining_reported_auroc_max,0.7504000000000001,descriptive AUROC
+bose_2019_nontraining_reported_auroc_min,0.75,descriptive AUROC
+bose_2019_nontraining_reported_auroc_max,0.75,descriptive AUROC
+yu_2023_nontraining_reported_auroc_min,0.85,descriptive AUROC
+yu_2023_nontraining_reported_auroc_max,0.85,descriptive AUROC
+kenet_2023_nontraining_reported_auroc_min,0.867,descriptive AUROC
+kenet_2023_nontraining_reported_auroc_max,0.971,descriptive AUROC
+yu_2022_nontraining_reported_auroc_min,0.83,descriptive AUROC
+yu_2022_nontraining_reported_auroc_max,0.83,descriptive AUROC
