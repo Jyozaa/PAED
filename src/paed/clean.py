@@ -210,6 +210,7 @@ def build(rows, contexts, config):
         flag(base,'MODEL_DEPENDENCE','All models within this source share an evaluation cohort; model entries are not independent studies')
         if sid in {'yu_2022','yu_2023'}:flag(base,'POTENTIAL_COHORT_OVERLAP','Same Dallas institution, 2010-2019 and 160 CA/711 controls; shared dependency group pending verification')
         if sid=='kenet_2023':
+            flag(base,'WINDOW_EVENT_COUNT_RECONCILIATION','211 positive windows exceed 5 x 36 = 180 under an unstated one-event-per-test-CA-patient assumption; verify repeated arrests and window labeling; no error asserted')
             flag(base,'WINDOW_CLUSTERING','Six matrices count repeated five-minute windows; five test CA patients, 211 positive windows per matrix; no cluster adjustment')
             flag(base,'DUPLICATED_QUALITY_TEMPLATE','Source quality field repeats logistic-regression index description across all six models')
             flag(base,'MIXED_AGE_COHORT','38 patients aged 18+; no paediatric-only diagnostic table supplied')

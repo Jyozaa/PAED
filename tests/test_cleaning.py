@@ -78,6 +78,7 @@ def test_cohort_overlap_and_windows(evidence):
     assert len(k)==6 and all(r['total_units']==3059 and r['positive_units']==211 for r in k)
     assert all(r['analysis_unit']=='repeated_5_minute_window' for r in k)
     assert all(r['ci_status'].startswith('withheld') for r in k)
+    assert any(r['code']=='WINDOW_EVENT_COUNT_RECONCILIATION' for r in evidence['flags'])
 
 
 def test_rounding_and_actual_discrepancy(evidence):
