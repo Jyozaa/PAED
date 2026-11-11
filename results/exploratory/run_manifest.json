@@ -1,0 +1,292 @@
+{
+  "analysis_class": "exploratory_conditional",
+  "status": "completed_conditional_sensitivity_analysis",
+  "started_at_utc": "2026-11-11T16:37:47.550011+00:00",
+  "completed_at_utc": "2026-11-11T16:38:07.134500+00:00",
+  "analysis_reference_date": "2026-11-11",
+  "evidence_policy": "Only supplied extraction and existing repository derivatives. No new papers, correspondence or clinical evidence.",
+  "input_files": {
+    "results/auroc_estimates.csv": "0012eddfcd5c3c08446b30f69a9102ecedddc6c5ef3cdabd776dd96166d3aada",
+    "results/diagnostic_2x2.csv": "c2b2d48d918ef2fe63a42326a92652a2f585e7430604c6c85fc9e5a6f877cfaf",
+    "config/exploratory_scenarios.json": "1d21b2b612f961feac6e1987fae283933c9bf07ac1f66b9f99ef4dcbb3c97651",
+    "config/exploratory_baseline_hashes.json": "3dc48db7079819ec31b722c876deee4c082d5f8aba593c2b31318db68b8df974"
+  },
+  "original_source_hashes": [
+    {
+      "filename": "Data extraction paeds cardiac arrest SR progress 5.xlsx - Sheet1.csv",
+      "sha256": "df81fd52381b0efb09f87e81c0eb68b876621cef5df795b5e2a2be047b62b0e1"
+    },
+    {
+      "filename": "List of Variables.pdf",
+      "sha256": "1e6130c2178646d77a31f8d32fa8fe00760e6ee62b365aa10193922ef400448f"
+    },
+    {
+      "filename": "PROSPERO.pdf",
+      "sha256": "564c6f76c7017ee078894634cb601481a65dd0fac1297f664fb5aaeabf77b9ad"
+    }
+  ],
+  "baseline_commit": "1e18eef5bd6d3d1923d31d57156f77be81ff1256",
+  "protected_original_files": 67,
+  "original_run_manifest_sha256_at_execution": "4d8650af748b7a5f7483f7d06ed9701a5e5370847a8d022f974ede8a133dc784",
+  "original_descriptive_manifest_unchanged": true,
+  "source_git_commit_sha": "f145f0049c93578e31580b3d6d5d53ca87018c2e",
+  "source_revision_note": "Revision available at run time; publication commit cannot include its own future hash",
+  "source_code_hashes": {
+    "src/paed/exploratory.py": "0e869692a0081f76c36be77b3f8cb3c2a560e75df061a4cd14b46e269d261c37",
+    "src/paed/exploratory_figures.py": "063cfb30aa2f7a2e81db37a9e9a947083f1288010a45a3596cef323b1f2bebae",
+    "src/paed/exploratory_pipeline.py": "088aeb05266efe19f52e3bfc5d8d78488c402fa3cbf6efc0fd77d8d6dc32c2ab",
+    "src/paed/exploratory_reporting.py": "78a5dd177a252daa155c2af43f70e0976bda4100bff5449fcc3e6414fed15397",
+    "scripts/run_exploratory.py": "3f610d6b5c5c53bd5acad9828aa8747c72bafff893046f3b2a6dbb01cc3bb0ee",
+    "scripts/verify_exploratory.py": "46412bf6706a964c4b5a8dc45c56854bde8062a2dc6d7ed02229adc7d48aa5c7",
+    "requirements.txt": "8d62f8cd919caf1d9817f15fc2c2a0159de5b3bb037aa07f680d52dc15e66f2d"
+  },
+  "software": {
+    "python": "3.14.7",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scipy": "1.18.1",
+      "statsmodels": "0.15.0",
+      "matplotlib": "3.11.2",
+      "Markdown": "3.11.3",
+      "pytest": "9.2.0"
+    }
+  },
+  "scenario_configuration": {
+    "analysis_class": "exploratory_conditional",
+    "reference_date": "2026-11-11",
+    "evidence_policy": "Only supplied extraction and existing repository derivatives. No new papers, correspondence or clinical evidence.",
+    "random_seed": 20261111,
+    "deterministic_no_sampling": true,
+    "alpha": 0.05,
+    "auroc": {
+      "fixed_estimate_ids": [
+        "lu_2025_pedca_ft_a1",
+        "bose_2019_glm_a2"
+      ],
+      "dallas_alternatives": [
+        "yu_2023_rdn_boost_a1",
+        "yu_2022_logistic_a1"
+      ],
+      "kenet_alternatives": [
+        "kenet_2023_logistic_a1",
+        "kenet_2023_xgboost_a1",
+        "kenet_2023_soft_voting_a1"
+      ],
+      "initial_kenet": "kenet_2023_logistic_a1",
+      "initial_dallas": "yu_2023_rdn_boost_a1",
+      "assumed_auroc_scale_ses": [
+        0.02,
+        0.04,
+        0.08
+      ],
+      "se_rationale": "Illustrative precise, intermediate and imprecise scenarios on AUROC scale; not calibrated to these studies and not recovered sampling errors.",
+      "preserve_genuine_ci_variance": true,
+      "genuine_ci_transform": "existing endpoint-derived logit SE, construction method unverified",
+      "assumed_se_transform": "delta method: se_logit = assumed_se_auroc / (p * (1-p))",
+      "model_selection_rationale": "Named Lu index; Bose held-out test; analyst-selected conventional Kenet baseline first, plus two alternatives; mutually exclusive Dallas reports. No ranking scenarios by favourable result.",
+      "source_group_independence": "assumed across four conservative dependency groups, not independently established",
+      "method": "Paule-Mandel",
+      "software_function": "statsmodels.stats.meta_analysis.combine_effects(method_re='iterated')",
+      "tau2_start": 0.0,
+      "tau2_atol": 1e-10,
+      "tau2_maxiter": 1000,
+      "boundary_tolerance": 1e-10,
+      "equation_check_tolerance": 1e-07,
+      "interval": "modified Hartung-Knapp: var=max(1/sum(w),sum(w*(y-mu)^2)/((k-1)*sum(w))); t(k-1)",
+      "individual_plot_interval": "Reported genuine 95% CI when supplied; otherwise assumed normal-logit 95% interval",
+      "warning": "EXPLORATORY \u2014 uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.",
+      "fallback_solver": "scipy.optimize.brentq on the same Paule-Mandel equation after failed library residual check; no input changes",
+      "fallback_initial_upper": 1.0,
+      "fallback_max_expansions": 60,
+      "fallback_xtol": 1e-12,
+      "fallback_rtol": 1e-14
+    },
+    "diagnostic": {
+      "yu_model": "yu_2023_rdn_boost",
+      "kenet_models": [
+        "kenet_2023_logistic",
+        "kenet_2023_soft_voting",
+        "kenet_2023_xgboost"
+      ],
+      "kenet_design_effects": [
+        1,
+        5,
+        20
+      ],
+      "yu_variance_inflations": [
+        1,
+        5
+      ],
+      "design_effect_rationale": "Analyst-supplied variance multipliers, not measured ICCs or observed effective sample sizes; 1 is naive independence. Yu inflation probes unit uncertainty without resolving attribution/linkage.",
+      "coordinates": [
+        "logit_sensitivity",
+        "logit_false_positive_rate"
+      ],
+      "within_study_variance": [
+        "D*(1/TP+1/FN)",
+        "D*(1/FP+1/TN)"
+      ],
+      "within_study_covariance": "rho_within * sqrt(v_sensitivity*v_fpr)",
+      "primary_within_correlation": 0.0,
+      "source_level_independence": "assumed conditional independence between the two source summaries",
+      "between_source_covariances": [
+        {
+          "id": "T0",
+          "sd_sensitivity": 0.0,
+          "sd_fpr": 0.0,
+          "correlation": 0.0
+        },
+        {
+          "id": "T05Rneg",
+          "sd_sensitivity": 0.5,
+          "sd_fpr": 0.5,
+          "correlation": -0.5
+        },
+        {
+          "id": "T05R0",
+          "sd_sensitivity": 0.5,
+          "sd_fpr": 0.5,
+          "correlation": 0.0
+        },
+        {
+          "id": "T05Rpos",
+          "sd_sensitivity": 0.5,
+          "sd_fpr": 0.5,
+          "correlation": 0.5
+        },
+        {
+          "id": "T1R0",
+          "sd_sensitivity": 1.0,
+          "sd_fpr": 1.0,
+          "correlation": 0.0
+        }
+      ],
+      "heterogeneity_rationale": "T=0 common-logit constraint; SD 0.5 and 1.0 illustrate increasing logit heterogeneity; +/-0.5 probes correlation in sensitivity/FPR coordinates. No T parameter is estimated.",
+      "within_correlation_sensitivity": {
+        "kenet_design_effect": 5,
+        "yu_variance_inflation": 1,
+        "between_covariance_id": "T05R0",
+        "alternative_correlations": [
+          -0.5,
+          0.5
+        ],
+        "apply_to": "both source covariance matrices"
+      },
+      "interval": "normal marginal intervals using known-assumed GLS covariance; chi-square(2) joint logit confidence ellipse",
+      "plot_between_covariance_id": "T05R0",
+      "plot_yu_variance_inflation": 1,
+      "condition_number_warning": 10000000000.0,
+      "normal_equation_tolerance": 1e-08,
+      "minimum_cell_warning": 5,
+      "boundary_cells": "stop; do not add continuity correction or alter counts",
+      "warning": "EXPLORATORY \u2014 clustered windows, unresolved analysis units and assumed statistical parameters."
+    }
+  },
+  "auroc": {
+    "attempted_scenarios": 18,
+    "successful_final_scenarios": 18,
+    "failed_final_scenarios": 0,
+    "library_attempts_failing_equation_check": 1,
+    "total_numerical_attempts": 19,
+    "estimator": "Paule-Mandel, modified Hartung-Knapp t intervals"
+  },
+  "diagnostic": {
+    "attempted_scenarios": 96,
+    "successful_final_scenarios": 96,
+    "failed_final_scenarios": 0,
+    "method": "Joint normal-logit GLS with fixed T, inflated sampling covariances and specified correlations",
+    "unrestricted_covariance_estimated": false,
+    "hsroc_curve_fitted": false
+  },
+  "executed_command": "python scripts/run_exploratory.py --run-tests",
+  "numerical_checks": [
+    "All configured scenarios present, with unique exploratory IDs and explicit success/error status",
+    "Four source groups per AUROC scenario; no Dallas double counting, training performance, favourable-only selection or untagged imputed uncertainty",
+    "Source AUROCs and genuine CI-derived variance unchanged; normalized weights, PM root/boundary and conditional intervals validated",
+    "Two source summaries per diagnostic scenario; unchanged integer counts; correctly inflated covariance and GLS weight matrices summing to identity",
+    "All accepted joint solutions have positive covariance and consistent marginal conditional intervals; fixed heterogeneity is never called estimated",
+    "67 original scientific outputs, source configuration and curated inputs remain byte-for-byte unchanged"
+  ],
+  "tests": {
+    "status": "passed",
+    "exit_code": 0,
+    "command": "python -m pytest -q",
+    "output": "..............................................................           [100%]\n62 passed in 14.88s",
+    "stderr": ""
+  },
+  "output_files": {
+    "results/exploratory/auroc_scenario_inputs.csv": "9aa573e02129707a6ef3572817dc74d385fd235b30b5326c80c1cd2692b4cdda",
+    "results/exploratory/auroc_scenario_results.csv": "a2fffd6f84636f157342f1d0ca89c3dbbb248b36f21910b3a0604e02095e0d52",
+    "results/exploratory/data_dictionary.csv": "9341941495fb8720f4031d7aa956a1b7dbaa9ee0bf6737f05b41680b44cca5b1",
+    "results/exploratory/diagnostic_identifiability.csv": "79ea07b2b9ea21841052cb32f4b9e6c0eca23b27913ff6f41dc17867b9425175",
+    "results/exploratory/diagnostic_scenario_inputs.csv": "422d125260afb9e0cf4def5a6a4ba9f29c2af653c3efdf4e8ee08aaa71be88c7",
+    "results/exploratory/diagnostic_scenario_results.csv": "23fdcdfdc280227fdb37e22b42792d680dc8c4a477b8e629eb384cd07038a3bd",
+    "results/exploratory/fit_attempts.csv": "a7984e8c6f6da48fbc8b41a9ee3c5bec6dd825d89c2905d1d620b8ce71b06e08",
+    "results/exploratory/scenario_configuration.json": "1d21b2b612f961feac6e1987fae283933c9bf07ac1f66b9f99ef4dcbb3c97651",
+    "results/exploratory/sensitivity_contrasts.csv": "36d5d2f0b29de13767683c5d061f989755f26a47eefc280bc311395ae72d9272",
+    "results/exploratory/sensitivity_summary.csv": "f582b05bd4f2fa6adb63550fe346fed8317d128106ef9ccfdf8606b95d7490c4",
+    "figures/exploratory/auroc_sensitivity.png": "e970914dee0ac60036cc634ea5caf2ec792cffe4a50af11772acec9295deb3a4",
+    "figures/exploratory/auroc_sensitivity.svg": "3f869801fe3be05e74c7f09052529be516f6d9be8dd71f9e92e8f6a7fdd3c14a",
+    "figures/exploratory/diagnostic_joint_summaries.png": "39dedfd0ec5705801d62f57d356dcfbd7198909e6412f7e7bf93fd29fa9f008f",
+    "figures/exploratory/diagnostic_joint_summaries.svg": "22ecba3398bea7d9cd2cf12a228e92ce473f7ff0953ac3488c750985fdc8226c",
+    "figures/exploratory/diagnostic_sensitivity.png": "8bf05cc083dc4b8d78d8d84cd49d11d8533ccfc9656d15acab7fdb5ce958e04f",
+    "figures/exploratory/diagnostic_sensitivity.svg": "aa35d3a012a7b32146037fa30cea3d2cec9cb7c8cc3cb167d9ff9c58a68d131e",
+    "figures/exploratory/forest_A_2022_logistic_SE02.png": "9db1b907e5dd9af33d9bff79d99754e5726fd5f6ba603d12681954131bbe782b",
+    "figures/exploratory/forest_A_2022_logistic_SE02.svg": "c42c2db710d13e130710a43b621e157ea5436a9f5fa510fb06aad8a45248847d",
+    "figures/exploratory/forest_A_2022_logistic_SE04.png": "9b2a9e19ed13045946d5589dd00b90ef16d27822acfe52fbd4db288b61f55c5f",
+    "figures/exploratory/forest_A_2022_logistic_SE04.svg": "bf7f30f176bfe723dd33f1c072bd66d0337c07516bb52cf1d9420a8b793721d5",
+    "figures/exploratory/forest_A_2022_logistic_SE08.png": "57b51b6949fd3de19cec97b8690bfd39d4e554432e804f8c2b278de44c921422",
+    "figures/exploratory/forest_A_2022_logistic_SE08.svg": "9921ad9813ed419481ee78a0d0d109c4372eb6e5ab8897a1245a1753e5557fe8",
+    "figures/exploratory/forest_A_2022_soft_voting_SE02.png": "01bd54bbde1b7725ff38031deb62d8fb6b9db12a11461d2c4a50a07851b965c6",
+    "figures/exploratory/forest_A_2022_soft_voting_SE02.svg": "bff82c7f5305c498eabe3894a1bb903c322ba009b93332c395f469cd61b2a6a5",
+    "figures/exploratory/forest_A_2022_soft_voting_SE04.png": "95dd624cc6ca44f6bec7927540033b84d5ee2a331675b5eabd62eff90ab1c80f",
+    "figures/exploratory/forest_A_2022_soft_voting_SE04.svg": "7e24e5ac5b9056827392b528d1a7c7ab2ad678440a79a3b0293a1308e9ea3d79",
+    "figures/exploratory/forest_A_2022_soft_voting_SE08.png": "82268eb61868ec41a187e98104fc463b4a02fd44e50e55b8d120b25fc97ad9fa",
+    "figures/exploratory/forest_A_2022_soft_voting_SE08.svg": "9f2705920ed9a4c01a9b2371dbd3ad6bc443269198b7bebe898eb0934df65a45",
+    "figures/exploratory/forest_A_2022_xgboost_SE02.png": "01d11ffd02bb75449d2d066f2b7f85dcfca9b2b3cd63cceb485bce2039d3a29e",
+    "figures/exploratory/forest_A_2022_xgboost_SE02.svg": "2e0df35a9cb6e858088673afa8dc7c6c344463e83ebfc9fa9eef3a5d7743c9b7",
+    "figures/exploratory/forest_A_2022_xgboost_SE04.png": "8bcbf6178828a54bcd1febd4c16b14b548e152ed88ba614c418d8eb9a51dc1f2",
+    "figures/exploratory/forest_A_2022_xgboost_SE04.svg": "f2243e7aa0087b735a72d133c181d553a39fdc00d860474b5c5cbd6c83626cdf",
+    "figures/exploratory/forest_A_2022_xgboost_SE08.png": "ae1c8e6f00963e231d1c23168995c5509750e7203487058d7f3c8b036ad040ea",
+    "figures/exploratory/forest_A_2022_xgboost_SE08.svg": "b2cc73d5acb40cdc3956867afda3d6f383284043b25a6b848c5ce6f1112837a6",
+    "figures/exploratory/forest_A_2023_logistic_SE02.png": "09e42fcbabfde0d5e313065b028ec624b4cf4a312c57de9ca037ddfcdb10aebb",
+    "figures/exploratory/forest_A_2023_logistic_SE02.svg": "32e03cd697153a229626d9601bf0d548246eb473cf603a8517c8745fa8266901",
+    "figures/exploratory/forest_A_2023_logistic_SE04.png": "255d7c8f3062d06b2566d57450520e724aa0088522ba9827c4eaf488436efbe7",
+    "figures/exploratory/forest_A_2023_logistic_SE04.svg": "a3ec1869386f6c440008e5660861679efb7236b2f2c361630caacd6465084016",
+    "figures/exploratory/forest_A_2023_logistic_SE08.png": "4abecfb858b4a483739faaa479bbfa5ac0f51b844846ba62e639bcd2650b39c6",
+    "figures/exploratory/forest_A_2023_logistic_SE08.svg": "66b09f6d4f87308a3ae9fcbe88cbe89752cdf4189a8c362ec5a028d532ccd551",
+    "figures/exploratory/forest_A_2023_soft_voting_SE02.png": "4c00d6b864adca330f214ee21a300d48142120a2a0b84d5750f583876fc1a10d",
+    "figures/exploratory/forest_A_2023_soft_voting_SE02.svg": "cfbb77b56599f387682b2656163489c0b588013c8ad75441d1363c662b8d4744",
+    "figures/exploratory/forest_A_2023_soft_voting_SE04.png": "a5ccebf450e94d3f088b0785e013531ccf7aba0703d35459fd285c0ebdb523a0",
+    "figures/exploratory/forest_A_2023_soft_voting_SE04.svg": "6aa5dcd076d68759c764925e5a2dc7e1e4178fa24848a5968239836dba1e2fce",
+    "figures/exploratory/forest_A_2023_soft_voting_SE08.png": "5b3f18ac821c4a0aad6ed718885411f1716e58fae777630f2693e23fcaf7f182",
+    "figures/exploratory/forest_A_2023_soft_voting_SE08.svg": "40be27bbf9c8eea7ef3f1b9aa170302a79e88b4233288288c1adcf6298fe4398",
+    "figures/exploratory/forest_A_2023_xgboost_SE02.png": "53954dd2e59d52256a46181559cbf9bb045399e40cfbfee9806975bd701b32df",
+    "figures/exploratory/forest_A_2023_xgboost_SE02.svg": "a8fa8789e2f536b942a6adf9bc894867e597580d3d6cfe684e1b2ccb7b97f152",
+    "figures/exploratory/forest_A_2023_xgboost_SE04.png": "0104809557b1ec8e5e220b04573397e251d0a3368eb928ce3829f1bc40059c99",
+    "figures/exploratory/forest_A_2023_xgboost_SE04.svg": "2fe32c7567b8aa5491f213201ca0f6eaf1459b16546dbe200f2f2d60a9a34352",
+    "figures/exploratory/forest_A_2023_xgboost_SE08.png": "8e96c12333c62f3038c0f9d40b4c0ce338a0d9d4ca5a1449978bb2db885d665a",
+    "figures/exploratory/forest_A_2023_xgboost_SE08.svg": "be25c775a3ecb12fcde4450c90b7081c214e24aea62b5205de2a498c38c73f2f",
+    "reports/exploratory/assumptions_and_limitations.html": "485a49328141cc99f5e75b8f5fc2e297e4e6883f388456ed8081f7ac0bf40fa5",
+    "reports/exploratory/assumptions_and_limitations.md": "fca7f83c1a166807ac3cc05131d5167a5c58233bc854aee5c6fb5edb33430dbd",
+    "reports/exploratory/auroc_meta_analysis.html": "483edd45a4814b5321ac752b00aead22410535ffbf744f6e65564f6ac1758579",
+    "reports/exploratory/auroc_meta_analysis.md": "a49bef6c20ad670c8fd1f7a69c45a83d613a75fe9ddfbf180bd82851a4d02e08",
+    "reports/exploratory/consolidated_exploratory_report.html": "5ba503d491aae8e365e6805779038f40a24e33f8413d42cd669fac583e44518c",
+    "reports/exploratory/consolidated_exploratory_report.md": "ef0708eb6091d3b9ae59241e41f6e537dfa4dc4396dd9eceb3bfddecba006619",
+    "reports/exploratory/diagnostic_meta_analysis.html": "5b7a36bc2a8866d00c9439bde9b44183bef730f9bab29f460002f0e7c25f9228",
+    "reports/exploratory/diagnostic_meta_analysis.md": "e763c8cb316c3cba6deacae133881cbc4849aa852c32bead8951ee9e68cfeeb6",
+    "reports/exploratory/exploratory_results_summary.html": "0c8608e17ebd6322b4a27b50d08604dd256ea04c301d2b9788bc5b2cbcde490d",
+    "reports/exploratory/exploratory_results_summary.md": "ef0708eb6091d3b9ae59241e41f6e537dfa4dc4396dd9eceb3bfddecba006619",
+    "reports/exploratory/meta_analysis_methods.html": "fd75c24672ca8bbf194528ec034c8fc289024054fcb3315a29ac6feca82ad6b2",
+    "reports/exploratory/meta_analysis_methods.md": "8213aabe387ff82b83fde7ad4caa84144f8362962f6babf9e689445ec0e5ab09",
+    "reports/exploratory/sensitivity_analysis.html": "d44f1c95db151e21c5376829296637a614819f1e797dae606ed2fe82ccf2df45",
+    "reports/exploratory/sensitivity_analysis.md": "1a63ac3b919a20662495fdbf227a6c729007d23e69d6251394d6cbb107ffb248"
+  },
+  "warnings": [
+    "All pooled values/intervals are conditional on analyst assumptions",
+    "No new clinical evidence was obtained",
+    "Normal-logit approximation includes sparse cells",
+    "Source clustering, units, thresholds and validation remain unresolved"
+  ]
+}

@@ -1,0 +1,2 @@
+analysis_class,source_summaries,scalar_logit_observations,mean_parameters,unrestricted_covariance_components,residual_scatter_rank_upper_bound,unrestricted_covariance_estimated,approach,caution
+exploratory_conditional,2,4,2,3,1,False,Prespecified covariance T and closed-form GLS,Counting is not a structural-identifiability theorem; two sources cannot support reliable unrestricted heterogeneity/correlation estimation

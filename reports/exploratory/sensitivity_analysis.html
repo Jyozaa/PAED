@@ -1,0 +1,97 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>sensitivity analysis</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="exploratory-sensitivity-analysis">EXPLORATORY: sensitivity analysis</h1>
+<p>The supplied extraction is authoritative for this task and has not been independently verified against original papers. No new studies, external confidence intervals, author correspondence or patient-level records were consulted. Reported source values are unchanged. Original confirmatory feasibility conclusions and descriptive outputs are preserved. The numbers here are <strong>conditional pooled calculations</strong>, not the primary evidence-supported findings or established clinical accuracy.</p>
+<p>The following are matched-scenario contrasts, changing one configured factor at a time. They are not causal model comparisons or hypothesis tests. All paired scenarios and numerical deltas are in <a href="../../results/exploratory/sensitivity_contrasts.csv">sensitivity_contrasts.csv</a>. The table reports maximum absolute changes over the configured grid only; larger changes under unexamined assumptions remain possible.</p>
+<table>
+<thead>
+<tr>
+<th>analysis</th>
+<th>assumption changed</th>
+<th>matched pairs</th>
+<th>max absolute delta AUROC</th>
+<th>max absolute delta sensitivity (pp)</th>
+<th>max absolute delta specificity (pp)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auroc</td>
+<td>Assumed AUROC SE</td>
+<td>18</td>
+<td>0.070867</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>auroc</td>
+<td>Kenet model</td>
+<td>18</td>
+<td>0.041046</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>auroc</td>
+<td>Dallas substitution</td>
+<td>9</td>
+<td>0.042934</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>diagnostic</td>
+<td>Between-source covariance</td>
+<td>180</td>
+<td></td>
+<td>3.308</td>
+<td>8.404</td>
+</tr>
+<tr>
+<td>diagnostic</td>
+<td>Yu variance inflation</td>
+<td>45</td>
+<td></td>
+<td>3.563</td>
+<td>9.115</td>
+</tr>
+<tr>
+<td>diagnostic</td>
+<td>Kenet design effect</td>
+<td>90</td>
+<td></td>
+<td>6.591</td>
+<td>13.400</td>
+</tr>
+<tr>
+<td>diagnostic</td>
+<td>Kenet model</td>
+<td>96</td>
+<td></td>
+<td>10.949</td>
+<td>20.671</td>
+</tr>
+<tr>
+<td>diagnostic</td>
+<td>Within-source correlation</td>
+<td>9</td>
+<td></td>
+<td>0.172</td>
+<td>0.784</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-assumed-auroc-se">1. Assumed AUROC SE</h2>
+<p>Increasing assumed original-scale uncertainty changes transformed variances, study weights and estimated tau². The pooled result need not move monotonically or its interval widen monotonically, because relative weights and estimated random heterogeneity change together. The genuine Yu 2023 CI is retained while other SEs vary. Across all 18 configurations, pooled AUROC spans 0.7689-0.8451; this is not an uncertainty interval over a probability model of assumptions.</p>
+<h2 id="2-representative-kenet-model">2. Representative Kenet model</h2>
+<p>All logistic, soft-voting and XGBoost choices are reported; no observed maximum is selected as the preferred conclusion. A constant original-scale SE corresponds to a larger logit SE near AUROC=1, so high reported AUROC does not guarantee high inverse-variance weight. The full weight ledger makes this visible. Model-selection sensitivity does not establish an architecture winner.</p>
+<h2 id="3-substitute-yu-2022">3. Substitute Yu 2022</h2>
+<p>Yu 2022 replaces, never accompanies, Yu 2023. This changes both the source estimate (0.83 versus 0.85) and uncertainty provenance: Yu 2023 has a labelled CI, while Yu 2022's variance is assumed. The matched contrast is a joint substitution, not an isolated estimate of a publication-year or algorithm effect.</p>
+<h2 id="4-kenet-clustering-assumptions">4. Kenet clustering assumptions</h2>
+<p>D=1 is the naive independence scenario, not an endorsed analysis of windows. D=5/20 inflate source covariance while preserving counts and logit points. Relative source influence changes and conditional logit-mean variances increase when only a source covariance is inflated at fixed T/rho. Summary point estimates can shift toward Yu, with the direction depending on the selected Kenet model. The illustrative D values do not identify real ICCs or validate an effective patient count.</p>
+<h2 id="5-between-source-and-within-source-covariance">5. Between-source and within-source covariance</h2>
+<p>T0 assumes no between-source heterogeneity; T05 assumes SDs=0.5 with three correlations; T1 assumes SDs=1 with zero correlation. All are fixed, not estimated. Yu inflation and within-rho checks are separate sensitivity axes. These assumptions change the joint weights, means and intervals; correlation is in sensitivity/FPR coordinates. The transformed conditional summaries span sensitivity 0.8730-0.9824, specificity 0.6560-0.8750. Separate extremes are not one simultaneous operating point. Known-assumed-covariance intervals omit uncertainty about T, D and rho.</p>
+<h2 id="6-relatively-stable-conclusions">6. Relatively stable conclusions</h2>
+<p>Within this grid AUROC summaries remain above 0.5, but that numerical pattern is conditional on selected reported points, assumed uncertainty and model form. The source-data facts remain stable: genuine AUROC uncertainty is scarce; Kenet observations are repeated windows; Yu linkage remains unresolved; no confirmed external validation or universal threshold is added. Numerical stability does not validate clinical accuracy.</p>
+<h2 id="7-results-too-assumption-dependent-for-clinical-interpretation">7. Results too assumption-dependent for clinical interpretation</h2>
+<p>There is no unique pooled AUROC or diagnostic operating point that can be selected as the evidence-supported answer. The apparently precise T0/D1 result assumes independence and zero heterogeneity that the extraction does not establish. Wider scenarios are not automatically adequate either. These summaries cannot determine patient-level missed arrests, alert burden, deployment safety or prospective benefit.</p>
+<p>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</p>
+<p>EXPLORATORY — clustered windows, unresolved analysis units and assumed statistical parameters.</p></body></html>

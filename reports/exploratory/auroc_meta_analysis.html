@@ -1,0 +1,283 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>auroc meta analysis</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="exploratory-auroc-meta-analysis-results">EXPLORATORY: AUROC meta-analysis results</h1>
+<p>The supplied extraction is authoritative for this task and has not been independently verified against original papers. No new studies, external confidence intervals, author correspondence or patient-level records were consulted. Reported source values are unchanged. Original confirmatory feasibility conclusions and descriptive outputs are preserved. The numbers here are <strong>conditional pooled calculations</strong>, not the primary evidence-supported findings or established clinical accuracy.</p>
+<p><strong>18/18 configured scenarios produced conditional pooled results.</strong> Each has four potentially independent source groups, assumed independent for fitting; the existing source inventory remains five reports/20 models. Conditional summaries range <strong>0.768949-0.845098</strong> across configurations. This range is scenario spread, not a confidence interval.</p>
+<p>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</p>
+<p>Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy. Yu 2023's genuine CI is preserved; all other missing variances are hypothetical. Yu 2022 substitution means all four variances are assumed. No numerical result is a confirmatory estimate, and none resolves validation, horizon or protocol discrepancies.</p>
+<h2 id="selected-extracted-aurocs">Selected extracted AUROCs</h2>
+<table>
+<thead>
+<tr>
+<th>estimate</th>
+<th>source row</th>
+<th>AUROC</th>
+<th>uncertainty provenance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lu_2025_pedca_ft_a1</td>
+<td>18</td>
+<td>0.7399</td>
+<td>No genuine SE; hypothetical 0.02/0.04/0.08</td>
+</tr>
+<tr>
+<td>bose_2019_glm_a2</td>
+<td>19</td>
+<td>0.75</td>
+<td>No genuine SE; hypothetical 0.02/0.04/0.08</td>
+</tr>
+<tr>
+<td>yu_2023_rdn_boost_a1</td>
+<td>20</td>
+<td>0.85</td>
+<td>genuine 95% CI 0.79-0.9</td>
+</tr>
+<tr>
+<td>kenet_2023_logistic_a1</td>
+<td>23</td>
+<td>0.867</td>
+<td>No genuine SE; hypothetical 0.02/0.04/0.08</td>
+</tr>
+<tr>
+<td>kenet_2023_xgboost_a1</td>
+<td>26</td>
+<td>0.971</td>
+<td>No genuine SE; hypothetical 0.02/0.04/0.08</td>
+</tr>
+<tr>
+<td>kenet_2023_soft_voting_a1</td>
+<td>28</td>
+<td>0.957</td>
+<td>No genuine SE; hypothetical 0.02/0.04/0.08</td>
+</tr>
+<tr>
+<td>yu_2022_logistic_a1</td>
+<td>29</td>
+<td>0.83</td>
+<td>No genuine SE; hypothetical 0.02/0.04/0.08</td>
+</tr>
+</tbody>
+</table>
+<p>Each scenario includes four rows from this seven-evaluation set, as configured; never both Dallas reports.</p>
+<h2 id="every-configured-scenario">Every configured scenario</h2>
+<table>
+<thead>
+<tr>
+<th>scenario</th>
+<th>Kenet</th>
+<th>Dallas</th>
+<th>assumed SE</th>
+<th>conditional pooled AUROC [95%]</th>
+<th>estimated logit tau²</th>
+<th>status / diagnostics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A_2023_logistic_SE02</td>
+<td>logistic</td>
+<td>2023</td>
+<td>0.02</td>
+<td>0.8041 [0.6750, 0.8902]</td>
+<td>0.158941</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2023_logistic_SE04</td>
+<td>logistic</td>
+<td>2023</td>
+<td>0.04</td>
+<td>0.8017 [0.6752, 0.8872]</td>
+<td>0.114900</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2023_logistic_SE08</td>
+<td>logistic</td>
+<td>2023</td>
+<td>0.08</td>
+<td>0.8168 [0.7079, 0.8913]</td>
+<td>0.017281</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2023_xgboost_SE02</td>
+<td>xgboost</td>
+<td>2023</td>
+<td>0.02</td>
+<td>0.8451 [0.5078, 0.9665]</td>
+<td>0.983408</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2023_xgboost_SE04</td>
+<td>xgboost</td>
+<td>2023</td>
+<td>0.04</td>
+<td>0.8002 [0.5945, 0.9162]</td>
+<td>0.266631</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2023_xgboost_SE08</td>
+<td>xgboost</td>
+<td>2023</td>
+<td>0.08</td>
+<td>0.8119 [0.6900, 0.8933]</td>
+<td>0.026491</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2023_soft_voting_SE02</td>
+<td>soft_voting</td>
+<td>2023</td>
+<td>0.02</td>
+<td>0.8406 [0.5540, 0.9573]</td>
+<td>0.758288</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2023_soft_voting_SE04</td>
+<td>soft_voting</td>
+<td>2023</td>
+<td>0.04</td>
+<td>0.8117 [0.5858, 0.9293]</td>
+<td>0.360052</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2023_soft_voting_SE08</td>
+<td>soft_voting</td>
+<td>2023</td>
+<td>0.08</td>
+<td>0.8114 [0.6832, 0.8957]</td>
+<td>0.036638</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2022_logistic_SE02</td>
+<td>logistic</td>
+<td>2022</td>
+<td>0.02</td>
+<td>0.7997 [0.6805, 0.8821]</td>
+<td>0.138272</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2022_logistic_SE04</td>
+<td>logistic</td>
+<td>2022</td>
+<td>0.04</td>
+<td>0.7917 [0.6747, 0.8745]</td>
+<td>0.078488</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2022_logistic_SE08</td>
+<td>logistic</td>
+<td>2022</td>
+<td>0.08</td>
+<td>0.7807 [0.6191, 0.8864]</td>
+<td>0.000000</td>
+<td>boundary; success_conditional</td>
+</tr>
+<tr>
+<td>A_2022_xgboost_SE02</td>
+<td>xgboost</td>
+<td>2022</td>
+<td>0.02</td>
+<td>0.8398 [0.4990, 0.9650]</td>
+<td>0.985628</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2022_xgboost_SE04</td>
+<td>xgboost</td>
+<td>2022</td>
+<td>0.04</td>
+<td>0.7868 [0.6052, 0.8989]</td>
+<td>0.181712</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2022_xgboost_SE08</td>
+<td>xgboost</td>
+<td>2022</td>
+<td>0.08</td>
+<td>0.7689 [0.5907, 0.8847]</td>
+<td>0.000000</td>
+<td>boundary; success_conditional</td>
+</tr>
+<tr>
+<td>A_2022_soft_voting_SE02</td>
+<td>soft_voting</td>
+<td>2022</td>
+<td>0.02</td>
+<td>0.8354 [0.5466, 0.9553]</td>
+<td>0.756477</td>
+<td>validated fallback; success_conditional</td>
+</tr>
+<tr>
+<td>A_2022_soft_voting_SE04</td>
+<td>soft_voting</td>
+<td>2022</td>
+<td>0.04</td>
+<td>0.8020 [0.5829, 0.9215]</td>
+<td>0.312596</td>
+<td>success_conditional</td>
+</tr>
+<tr>
+<td>A_2022_soft_voting_SE08</td>
+<td>soft_voting</td>
+<td>2022</td>
+<td>0.08</td>
+<td>0.7716 [0.5953, 0.8858]</td>
+<td>0.000000</td>
+<td>boundary; success_conditional</td>
+</tr>
+</tbody>
+</table>
+<p>Each bracketed interval is the modified H-K conditional 95% interval, df=3. Estimated tau² refers to the assumed-variance logit model, not verified clinical heterogeneity. Full precision, source/model selections, assumptions, convergence and numerical diagnostics are in <a href="../../results/exploratory/auroc_scenario_results.csv">auroc_scenario_results.csv</a>; <a href="../../results/exploratory/auroc_scenario_inputs.csv">AUROC input/weight ledger</a> gives all 72 selected rows, individual points, genuine versus hypothetical SEs, plot limits and weights.</p>
+<h2 id="preserved-numerical-attempts">Preserved numerical attempts</h2>
+<table>
+<thead>
+<tr>
+<th>scenario_id</th>
+<th>solver</th>
+<th>status</th>
+<th>message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A_2022_soft_voting_SE02</td>
+<td>statsmodels_iterated_PM</td>
+<td>failed_equation_check</td>
+<td>Library PM residual check failed: tau2=0.0, Q_tau=25.772469087599525</td>
+</tr>
+</tbody>
+</table>
+<p>All final accepted fits pass the PM equation/boundary check. A numerical fallback is disclosed, not a suppressed or data-modified fit. Zero tau² at some high-SE scenarios is a conditional boundary estimate; it does not show the studies are clinically homogeneous.</p>
+<h2 id="forest-plots-and-assumption-sensitivity">Forest plots and assumption sensitivity</h2>
+<p><img alt="AUROC sensitivity" src="../../figures/exploratory/auroc_sensitivity.png" /></p>
+<p>Shading is conditional 95% uncertainty under each scenario; it excludes uncertainty about the assumptions. Genuine study intervals are used only for Yu 2023; other forest error bars arise from analyst-assumed SEs. Different algorithms/horizons/units are summarized under a hypothetical random-effects model. All successful scenarios have individual forest plots:</p>
+<ul>
+<li><a href="../../figures/exploratory/forest_A_2023_logistic_SE02.png">A_2023_logistic_SE02</a> (<a href="../../figures/exploratory/forest_A_2023_logistic_SE02.svg">SVG</a>): 0.8041 [0.6750, 0.8902]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2023_logistic_SE04.png">A_2023_logistic_SE04</a> (<a href="../../figures/exploratory/forest_A_2023_logistic_SE04.svg">SVG</a>): 0.8017 [0.6752, 0.8872]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2023_logistic_SE08.png">A_2023_logistic_SE08</a> (<a href="../../figures/exploratory/forest_A_2023_logistic_SE08.svg">SVG</a>): 0.8168 [0.7079, 0.8913]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2023_xgboost_SE02.png">A_2023_xgboost_SE02</a> (<a href="../../figures/exploratory/forest_A_2023_xgboost_SE02.svg">SVG</a>): 0.8451 [0.5078, 0.9665]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2023_xgboost_SE04.png">A_2023_xgboost_SE04</a> (<a href="../../figures/exploratory/forest_A_2023_xgboost_SE04.svg">SVG</a>): 0.8002 [0.5945, 0.9162]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2023_xgboost_SE08.png">A_2023_xgboost_SE08</a> (<a href="../../figures/exploratory/forest_A_2023_xgboost_SE08.svg">SVG</a>): 0.8119 [0.6900, 0.8933]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2023_soft_voting_SE02.png">A_2023_soft_voting_SE02</a> (<a href="../../figures/exploratory/forest_A_2023_soft_voting_SE02.svg">SVG</a>): 0.8406 [0.5540, 0.9573]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2023_soft_voting_SE04.png">A_2023_soft_voting_SE04</a> (<a href="../../figures/exploratory/forest_A_2023_soft_voting_SE04.svg">SVG</a>): 0.8117 [0.5858, 0.9293]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2023_soft_voting_SE08.png">A_2023_soft_voting_SE08</a> (<a href="../../figures/exploratory/forest_A_2023_soft_voting_SE08.svg">SVG</a>): 0.8114 [0.6832, 0.8957]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2022_logistic_SE02.png">A_2022_logistic_SE02</a> (<a href="../../figures/exploratory/forest_A_2022_logistic_SE02.svg">SVG</a>): 0.7997 [0.6805, 0.8821]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2022_logistic_SE04.png">A_2022_logistic_SE04</a> (<a href="../../figures/exploratory/forest_A_2022_logistic_SE04.svg">SVG</a>): 0.7917 [0.6747, 0.8745]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2022_logistic_SE08.png">A_2022_logistic_SE08</a> (<a href="../../figures/exploratory/forest_A_2022_logistic_SE08.svg">SVG</a>): 0.7807 [0.6191, 0.8864]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2022_xgboost_SE02.png">A_2022_xgboost_SE02</a> (<a href="../../figures/exploratory/forest_A_2022_xgboost_SE02.svg">SVG</a>): 0.8398 [0.4990, 0.9650]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2022_xgboost_SE04.png">A_2022_xgboost_SE04</a> (<a href="../../figures/exploratory/forest_A_2022_xgboost_SE04.svg">SVG</a>): 0.7868 [0.6052, 0.8989]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2022_xgboost_SE08.png">A_2022_xgboost_SE08</a> (<a href="../../figures/exploratory/forest_A_2022_xgboost_SE08.svg">SVG</a>): 0.7689 [0.5907, 0.8847]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2022_soft_voting_SE02.png">A_2022_soft_voting_SE02</a> (<a href="../../figures/exploratory/forest_A_2022_soft_voting_SE02.svg">SVG</a>): 0.8354 [0.5466, 0.9553]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2022_soft_voting_SE04.png">A_2022_soft_voting_SE04</a> (<a href="../../figures/exploratory/forest_A_2022_soft_voting_SE04.svg">SVG</a>): 0.8020 [0.5829, 0.9215]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+<li><a href="../../figures/exploratory/forest_A_2022_soft_voting_SE08.png">A_2022_soft_voting_SE08</a> (<a href="../../figures/exploratory/forest_A_2022_soft_voting_SE08.svg">SVG</a>): 0.7716 [0.5953, 0.8858]; <strong>EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.</strong> Hypothetical missing SEs; four source groups assumed independent; heterogeneous tools, horizons, units and internal validation; not validated clinical accuracy.</li>
+</ul></body></html>
