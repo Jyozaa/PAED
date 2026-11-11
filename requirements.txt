@@ -1,0 +1,7 @@
+numpy==2.5.4
+pandas==3.1.1
+scipy==1.18.1
+matplotlib==3.11.2
+Markdown==3.11.3
+pytest==9.2.0
+pypdf==7.0.1

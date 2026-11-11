@@ -1,0 +1,6806 @@
+[
+  {
+    "source_row": 3,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 3,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 4,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 5,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 6,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 7,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 8,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 9,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 10,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 11,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 12,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 13,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 14,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 15,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 16,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 17,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 18,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 19,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 20,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 21,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 22,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 23,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 24,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 25,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 26,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 27,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 28,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "missing"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 0,
+    "analysis_field": "title",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 1,
+    "analysis_field": "full_text_url",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 2,
+    "analysis_field": "doi",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 3,
+    "analysis_field": "study_label",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 4,
+    "analysis_field": "authors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 5,
+    "analysis_field": "year",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 6,
+    "analysis_field": "country",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 7,
+    "analysis_field": "study_aim",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 8,
+    "analysis_field": "design",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 9,
+    "analysis_field": "setting",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 10,
+    "analysis_field": "recruitment",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 11,
+    "analysis_field": "age",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 12,
+    "analysis_field": "age_groups",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 13,
+    "analysis_field": "sex",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 14,
+    "analysis_field": "sample_size",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 15,
+    "analysis_field": "ca_prevalence",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 16,
+    "analysis_field": "conditions",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 17,
+    "analysis_field": "architecture_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 18,
+    "analysis_field": "modality_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 19,
+    "analysis_field": "feature_selection",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 20,
+    "analysis_field": "predictors",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 21,
+    "analysis_field": "time_series",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 22,
+    "analysis_field": "internal_validation",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 23,
+    "analysis_field": "external_validation_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 24,
+    "analysis_field": "split_sizes",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 25,
+    "analysis_field": "lead_time_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 26,
+    "analysis_field": "outcome_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 27,
+    "analysis_field": "frequency_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 28,
+    "analysis_field": "tp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 29,
+    "analysis_field": "fp_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 30,
+    "analysis_field": "fn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 31,
+    "analysis_field": "tn_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 32,
+    "analysis_field": "sensitivity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 33,
+    "analysis_field": "specificity_raw",
+    "missing_state": "not_reported"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 34,
+    "analysis_field": "auroc_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 35,
+    "analysis_field": "feature_themes_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 36,
+    "analysis_field": "comparator_raw",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 37,
+    "analysis_field": "raw_risk_of_bias",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 38,
+    "analysis_field": "raw_meta_regression",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 39,
+    "analysis_field": "raw_limitations",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 40,
+    "analysis_field": "additional_notes",
+    "missing_state": "observed"
+  },
+  {
+    "source_row": 29,
+    "source_column_index": 41,
+    "analysis_field": "assumptions",
+    "missing_state": "observed"
+  }
+]

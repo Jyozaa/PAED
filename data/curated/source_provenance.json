@@ -1,0 +1,31 @@
+{
+  "inputs": [
+    {
+      "filename": "Data extraction paeds cardiac arrest SR progress 5.xlsx - Sheet1.csv",
+      "sha256": "df81fd52381b0efb09f87e81c0eb68b876621cef5df795b5e2a2be047b62b0e1"
+    },
+    {
+      "filename": "List of Variables.pdf",
+      "sha256": "1e6130c2178646d77a31f8d32fa8fe00760e6ee62b365aa10193922ef400448f"
+    },
+    {
+      "filename": "PROSPERO.pdf",
+      "sha256": "564c6f76c7017ee078894634cb601481a65dd0fac1297f664fb5aaeabf77b9ad"
+    }
+  ],
+  "pdf_read_checks": [
+    {
+      "name": "List of Variables.pdf",
+      "pages": 3,
+      "text_characters": 3053
+    },
+    {
+      "name": "PROSPERO.pdf",
+      "pages": 7,
+      "text_characters": 13678
+    }
+  ],
+  "source_records": 27,
+  "header_rows": 2,
+  "source_numbering": "1-based logical CSV record, including both header records; physical multiline spans also supplied"
+}

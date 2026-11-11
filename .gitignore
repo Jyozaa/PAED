@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+/tmp/
+/data/local/
+/data/raw/
+/*.pdf
+/*.csv
+*.egg-info/
+.coverage
+PROSPERO.pdf
+List of Variables.pdf
+Data extraction paeds cardiac arrest SR progress 5.xlsx - Sheet1.csv
