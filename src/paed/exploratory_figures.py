@@ -34,7 +34,7 @@ def create(results,config,folder):
                          'svg.hashsalt':'paed_exploratory_v1'})
     A=[x for x in results['auroc_results'] if x['status']=='success_conditional']
     D=[x for x in results['diagnostic_results'] if x['status']=='success_conditional']
-    for row in A:
+    for row in [r for r in A if r['scenario_family']=='core_lu_logistic']:
         inputs=[x for x in results['auroc_inputs'] if x['scenario_id']==row['scenario_id']]
         fig,ax=plt.subplots(figsize=(13,5.8))
         for i,r in enumerate(inputs):
@@ -59,7 +59,7 @@ def create(results,config,folder):
         fig,axes=plt.subplots(1,2,figsize=(13,6.2),sharey=True)
         for ax,dallas in zip(axes,config['auroc']['dallas_alternatives']):
             for model,color in zip(config['auroc']['kenet_alternatives'],PALETTE):
-                rows=sorted([r for r in A if r['dallas_estimate_id']==dallas and r['kenet_estimate_id']==model],key=lambda x:x['assumed_se_auroc'])
+                rows=sorted([r for r in A if r['scenario_family']=='core_lu_logistic' and r['dallas_estimate_id']==dallas and r['kenet_estimate_id']==model],key=lambda x:x['assumed_se_auroc'])
                 x=np.array([r['assumed_se_auroc'] for r in rows]);y=np.array([r['pooled_auroc'] for r in rows])
                 ax.plot(x,y,'o-',color=color,label=KENET[model.removesuffix('_a1')])
                 ax.fill_between(x,[r['conditional_95_lower'] for r in rows],[r['conditional_95_upper'] for r in rows],color=color,alpha=.07)
@@ -72,6 +72,26 @@ def create(results,config,folder):
         fig.text(.025,.02,'Only one genuine CI exists (Yu 2023); substitution by Yu 2022 makes all four variances hypothetical. Curves are scenario comparisons, not clinical validation.',fontsize=9)
         fig.subplots_adjust(bottom=.22,top=.85,wspace=.15)
         save(fig,folder,'auroc_sensitivity')
+        fig,axes=plt.subplots(2,3,figsize=(15,9),sharey=True)
+        lu_ids=[config['auroc']['core_lu_estimate_id'],*config['auroc']['additional_lu_alternatives']]
+        lookup={r['estimate_id']:r for r in results['auroc_inputs']}
+        names=[lookup[x]['model_name'].replace('_',' ') for x in lu_ids]
+        low=min(r['pooled_auroc'] for r in A)-.025;high=max(r['pooled_auroc'] for r in A)+.025
+        for i,dallas in enumerate(config['auroc']['dallas_alternatives']):
+            for j,kenet in enumerate(config['auroc']['kenet_alternatives']):
+                ax=axes[i,j]
+                for se,color in zip(config['auroc']['assumed_auroc_scale_ses'],PALETTE):
+                    values=[next(r['pooled_auroc'] for r in A if r['lu_estimate_id']==lu and r['dallas_estimate_id']==dallas and r['kenet_estimate_id']==kenet and r['assumed_se_auroc']==se) for lu in lu_ids]
+                    ax.plot(range(len(lu_ids)),values,'o-',color=color,label=f'Assumed SE {se:.2f}')
+                ax.set_title(f'Yu {dallas.split("_")[1]}; Kenet {KENET[kenet.removesuffix("_a1")]}',fontsize=10)
+                ax.set_xticks(range(len(names)),names,rotation=45,ha='right',fontsize=8);ax.set_ylim(low,high);ax.grid(alpha=.15)
+        axes[0,0].set_ylabel('Conditional pooled AUROC');axes[1,0].set_ylabel('Conditional pooled AUROC')
+        handles,labels=axes[0,0].get_legend_handles_labels();fig.legend(handles,labels,loc='lower center',bbox_to_anchor=(.5,.12),ncol=3)
+        fig.suptitle('All eight retained Lu representatives: one Lu model per scenario',weight='bold')
+        fig.text(.025,.065,config['auroc']['warning'],fontsize=10,weight='bold',color='#8B3E1B')
+        fig.text(.025,.015,'Lu logistic is the core baseline; all seven other retained models are alternatives. Each point uses four source groups.\nLines compare categorical choices, not clinical trends; full conditional intervals and source uncertainty are tabulated for every scenario.',fontsize=9)
+        fig.subplots_adjust(top=.91,bottom=.27,hspace=.44,wspace=.15)
+        save(fig,folder,'lu_model_sensitivity')
     if D:
         c=config['diagnostic'];fig,axes=plt.subplots(1,3,figsize=(15,6.5),sharex=True,sharey=True)
         for ax,model in zip(axes,c['kenet_models']):

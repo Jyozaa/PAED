@@ -63,9 +63,9 @@ def test_2x2_correct_formulas_and_zero_denominators():
 
 
 def test_agreed_exclusions_and_cross_reference(evidence):
-    assert len(evidence['audit'])==27 and len(evidence['models'])==20
+    assert len(evidence['audit'])==27 and len(evidence['models'])==17
     assert len({r['study_id'] for r in evidence['models']})==5
-    assert not any(r['study_id']=='yu_2026' or r['model_id']=='yu_2023_gnb' for r in evidence['models'])
+    assert not any(r['study_id']=='yu_2026' or r['model_id'] in {'yu_2023_gnb','lu_2025_xgboost','lu_2025_gmlp','lu_2025_pedca_ft'} for r in evidence['models'])
     assert sum(x['study_id']=='yu_2026' for x in evidence['excluded'])==5
     assert next(x for x in evidence['excluded'] if x['source_row']==21)['record_type']=='cross_reference'
     assert any(r['study_id']=='kenet_2023' for r in evidence['models'])
@@ -95,6 +95,6 @@ def test_all_estimates_traceable_no_imputed_variance(evidence):
             for field in ['study_id','model_id','source_row','metric_source','prediction_horizon','validation_type','cohort_id','dependency_group','analysis_unit']:
                 assert r[field] is not None and r[field]!=''
     a=evidence['auroc']
-    assert len(a)==21 and sum(r['ci_lower'] is not None for r in a)==1
-    assert sum(r['uncertainty_type']=='unspecified_plus_minus' for r in a)==11
+    assert len(a)==18 and sum(r['ci_lower'] is not None for r in a)==1
+    assert sum(r['uncertainty_type']=='unspecified_plus_minus' for r in a)==8
     assert all(r['se_logit_approx'] is None for r in a if r['ci_lower'] is None)

@@ -2,14 +2,17 @@
   "scope": "team-agreed exploratory cohort; strict protocol assessment in parallel",
   "protocol_id": "CRD420251241478",
   "protocol_version": "3.0, published 2026-08-01; supplied snapshot 2026-11-04",
-  "decision_date": "2026-11-11",
+  "decision_date": "2026-11-12",
   "selection_hierarchy": [
     "Require an explicitly designated index model or a single model; do not rank by observed AUROC",
     "Prefer independent external validation, then patient-disjoint held-out internal test, then patient-disjoint cross-validation; flag apparent/unreported validation",
     "Keep horizons separate; extraction supplies the 1-hour values for Yu 2022/2023, but these peak values are not a prespecified cross-study horizon",
     "One estimate per conservative dependency group; unresolved overlap or representative-model choice blocks automatic pooling"
   ],
-  "exclusions": {"yu_2026": "Composite adverse event performance, not cardiac arrest alone", "yu_2023_gnb": "Graphical results without adequately extractable numerical estimates"},
+  "exclusions": {
+    "yu_2026": "Composite adverse event performance, not cardiac arrest alone",
+    "yu_2023_gnb": "Graphical results without adequately extractable numerical estimates"
+  },
   "auroc_method": "Guarded logit AUROC REML, modified Hartung-Knapp t interval; no fit without genuine variances and independent comparable selected estimates",
   "diagnostic_method": "Guarded R mada::reitsma bivariate random-effects model; binomial HSROC preferred if eligible data later warrant it",
   "rounding_tolerance": 0.00055,
@@ -18,6 +21,18 @@
   "minimum_bivariate_independent_cohorts": 5,
   "minimum_counts_note": "Conservative analyst feasibility safeguards for this project, not universal sample-size cutoffs; passing does not establish comparability or identifiability",
   "random_seed": 20261111,
-  "private_fields": ["additional_notes", "assumptions", "raw_risk_of_bias", "raw_meta_regression", "raw_limitations"],
-  "public_evidence_policy": "Aggregate extraction facts only; no supplied raw files, correspondence contents, personal contact details or unpublished free-text notes"
+  "private_fields": [
+    "additional_notes",
+    "assumptions",
+    "raw_risk_of_bias",
+    "raw_meta_regression",
+    "raw_limitations"
+  ],
+  "public_evidence_policy": "Aggregate extraction facts only; no supplied raw files, correspondence contents, personal contact details or unpublished free-text notes",
+  "revision_id": "exclude_graph_derived_lu_models",
+  "model_exclusions": {
+    "lu_2025_xgboost": "Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.",
+    "lu_2025_gmlp": "Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.",
+    "lu_2025_pedca_ft": "Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable."
+  }
 }

@@ -1,10 +1,12 @@
 # Figure captions
 
-All figures are exported as 220-dpi PNG and vector SVG. All are descriptive; no pooled forest plot or fitted HSROC was generated because neither model passed eligibility checks.
+All descriptive figures are PNG and SVG. No confirmatory pooled forest or fitted HSROC is generated.
 
-1. **auroc_descriptive**: 21 numerical AUROC evaluations from five reports/20 models. Bose training and test are separate. Only the supplied Yu 2023 genuine 95% CI is an error bar; Lu +/- variability is unspecified and not drawn as a CI. Different horizons, units and validation, plus shared cohorts, preclude pooled inference.
-2. **sensitivity_descriptive**: Eleven model/evaluation points. Complete matrices are recalculated; other source proportions remain descriptive. Three Lu points are graph-read (open markers). Kenet units are repeated five-minute windows, and Yu 2023's unit/horizon linkage is unresolved. No naive binomial CI or pooled point is shown.
-3. **specificity_descriptive**: Twelve model/evaluation points, including Bose's separate entire-dataset specificity. Count-derived Kenet random-forest specificity differs from its reported 77.8%; both are retained in tables. Units and CI limitations match the sensitivity plot.
-4. **sroc_descriptive**: Eleven model-specific sensitivity/specificity pairs in ROC space, with count-derived pairs where complete and reported pairs otherwise. The diagonal is a visual reference only. No threshold-aggregated curve, confidence region or SROC area is fitted. Six Kenet models are dependent; Yu 2023 linkage is uncertain; Lu points are graph-read.
-5. **heterogeneity_overview**: Five-report comparability/dependency matrix. All off-diagonal pairs lack adequate evidence for current pooling. Probable Dallas patient reuse is marked separately; no identified overlap elsewhere does not prove independence. Clinical comparability is detailed in the matrix CSV and heterogeneity report.
-6. **inclusion_flow**: Dataset audit only: 27 post-header records, 26 populated model entries/six reports, one cross-reference, six populated-model exclusions, five retained reports/20 models. The strict protocol subset has zero demonstrated eligible studies. Search and screening totals were not supplied; this is not a PRISMA literature-search flow chart.
+- **auroc_descriptive**: 18 numerical AUROC evaluations across 17 models/5 reports, including separate Bose training/test results. Only Yu 2023 has a supplied genuine CI. Lu has 8 retained models; XGBoost, gMLP and PEDCA-FT are excluded in full. Unspecified +/- quantities are not error bars. Units/horizons/validation differ and models share cohorts.
+- **sensitivity_descriptive**: eight retained model/evaluation points from Bose, Yu 2023 and Kenet; no Lu graph-derived points. Complete tables are recalculated. No patient-level/window-naive CIs are invented.
+- **specificity_descriptive**: nine evaluations including separate Bose entire-dataset specificity. Count-derived random-forest specificity remains distinct from reported 77.8%.
+- **sroc_descriptive**: eight model-specific operating pairs in ROC space, with no fitted curve, summary operating point or confidence region. Six Kenet points share windows; Yu linkage is unverified. Lu/Yu 2022 contribute no eligible operating points.
+- **heterogeneity_overview**: all five reports and ten pairs, retaining possible Dallas reuse and current pooling limitations.
+- **inclusion_flow**: extraction-only audit of 27 post-header records, 26 populated models/six original reports, one cross-reference, nine model exclusions and 17 retained models/five reports. Not a PRISMA search/screening flow.
+
+Exploratory figures are separately captioned in their scenario reports and carry explicit assumption warnings. The short LaTeX report includes the revised AUROC figure only; no sensitivity/specificity graph is included in that document.

@@ -1,4 +1,4 @@
 analysis,status,pooled_estimate_produced,reason
-auroc,not_statistically_defensible,False,Fewer than 3 eligible independent estimates; Only Yu 2023 has a supplied genuine CI; 11 Lu +/- values have unspecified meaning; Yu 2022/2023 may reuse patients; no covariance supplied; Different horizons/units/validation types; Kenet representative-model selection unresolved
+auroc,not_statistically_defensible,False,Fewer than 3 eligible independent estimates; Only Yu 2023 has a supplied genuine CI; 8 retained Lu +/- values have unspecified meaning; Yu 2022/2023 may reuse patients; no covariance supplied; Different horizons/units/validation types; Kenet representative-model selection unresolved
 diagnostic,not_statistically_defensible,False,"Fewer than 5 eligible independent datasets; Six Kenet models share the same 3059 windows from 229 test patients (5 CA); no clustering adjustment; Yu 2023 representative fold has 218 units; model attribution, threshold and horizon unresolved; Even optimistic study-source independence gives only two sources for five bivariate location/covariance parameters"
 strict_protocol,eligibility_assessment,False,

@@ -1,27 +1,12 @@
-# EXPLORATORY: diagnostic joint pooling results
+# Revised exploratory diagnostic joint calculations
 
-The supplied extraction is authoritative for this task and has not been independently verified against original papers. No new studies, external confidence intervals, author correspondence or patient-level records were consulted. Reported source values are unchanged. Original confirmatory feasibility conclusions and descriptive outputs are preserved. The numbers here are **conditional pooled calculations**, not the primary evidence-supported findings or established clinical accuracy.
+This eligibility revision wholly excludes Lu 2025 XGBoost, gMLP and PEDCA-FT because their sensitivity/specificity was graphically extracted and considered insufficiently reliable. Their AUROCs are excluded with the entries; this does not assert that those AUROCs were graphical. The revised extraction retains five reports and 17 models, including eight Lu models. Other Lu models remain eligible despite missing operating points. Only the supplied sources and existing derivatives are used. Original source hashes are unchanged and no new papers, clinical data or correspondence were obtained. Confirmatory pooling remains unsupported; every pooled number here is explicitly conditional on analyst assumptions.
 
-**96/96 configured conditional GLS scenarios solved successfully.** Each contains one Kenet model and the Yu 2023 representative-fold table: two assumed independent source summaries, not seven independent studies or two verified patient datasets. Across all configurations, summary sensitivity ranges **0.872956-0.982449** and specificity **0.655968-0.874968**. These separate scenario extrema need not occur in the same scenario and are not confidence intervals.
+**96/96 scenarios** solved under the same covariance assumptions as before. All previous numeric columns are identical: **True**. Maximum absolute numerical difference: **0.0**. The calculations were executed again; previous pooled numbers were not substituted as new results.
 
 EXPLORATORY — clustered windows, unresolved analysis units and assumed statistical parameters.
 
-Two source summaries; Kenet clustered windows and mixed-age sample; Yu attribution/unit/threshold/horizon unresolved; all covariance assumptions conditional; not validated patient-level accuracy. All heterogeneity parameters are fixed assumptions, not empirical estimates. The original counts remain unchanged; all 192 source-scenario rows, analysis units, linkage caveats, sampling/total covariances and GLS weight matrices are in the [diagnostic input/covariance/weight ledger](../../results/exploratory/diagnostic_scenario_inputs.csv).
-
-## Assumed between-source covariance matrices
-
-| T ID | SD sensitivity | SD FPR | rho sensitivity/FPR | matrix [[T11,T12],[T12,T22]] |
-| --- | --- | --- | --- | --- |
-| T0 | 0.0 | 0.0 | 0.0 | [[0.0, 0.0], [0.0, 0.0]] |
-| T05Rneg | 0.5 | 0.5 | -0.5 | [[0.25, -0.125], [-0.125, 0.25]] |
-| T05R0 | 0.5 | 0.5 | 0.0 | [[0.25, 0.0], [0.0, 0.25]] |
-| T05Rpos | 0.5 | 0.5 | 0.5 | [[0.25, 0.125], [0.125, 0.25]] |
-| T1R0 | 1.0 | 1.0 | 0.0 | [[1.0, 0.0], [0.0, 1.0]] |
-
-
-D means variance inflation: Kenet 1/5/20; Yu 1/5. Primary within-source rho=0. The six focused within-rho variants use Kenet D=5, Yu D=1, T05R0 and rho=-0.5/+0.5. Intervals condition on these choices, assume approximate normal logits, and do not include uncertainty in covariance parameters or extraction validity. All tables include a small-cell approximation warning because Yu has FN=4; XGBoost additionally has FN=1.
-
-## Unchanged observed count tables used
+Two source summaries; Kenet clustered windows and mixed-age sample; Yu attribution/unit/threshold/horizon unresolved; all covariance assumptions conditional; not validated patient-level accuracy. Lu never contributed a complete count table to these scenarios. All source counts and settings remain unchanged. Summary sensitivity range is 0.872956-0.982449; specificity range is 0.655968-0.874968. Separate extrema are not a joint operating point or uncertainty interval.
 
 | model_id | source_row | tp | fp | fn | tn | analysis_unit |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -31,9 +16,16 @@ D means variance inflation: Kenet 1/5/20; Yu 1/5. Primary within-source rho=0. T
 | kenet_2023_xgboost | 26 | 210 | 866 | 1 | 1982 | repeated_5_minute_window |
 
 
-Only one Kenet row accompanies Yu in each scenario.
+| T | SD sensitivity | SD FPR | rho sensitivity/FPR | fixed covariance matrix |
+| --- | --- | --- | --- | --- |
+| T0 | 0.0 | 0.0 | 0.0 | [[0.0, 0.0], [0.0, 0.0]] |
+| T05Rneg | 0.5 | 0.5 | -0.5 | [[0.25, -0.125], [-0.125, 0.25]] |
+| T05R0 | 0.5 | 0.5 | 0.0 | [[0.25, 0.0], [0.0, 0.25]] |
+| T05Rpos | 0.5 | 0.5 | 0.5 | [[0.25, 0.125], [0.125, 0.25]] |
+| T1R0 | 1.0 | 1.0 | 0.0 | [[1.0, 0.0], [0.0, 1.0]] |
 
-## Every configured scenario
+
+## Every scenario and its conditional marginal intervals
 
 | scenario | Kenet | Kenet D | Yu D | T | within rho | conditional sensitivity [95%] | conditional specificity [95%] | status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -135,18 +127,12 @@ Only one Kenet row accompanies Yu in each scenario.
 | D_xgboost_K5_Y1_T05R0_W+0.5 | xgboost | 5 | 1 | T05R0 | 0.5 | 0.9218 [0.7525, 0.9786] | 0.6762 [0.5055, 0.8102] | success_conditional |
 
 
-Every bracket is a **conditional marginal** 95% interval, not a reported study CI or validated patient-level interval. Full precision and diagnostics are in [diagnostic_scenario_results.csv](../../results/exploratory/diagnostic_scenario_results.csv). No unrestricted covariance/HSROC fit was claimed. Closed-form solutions are checked by positive-definite covariance, normal equations and condition numbers; large conditional residual diagnostics remain visible.
+Maximum linear-equation residual: 5.73e-14. Large conditional residual warnings: 8 scenarios. Sparse-cell approximation warnings remain for all scenarios. T is fixed, not estimated; the solve is closed form, not iterative convergence. No HSROC is fitted.
 
-## Numerical diagnostics
+![Conditional joint regions](../../figures/exploratory/diagnostic_joint_summaries.png)
 
-Maximum normal-equation residual: 5.73e-14; maximum covariance/precision condition number: 605.543. There are 8 scenarios with large conditional residual discrepancy warnings, retained in the table/ledger. This signals tension under the specified covariance model, not an estimated heterogeneity parameter. All 96 scenarios have sparse-cell approximation warnings. No warnings are used to select favourable scenarios.
-
-## Conditional joint regions
-
-![Joint summaries](../../figures/exploratory/diagnostic_joint_summaries.png)
-
-Caption: one panel per Kenet model; fixed T05R0 (SDs=0.5, rho=0), Yu D=1, within rho=0; Kenet D=1/5/20 varies. Lines are transformed **joint confidence ellipses** under supplied covariance, not fitted SROC curves or prediction regions. EXPLORATORY — clustered windows, unresolved analysis units and assumed statistical parameters. Two source summaries; Kenet clustered windows and mixed-age sample; Yu attribution/unit/threshold/horizon unresolved; all covariance assumptions conditional; not validated patient-level accuracy.
+EXPLORATORY — clustered windows, unresolved analysis units and assumed statistical parameters. T05R0, Yu inflation=1, within rho=0, Kenet D=1/5/20; transformed confidence ellipses are conditional on covariance, not prediction regions or fitted ROC curves.
 
 ![Diagnostic sensitivity](../../figures/exploratory/diagnostic_sensitivity.png)
 
-Caption: all five T choices across Kenet D=1/5/20, per model, holding Yu D=1 and within rho=0. Lines connect assumption scenarios and omit error bars for legibility; all conditional intervals and additional variants are tabulated. EXPLORATORY — clustered windows, unresolved analysis units and assumed statistical parameters. Two source summaries; Kenet clustered windows and mixed-age sample; Yu attribution/unit/threshold/horizon unresolved; all covariance assumptions conditional; not validated patient-level accuracy.
+EXPLORATORY — clustered windows, unresolved analysis units and assumed statistical parameters. Five fixed T choices, Yu inflation=1, within rho=0 shown; all additional Yu/correlation variants are tabulated. These graphs remain separate exploratory artifacts and are not included in the short LaTeX report.

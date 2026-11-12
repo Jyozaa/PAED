@@ -1,34 +1,52 @@
-# EXPLORATORY: meta-analysis methods
+# Revised exploratory meta-analysis methods
 
-The supplied extraction is authoritative for this task and has not been independently verified against original papers. No new studies, external confidence intervals, author correspondence or patient-level records were consulted. Reported source values are unchanged. Original confirmatory feasibility conclusions and descriptive outputs are preserved. The numbers here are **conditional pooled calculations**, not the primary evidence-supported findings or established clinical accuracy.
+This eligibility revision wholly excludes Lu 2025 XGBoost, gMLP and PEDCA-FT because their sensitivity/specificity was graphically extracted and considered insufficiently reliable. Their AUROCs are excluded with the entries; this does not assert that those AUROCs were graphical. The revised extraction retains five reports and 17 models, including eight Lu models. Other Lu models remain eligible despite missing operating points. Only the supplied sources and existing derivatives are used. Original source hashes are unchanged and no new papers, clinical data or correspondence were obtained. Confirmatory pooling remains unsupported; every pooled number here is explicitly conditional on analyst assumptions.
 
-## Scope, selections and provenance
+## Versioned eligibility and provenance
 
-Working extraction: five reports/20 models with Yu 2026 and Yu 2023 Gaussian Naive Bayes excluded. Computations read only the existing AUROC and diagnostic CSVs plus explicit configuration, retaining source record, model, cohort/dependency identifier and units in every ledger. The baseline hashes protect 67 original scientific/configuration/data files. Original execution metadata may change only on an intentional original-pipeline rerun; this extension does not rewrite it.
+The parent `exploratory-pooling` branch preserves the previous 20-model results. Immutable aggregate snapshots supply the before/after comparisons and are checked against their parent Git commit. The original integrity record is retained in `config/baselines/analysis_20_model_integrity.json` and validated against its historical Git tree. A separate 17-model baseline protects current scientific outputs/configuration/data, following descriptive validation. Original raw and curated source data are never rewritten to accommodate exclusions. The revision explicitly replaces outdated expectations rather than disabling them.
 
-AUROC factorial: 2 mutually exclusive Dallas reports x 3 Kenet choices x 3 assumed missing SEs = 18 scenarios. Fixed choices are Lu PEDCA-FT and Bose **held-out** test. Default selection is Yu 2023 plus Kenet logistic regression, reported at all three SE assumptions; no single assumption is called empirical truth. Clinical independence between four conservative source groups is assumed, not established.
+## AUROC selections and scenario families
 
-Diagnostic factorial: 3 Kenet choices x 3 Kenet design effects x 2 Yu inflation factors x 5 fixed T specifications = 90 scenarios. Six additional focused within-source-correlation variants (3 models x 2 correlations) give 96 total. No scenario contains multiple Kenet algorithms as separate sources.
+Core scenarios use Lu logistic regression **0.6292**, Bose held-out GLM **0.7500**, Yu 2023 RDN Boost **0.8500** or Yu 2022 logistic **0.8300**, and one Kenet model (logistic **0.8670**, XGBoost **0.9710**, soft voting **0.9570**). Lu logistic is an analyst-selected conventional baseline after exclusion of the named index, not an original verified primary designation. All 18 core scenarios cross 2 mutually exclusive Dallas choices, 3 Kenet choices and 3 missing-SE assumptions.
 
-## AUROC normal random-effects model
+Every other retained Lu numerical AUROC is substituted in source-record order, with the same full cross. This produces 126 additional scenarios, 144 total, one Lu model per scenario. No model is selected to maximize the pooled result, and the potentially overlapping Dallas reports never contribute together. Four source groups are assumed independent for calculation, not proven independent clinical cohorts.
 
-For source i, y_i=logit(AUC_i). The conditional model is y_i ~ N(mu, v_i+tau²). For genuinely labelled Yu 2023 CI, use the existing endpoint approximation SE_logit=[logit(0.90)-logit(0.79)]/(2*1.95996398454)=0.22252939; CI construction is still unverified. For missing uncertainty, set original-scale SE=s in {0.02,0.04,0.08} and use delta SE_logit=s/[p(1-p)]. These are explicitly **assumed**, not extracted SEs or reconstructed confidence limits.
+| estimate | source row | individual AUROC | uncertainty |
+| --- | --- | --- | --- |
+| lu_2025_logistic_a1 | 11 | 0.6292 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| bose_2019_glm_a2 | 19 | 0.75 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| yu_2023_rdn_boost_a1 | 20 | 0.85 | genuine 95% CI 0.79-0.9 |
+| kenet_2023_logistic_a1 | 23 | 0.867 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| kenet_2023_xgboost_a1 | 26 | 0.971 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| kenet_2023_soft_voting_a1 | 28 | 0.957 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| yu_2022_logistic_a1 | 29 | 0.83 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| lu_2025_knn_dtw_a1 | 8 | 0.5527000000000001 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| lu_2025_svc_gak_a1 | 9 | 0.5472 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| lu_2025_knn_unif_a1 | 10 | 0.5740999999999999 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| lu_2025_rf_gini_a1 | 12 | 0.7329000000000001 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| lu_2025_lightgbm_a1 | 14 | 0.6142 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| lu_2025_tabnn_a1 | 15 | 0.6215999999999999 | hypothetical original-scale SE 0.02/0.04/0.08 |
+| lu_2025_tresnet_a1 | 16 | 0.7221 | hypothetical original-scale SE 0.02/0.04/0.08 |
 
-The installed primary implementation is `statsmodels.stats.meta_analysis.combine_effects(method_re="iterated")`, **Paule–Mandel**, not REML. Its installed source documents checks against metafor; it was inspected locally and is independently tested here against equal-variance analytic and unequal-variance bracketed-root solutions using synthetic numerical examples (no new clinical data). The PM estimate solves sum[w_i(tau²)*(y_i-mu_w)²]=k-1 if Q(0)>k-1, otherwise tau²=0. We verify that equation or boundary inequality for every fit. Maximum iterations=1000, equation tolerance=1e-07.
 
-If a library iteration fails the equation check, preserve the failure and solve the **same PM equation** by configured SciPy `brentq` bracketing. This changes the numerical solver only, not source values, estimator or assumptions. A failed fallback yields no pooled result. All attempts, including unsuccessful initial attempts, are in `fit_attempts.csv`.
+## Random-effects estimator and intervals
 
-Weights are 1/(v_i+tau²). Conditional pooled logit mu=sum(w_i*y_i)/sum(w_i). Modified Hartung–Knapp variance=max[1/sum(w_i), Q(tau²)/((k-1)*sum(w_i))], using t critical value with k-1=3 degrees of freedom. Transform mu and interval endpoints by expit. This scale floor prevents the H-K adjustment narrowing below the conventional variance at a zero-heterogeneity boundary. Report tau² on **logit** scale, Q, root residual, boundary status, weights, warnings and solver. No I², clinical prediction interval or p-value is used to claim validity.
+For source i, y_i=logit(AUC_i), v_i=SE_logit²; y_i follows a conditional normal random-effects model with mean mu and variance v_i+tau². Genuine Yu 2023 CI-derived logit SE remains 0.22252939, with unverified CI construction. For every missing SE, s=0.02/0.04/0.08 is **assumed on the AUROC scale**, and delta SE_logit=s/[p(1-p)]. None of Lu's unspecified +/- quantities is used as an SE.
+
+The estimator remains **Paule-Mandel**, implemented in `statsmodels.stats.meta_analysis.combine_effects(method_re="iterated")`, not REML. It solves Q(tau²)=k-1 for a positive root or uses a valid zero boundary if Q(0)<=k-1. Every accepted root/boundary is checked. If the library iteration fails that check, the failure is preserved and the same equation is solved using configured SciPy `brentq`, with no input or estimator changes. Unsuccessful final fits have no numerical pooled estimate or forest.
+
+Weights are 1/(v_i+tau²); mu=sum(w_i*y_i)/sum(w_i). Modified Hartung-Knapp variance is max[1/sum(w_i),Q(tau²)/((k-1)*sum(w_i))], using t(3) for four source groups. Pooled point/conditional 95% endpoints are back-transformed by expit. Tau² is estimated on logit scale conditional on hypothetical sampling variances. Zero tau² does not establish clinical homogeneity. No clinical prediction interval, I² or p-value is used to establish validity.
 
 EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.
 
-## Joint diagnostic normal-logit model with fixed heterogeneity
+## Diagnostic constrained joint model
 
-For each unchanged table, z_i=(log(TP/FN), log(FP/TN))'=(logit sensitivity, logit FPR)'. Within covariance S_i has diagonal D_i*(1/TP+1/FN) and D_i*(1/FP+1/TN). Its off-diagonal is rho_within*sqrt(S11*S22), with primary rho_within=0 and focused alternatives -0.5/+0.5 for both sources. D_Kenet=1/5/20; D_Yu=1/5. Disjoint-class binomial independence motivates the naive zero correlation, but repeated patients can link both outcomes; all these covariances are assumptions. Counts are never divided, rounded or replaced by effective counts.
+All 96 prior diagnostic configurations are **rerun unchanged**: one Kenet table plus the Yu representative-fold table. Kenet variance inflation D=1/5/20; Yu inflation=1/5; five fixed between-source covariance choices give 90 scenarios. Six focused within-correlation alternatives (-0.5/+0.5 for both sources, Kenet D=5, Yu D=1, T05R0) give 96 total. Counts remain observed integers in their window/unresolved units, never invented effective patient samples.
 
-Let T be the **prespecified** between-source covariance, V_i=S_i+T, P_i=V_i^(-1). Then C=(sum P_i)^(-1), mu=C*sum(P_i*z_i). This is generalized least squares for z_i ~ N_2(mu,V_i), integrating Gaussian source-level random effects when T>0. T0 gives a common-logit constraint, not estimated random heterogeneity. All covariance choices are explicit:
+For each table z_i=(log(TP/FN),log(FP/TN))', the sensitivity/FPR logits. S_i has diagonal D*(1/TP+1/FN) and D*(1/FP+1/TN), and covariance rho_within*sqrt(S11*S22). Primary within rho is zero. Between-source covariance T is **fixed, not estimated**:
 
-| T ID | SD sensitivity | SD FPR | rho sensitivity/FPR | matrix [[T11,T12],[T12,T22]] |
+| T | SD sensitivity | SD FPR | rho sensitivity/FPR | fixed covariance matrix |
 | --- | --- | --- | --- | --- |
 | T0 | 0.0 | 0.0 | 0.0 | [[0.0, 0.0], [0.0, 0.0]] |
 | T05Rneg | 0.5 | 0.5 | -0.5 | [[0.25, -0.125], [-0.125, 0.25]] |
@@ -37,18 +55,12 @@ Let T be the **prespecified** between-source covariance, V_i=S_i+T, P_i=V_i^(-1)
 | T1R0 | 1.0 | 1.0 | 0.0 | [[1.0, 0.0], [0.0, 1.0]] |
 
 
-Correlations refer to sensitivity/FPR logits, not sensitivity/specificity. Matrices with nonzero correlation can change both GLS mean coordinates through cross-coordinate weighting; results need not equal separate univariate inverse-variance summaries. The complete [diagnostic input/covariance/weight ledger](../../results/exploratory/diagnostic_scenario_inputs.csv) records S_i, V_i and the 2x2 coefficient matrices C*P_i, which sum to identity.
+With V_i=S_i+T and P_i=V_i^(-1), GLS gives C=(sum P_i)^(-1), mu=C*sum(P_i*z_i). Sensitivity=expit(mu_1), specificity=expit(-mu_2). Marginal conditional 95% intervals transform normal limits using C; specificity reverses the FPR sign correctly. Joint confidence regions use chi-square(2,0.95) ellipses in logit coordinates, transformed to ROC space. They are not fitted HSROC curves or study prediction regions.
 
-Report sensitivity=expit(mu_1), specificity=expit(-mu_2). Marginal conditional 95% intervals transform mu_j +/- 1.95996398454*sqrt(C_jj), reversing FPR to specificity correctly. Joint regions use (u-mu)'C^(-1)(u-mu)<=chi²(2,0.95) on logit coordinates, transformed to ROC space. They are **confidence regions conditional on covariance**, not study prediction regions or fitted HSROC curves. Point/covariance solves are closed form; iterative convergence and Bayesian priors/MCMC do not apply.
-
-Check all covariance eigenvalues, normal-equation residuals and condition numbers. Q_conditional=sum[(z_i-mu)'P_i(z_i-mu)] is a conditional residual diagnostic with 4-2=2 degrees of freedom if covariance were truly known, not an empirical T estimate. Sparse-cell and large conditional residual warnings remain in output; no adverse scenario is suppressed.
+Positive covariance, normal-equation residuals and condition numbers are checked. The conditional residual quadratic has two residual degrees of freedom under known-assumed covariance; it does not empirically estimate T. With two paired sources, unrestricted covariance estimation remains unstable; the residual scatter has rank at most one. Parameter counting alone is not asserted as a structural-identifiability theorem. Sparse cells and large conditional residuals are recorded, not suppressed.
 
 EXPLORATORY — clustered windows, unresolved analysis units and assumed statistical parameters.
 
-## Why no unrestricted covariance fit
+## Reproduction
 
-Two paired source observations supply four scalar logits. After two mean coordinates, the ordinary residual scatter has rank at most one; attempting to learn two random-effect variances and a correlation would be extremely unstable/boundary-prone. Parameter counting alone is not asserted as a general structural-identifiability theorem. No reliable unrestricted fit or empirical between-study correlation is claimed. Prespecifying T makes the conditional GLS problem solvable without pretending T was learned from these two sources.
-
-## Reproduction and software
-
-Run `make exploratory`, then `make verify-exploratory`. The separate runner records input/configuration/output hashes, source revision, versions, original-source hash references, all scenarios, attempted/accepted fits and full tests in `results/exploratory/run_manifest.json`. Computation is deterministic; no random simulation is used. Public curated reproduction requires no raw files or external evidence. Original `make all` remains a separate descriptive workflow.
+`make revised` rebuilds descriptive outputs, all 144 AUROC/96 diagnostic scenarios, comparisons and the LaTeX PDF, then runs the full tests and verifies hashes. `make exploratory` runs the scenario layer against already revised descriptive data; `make verify-exploratory` checks its provenance and outputs. Core forests are provided for 18 scenarios; all 126 alternatives are fully tabulated and plotted in a dedicated comparison. Runtime, versions, commands, failures and assumptions appear in execution manifests.

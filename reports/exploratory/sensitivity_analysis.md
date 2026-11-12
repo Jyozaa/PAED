@@ -1,14 +1,28 @@
-# EXPLORATORY: sensitivity analysis
+# Revised scenario sensitivity and before/after comparison
 
-The supplied extraction is authoritative for this task and has not been independently verified against original papers. No new studies, external confidence intervals, author correspondence or patient-level records were consulted. Reported source values are unchanged. Original confirmatory feasibility conclusions and descriptive outputs are preserved. The numbers here are **conditional pooled calculations**, not the primary evidence-supported findings or established clinical accuracy.
+This eligibility revision wholly excludes Lu 2025 XGBoost, gMLP and PEDCA-FT because their sensitivity/specificity was graphically extracted and considered insufficiently reliable. Their AUROCs are excluded with the entries; this does not assert that those AUROCs were graphical. The revised extraction retains five reports and 17 models, including eight Lu models. Other Lu models remain eligible despite missing operating points. Only the supplied sources and existing derivatives are used. Original source hashes are unchanged and no new papers, clinical data or correspondence were obtained. Confirmatory pooling remains unsupported; every pooled number here is explicitly conditional on analyst assumptions.
 
-The following are matched-scenario contrasts, changing one configured factor at a time. They are not causal model comparisons or hypothesis tests. All paired scenarios and numerical deltas are in [sensitivity_contrasts.csv](../../results/exploratory/sensitivity_contrasts.csv). The table reports maximum absolute changes over the configured grid only; larger changes under unexamined assumptions remain possible.
+| measure | previous | revised |
+| --- | --- | --- |
+| Retained study reports | 5 | 5 |
+| Retained models | 20 | 17 |
+| Retained Lu models | 11 | 8 |
+| Lu reported AUROC range | 0.5472-0.7504 | 0.5472-0.7329 |
+| Core AUROC scenarios | 18 | 18 |
+| Core conditional pooled AUROC range | 0.7689-0.8451 | 0.7241-0.8305 |
+| Additional retained-Lu AUROC scenarios | 0 | 126 |
+| All revised Lu-choice conditional pooled AUROC range | Not previously assessed | 0.7120-0.8441 |
+| Diagnostic scenarios | 96 | 96 |
+| Conditional diagnostic sensitivity (%) | 87.2956-98.2449 | 87.2956-98.2449 |
+| Conditional diagnostic specificity (%) | 65.5968-87.4968 | 65.5968-87.4968 |
 
-| analysis | assumption changed | matched pairs | max absolute delta AUROC | max absolute delta sensitivity (pp) | max absolute delta specificity (pp) |
+
+| analysis | factor | matched pairs | max absolute delta AUROC | max absolute sensitivity change (pp) | max absolute specificity change (pp) |
 | --- | --- | --- | --- | --- | --- |
-| auroc | Assumed AUROC SE | 18 | 0.070867 |  |  |
-| auroc | Kenet model | 18 | 0.041046 |  |  |
-| auroc | Dallas substitution | 9 | 0.042934 |  |  |
+| auroc | Assumed AUROC SE | 144 | 0.102521 |  |  |
+| auroc | Kenet model | 144 | 0.050236 |  |  |
+| auroc | Dallas substitution | 72 | 0.044747 |  |  |
+| auroc | Lu representative | 504 | 0.061532 |  |  |
 | diagnostic | Between-source covariance | 180 |  | 3.308 | 8.404 |
 | diagnostic | Yu variance inflation | 45 |  | 3.563 | 9.115 |
 | diagnostic | Kenet design effect | 90 |  | 6.591 | 13.400 |
@@ -16,34 +30,32 @@ The following are matched-scenario contrasts, changing one configured factor at 
 | diagnostic | Within-source correlation | 9 |  | 0.172 | 0.784 |
 
 
-## 1. Assumed AUROC SE
+Matched contrasts change one configured factor at a time; they are not superiority tests or sampling confidence intervals. The expanded Lu-choice grid is distinguished from the 18 revised core scenarios. Saved predecessor results and all paired changes are independently checked against the parent Git commit.
 
-Increasing assumed original-scale uncertainty changes transformed variances, study weights and estimated tau². The pooled result need not move monotonically or its interval widen monotonically, because relative weights and estimated random heterogeneity change together. The genuine Yu 2023 CI is retained while other SEs vary. Across all 18 configurations, pooled AUROC spans 0.7689-0.8451; this is not an uncertainty interval over a probability model of assumptions.
+1. Changing assumed AUROC SE changes logit precision, weights and estimated tau². Changes need not be monotonic, and conditional intervals need not widen monotonically as the estimated random variance also changes.
+2. Changing Kenet model is always a separate scenario, not extra independent data. No architecture winner is inferred.
+3. Substituting Yu 2022 changes both its point and uncertainty provenance, since all four variances then become hypothetical. Dallas reports never appear together.
+4. Inflating Kenet covariance changes its influence and conditional logit-mean covariance while preserving all counts; the design effects are unmeasured assumptions.
+5. T, Yu inflation and correlation choices remain hypothetical. The diagnostic grid is numerically unchanged by the Lu exclusions, not newly validated by numerical reproduction.
+6. All original source-data limitations persist across assumptions. Stable numbers do not establish clinical validity.
+7. No unique pooled clinical accuracy is supported. Wider or apparently precise scenarios are not automatically adequate corrections for bias, clustering, thresholds or unverified units.
 
-## 2. Representative Kenet model
+## Additional Lu selection sensitivity
 
-All logistic, soft-voting and XGBoost choices are reported; no observed maximum is selected as the preferred conclusion. A constant original-scale SE corresponds to a larger logit SE near AUROC=1, so high reported AUROC does not guarantee high inverse-variance weight. The full weight ledger makes this visible. Model-selection sensitivity does not establish an architecture winner.
+| lu_model_id | individual_auroc | scenario_count | pooled_min | pooled_max | max_absolute_change_from_matched_lu_logistic |
+| --- | --- | --- | --- | --- | --- |
+| lu_2025_logistic | 0.6292 | 18 | 0.7240731071621067 | 0.8305023589110181 | 0.0 |
+| lu_2025_knn_dtw | 0.5527000000000001 | 18 | 0.7127655421224767 | 0.8210303676945517 | 0.020428806993685877 |
+| lu_2025_svc_gak | 0.5472 | 18 | 0.7119517745376744 | 0.820346029449468 | 0.021728795179537075 |
+| lu_2025_knn_unif | 0.5740999999999999 | 18 | 0.7159313582816196 | 0.8236824921328535 | 0.015193310238810875 |
+| lu_2025_rf_gini | 0.7329000000000001 | 18 | 0.7659480078673743 | 0.8440928251643599 | 0.04187490070526756 |
+| lu_2025_lightgbm | 0.6142 | 18 | 0.7218597124098084 | 0.8286391697187089 | 0.0044322806190745245 |
+| lu_2025_tabnn | 0.6215999999999999 | 18 | 0.7229521528741276 | 0.8295571084633281 | 0.002277697844302984 |
+| lu_2025_tresnet | 0.7221 | 18 | 0.7611830589808515 | 0.8425747545892683 | 0.03710995181874477 |
 
-## 3. Substitute Yu 2022
-
-Yu 2022 replaces, never accompanies, Yu 2023. This changes both the source estimate (0.83 versus 0.85) and uncertainty provenance: Yu 2023 has a labelled CI, while Yu 2022's variance is assumed. The matched contrast is a joint substitution, not an isolated estimate of a publication-year or algorithm effect.
-
-## 4. Kenet clustering assumptions
-
-D=1 is the naive independence scenario, not an endorsed analysis of windows. D=5/20 inflate source covariance while preserving counts and logit points. Relative source influence changes and conditional logit-mean variances increase when only a source covariance is inflated at fixed T/rho. Summary point estimates can shift toward Yu, with the direction depending on the selected Kenet model. The illustrative D values do not identify real ICCs or validate an effective patient count.
-
-## 5. Between-source and within-source covariance
-
-T0 assumes no between-source heterogeneity; T05 assumes SDs=0.5 with three correlations; T1 assumes SDs=1 with zero correlation. All are fixed, not estimated. Yu inflation and within-rho checks are separate sensitivity axes. These assumptions change the joint weights, means and intervals; correlation is in sensitivity/FPR coordinates. The transformed conditional summaries span sensitivity 0.8730-0.9824, specificity 0.6560-0.8750. Separate extremes are not one simultaneous operating point. Known-assumed-covariance intervals omit uncertainty about T, D and rho.
-
-## 6. Relatively stable conclusions
-
-Within this grid AUROC summaries remain above 0.5, but that numerical pattern is conditional on selected reported points, assumed uncertainty and model form. The source-data facts remain stable: genuine AUROC uncertainty is scarce; Kenet observations are repeated windows; Yu linkage remains unresolved; no confirmed external validation or universal threshold is added. Numerical stability does not validate clinical accuracy.
-
-## 7. Results too assumption-dependent for clinical interpretation
-
-There is no unique pooled AUROC or diagnostic operating point that can be selected as the evidence-supported answer. The apparently precise T0/D1 result assumes independence and zero heterogeneity that the extraction does not establish. Wider scenarios are not automatically adequate either. These summaries cannot determine patient-level missed arrests, alert burden, deployment safety or prospective benefit.
 
 EXPLORATORY — uncertainty assumptions supplied by analyst; not validated pooled clinical accuracy.
 
 EXPLORATORY — clustered windows, unresolved analysis units and assumed statistical parameters.
+
+See [full before/after comparison](../revisions/exclusion_comparison.md), all source/weight/covariance ledgers, and the complete scenario tables. No missing source information was invented.

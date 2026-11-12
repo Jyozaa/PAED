@@ -1,13 +1,14 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>table1 study characteristics</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="table-1-team-agreed-exploratory-study-characteristics">Table 1. Team-agreed exploratory study characteristics</h1>
-<p>Five study reports, four conservative potential dependency groups; no confirmed external validation. Full precision and all characteristics are in the CSV.</p>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>table1 study characteristics</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="study-characteristics">Study characteristics</h1>
+<p>Revised dataset: 5 study reports and 17 models.</p>
 <table>
 <thead>
 <tr>
 <th>study_id</th>
+<th>retained_models</th>
 <th>sample_size_and_ca</th>
 <th>icu_setting</th>
-<th>training_validation</th>
 <th>model_architectures</th>
+<th>training_validation</th>
 <th>prediction_horizon</th>
 <th>reporting_limitations</th>
 </tr>
@@ -15,46 +16,51 @@
 <tbody>
 <tr>
 <td>lu_2025</td>
+<td>8</td>
 <td>3,566 patients; 4,672 admissions; 4.0% patient and 3.1% admission CA proportions (rounded; exact counts not supplied)</td>
 <td>CICU</td>
+<td>knn dtw; svc gak; knn unif; logistic; rf gini; lightgbm; tabnn; tresnet</td>
 <td>Five-fold CV grouped by patient; no separate external validation</td>
-<td>knn dtw; svc gak; knn unif; logistic; rf gini; xgboost; lightgbm; tabnn; tresnet; gmlp; pedca ft</td>
 <td>First-24h input; target outcome interval requires public verification</td>
-<td>Unspecified meaning of AUROC +/- variation; operating points graph-read for three models; exact target interval and operational outcome definition not publicly verified from supplied sources; duplicated baseline model description in quality fields</td>
+<td>Eight retained AUROC +/- quantities have unspecified meaning; no eligible retained sensitivity/specificity; three whole model entries excluded by team because their operating points were graphical. Exact outcome interval/definition remains unverified; duplicated baseline quality text.</td>
 </tr>
 <tr>
 <td>bose_2019</td>
+<td>1</td>
 <td>Initial 228 patients (22 CA); analysed 64 (16 CA, 48 matched controls); training 44 (11 CA), test 20 (5 CA)</td>
 <td>CICU</td>
-<td>Patient train/test split 44/20, with 60 bootstrap iterations; no external validation</td>
 <td>glm</td>
+<td>Patient train/test split 44/20, with 60 bootstrap iterations; no external validation</td>
 <td>At least 2h warning; mean 17h (SD 7.5) among 16 cases; not a fixed 17h forecast</td>
 <td>Only 5 test arrest patients; bootstrap procedure described but no numerical AUROC CI/SE supplied; percentage sensitivity does not identify an integer patient table; recruitment start date inconsistent</td>
 </tr>
 <tr>
 <td>yu_2023</td>
+<td>1</td>
 <td>160 index CA cases/events and 711 unique controls; selected case-control fraction 18.37%, not population incidence</td>
 <td>CICU</td>
-<td>Five-fold CV (80/20 per fold), control subsampling; no demonstrated external validation</td>
 <td>rdn boost</td>
+<td>Five-fold CV (80/20 per fold), control subsampling; no demonstrated external validation</td>
 <td>1h extracted peak AUROC; other 5/9/13h results not numerically supplied</td>
 <td>Representative confusion-matrix model attribution assumed in extraction; fold, threshold, horizon and unit unresolved; probable cohort reuse with Yu 2022; rounded PPV/NPV require comparison with exact table-derived values</td>
 </tr>
 <tr>
 <td>kenet_2023</td>
+<td>6</td>
 <td>1,145 patients, 15 CA; 14,714 windows, 516 positive overall; test 229 patients (5 CA); six test matrices each contain 3,059 windows (211 positive)</td>
 <td>general_PICU</td>
-<td>Patient split: train 732 (6 CA), validation 184 (4 CA), test 229 (5 CA)</td>
 <td>logistic; svm; random forest; xgboost; lightgbm; soft voting</td>
+<td>Patient split: train 732 (6 CA), validation 184 (4 CA), test 229 (5 CA)</td>
 <td>5min windows labelled positive within 3h before CA; 3h preferred over 1h</td>
 <td>Repeated windows and six dependent models; no intrapatient correlation or clustering adjustment supplied; 1,019/2,164 patients removed including 57 CA; 38 adults included; recruitment ends July vs August 2021</td>
 </tr>
 <tr>
 <td>yu_2022</td>
+<td>1</td>
 <td>871 selected patients: 160 CA and 711 controls; 18.37% sample fraction, not population prevalence</td>
 <td>CICU</td>
-<td>No independent validation reported</td>
 <td>logistic</td>
+<td>No independent validation reported</td>
 <td>1h extracted peak; 1-15h evaluated, distal ranges approximate only</td>
 <td>No AUROC CI/SE or model-level 2x2; independent validation unreported; cases referenced to arrest vs controls first 48h; probable cohort reuse with Yu 2023</td>
 </tr>

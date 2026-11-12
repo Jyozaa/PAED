@@ -4,3 +4,4 @@ figures/*.svg -whitespace
 results/*.csv -whitespace
 figures/exploratory/*.svg -whitespace
 results/exploratory/*.csv -whitespace
+data/history/analysis_20_models/*.csv -whitespace

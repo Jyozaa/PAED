@@ -1,0 +1,60 @@
+{
+  "revision_id": "exclude_graph_derived_lu_models",
+  "reference_date": "2026-11-12",
+  "parent_commit": "38815dec5fa9d5d67c895739fa27a0a33dc8d88d",
+  "parent_branch": "exploratory-pooling",
+  "analysis_class": "intentional_eligibility_revision",
+  "excluded_model_ids": [
+    "lu_2025_xgboost",
+    "lu_2025_gmlp",
+    "lu_2025_pedca_ft"
+  ],
+  "exclusion_reason": "Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.",
+  "scope": "Entire model entries including AUROC; this does not assert that the AUROC itself was graph-derived",
+  "original_source_hashes": [
+    {
+      "filename": "Data extraction paeds cardiac arrest SR progress 5.xlsx - Sheet1.csv",
+      "sha256": "df81fd52381b0efb09f87e81c0eb68b876621cef5df795b5e2a2be047b62b0e1"
+    },
+    {
+      "filename": "List of Variables.pdf",
+      "sha256": "1e6130c2178646d77a31f8d32fa8fe00760e6ee62b365aa10193922ef400448f"
+    },
+    {
+      "filename": "PROSPERO.pdf",
+      "sha256": "564c6f76c7017ee078894634cb601481a65dd0fac1297f664fb5aaeabf77b9ad"
+    }
+  ],
+  "saved_comparison_inputs": {
+    "data/history/analysis_20_models/auroc_scenario_results.csv": {
+      "source_path": "results/exploratory/auroc_scenario_results.csv",
+      "sha256": "a2fffd6f84636f157342f1d0ca89c3dbbb248b36f21910b3a0604e02095e0d52"
+    },
+    "data/history/analysis_20_models/diagnostic_scenario_results.csv": {
+      "source_path": "results/exploratory/diagnostic_scenario_results.csv",
+      "sha256": "23fdcdfdc280227fdb37e22b42792d680dc8c4a477b8e629eb384cd07038a3bd"
+    },
+    "data/history/analysis_20_models/diagnostic_scenario_inputs.csv": {
+      "source_path": "results/exploratory/diagnostic_scenario_inputs.csv",
+      "sha256": "422d125260afb9e0cf4def5a6a4ba9f29c2af653c3efdf4e8ee08aaa71be88c7"
+    },
+    "data/history/analysis_20_models/descriptive_summary.csv": {
+      "source_path": "results/descriptive_summary.csv",
+      "sha256": "a3d2fb45f59937276def331a34bee23e178c02f0ebcad359ac5ef7d8a9160888"
+    },
+    "data/history/analysis_20_models/study_inventory.csv": {
+      "source_path": "results/study_inventory.csv",
+      "sha256": "925b3945f593790178e8d9aea97ed73a7cbb54943e529e3dd11404950207db94"
+    },
+    "data/history/analysis_20_models/diagnostic_2x2.csv": {
+      "source_path": "results/diagnostic_2x2.csv",
+      "sha256": "c2b2d48d918ef2fe63a42326a92652a2f585e7430604c6c85fc9e5a6f877cfaf"
+    },
+    "data/history/analysis_20_models/exploratory_scenarios.json": {
+      "source_path": "config/exploratory_scenarios.json",
+      "sha256": "1d21b2b612f961feac6e1987fae283933c9bf07ac1f66b9f99ef4dcbb3c97651"
+    }
+  },
+  "historical_baseline": "config/baselines/analysis_20_model_integrity.json",
+  "provenance_policy": "Original/curated sources remain immutable; historical hash checks are validated against the saved Git baseline; current scientific-output expectations are versioned for the intentional 17-model revision."
+}

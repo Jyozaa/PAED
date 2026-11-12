@@ -1,0 +1,125 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>exclusion comparison</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="lu-model-exclusion-before-and-after-comparison">Lu model exclusion: before-and-after comparison</h1>
+<p>This is an intentional eligibility revision from the saved 20-model analysis on <code>exploratory-pooling</code>. Three whole Lu entries are excluded because their sensitivity/specificity was graphically extracted. This does not assert that their AUROCs were graphical. No additional model is excluded solely for missing operating points. Original source files and curated source records are unchanged; historical baselines are independently validated against Git.</p>
+<table>
+<thead>
+<tr>
+<th>measure</th>
+<th>previous</th>
+<th>revised</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retained study reports</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Retained models</td>
+<td>20</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Retained Lu models</td>
+<td>11</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Lu reported AUROC range</td>
+<td>0.5472-0.7504</td>
+<td>0.5472-0.7329</td>
+</tr>
+<tr>
+<td>Core AUROC scenarios</td>
+<td>18</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Core conditional pooled AUROC range</td>
+<td>0.7689-0.8451</td>
+<td>0.7241-0.8305</td>
+</tr>
+<tr>
+<td>Additional retained-Lu AUROC scenarios</td>
+<td>0</td>
+<td>126</td>
+</tr>
+<tr>
+<td>All revised Lu-choice conditional pooled AUROC range</td>
+<td>Not previously assessed</td>
+<td>0.7120-0.8441</td>
+</tr>
+<tr>
+<td>Diagnostic scenarios</td>
+<td>96</td>
+<td>96</td>
+</tr>
+<tr>
+<td>Conditional diagnostic sensitivity (%)</td>
+<td>87.2956-98.2449</td>
+<td>87.2956-98.2449</td>
+</tr>
+<tr>
+<td>Conditional diagnostic specificity (%)</td>
+<td>65.5968-87.4968</td>
+<td>65.5968-87.4968</td>
+</tr>
+</tbody>
+</table>
+<p>Core results use Lu logistic regression instead of the excluded index. Additional scenarios systematically use every other retained Lu algorithm, one at a time. Scenario ranges are not confidence intervals. All paired core estimates/conditional intervals/heterogeneity and their changes are in <code>results/exploratory/core_before_after.csv</code>.</p>
+<p>All 96 diagnostic scenarios were recalculated. Numerical identity across every original numeric result column: <strong>True</strong>. Maximum absolute numerical difference: <strong>0.0</strong>. Inputs remain one Yu table and one Kenet table per scenario, with identical counts and assumed covariance. No Lu model contributes to those calculations.</p>
+<table>
+<thead>
+<tr>
+<th>path</th>
+<th>byte_identical</th>
+<th>previous_sha256</th>
+<th>revised_sha256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>results/diagnostic_2x2.csv</td>
+<td>True</td>
+<td>c2b2d48d918ef2fe63a42326a92652a2f585e7430604c6c85fc9e5a6f877cfaf</td>
+<td>c2b2d48d918ef2fe63a42326a92652a2f585e7430604c6c85fc9e5a6f877cfaf</td>
+</tr>
+<tr>
+<td>results/exploratory/diagnostic_scenario_results.csv</td>
+<td>True</td>
+<td>23fdcdfdc280227fdb37e22b42792d680dc8c4a477b8e629eb384cd07038a3bd</td>
+<td>23fdcdfdc280227fdb37e22b42792d680dc8c4a477b8e629eb384cd07038a3bd</td>
+</tr>
+<tr>
+<td>results/exploratory/diagnostic_scenario_inputs.csv</td>
+<td>True</td>
+<td>422d125260afb9e0cf4def5a6a4ba9f29c2af653c3efdf4e8ee08aaa71be88c7</td>
+<td>422d125260afb9e0cf4def5a6a4ba9f29c2af653c3efdf4e8ee08aaa71be88c7</td>
+</tr>
+<tr>
+<td>figures/exploratory/diagnostic_joint_summaries.png</td>
+<td>True</td>
+<td>39dedfd0ec5705801d62f57d356dcfbd7198909e6412f7e7bf93fd29fa9f008f</td>
+<td>39dedfd0ec5705801d62f57d356dcfbd7198909e6412f7e7bf93fd29fa9f008f</td>
+</tr>
+<tr>
+<td>figures/exploratory/diagnostic_joint_summaries.svg</td>
+<td>True</td>
+<td>22ecba3398bea7d9cd2cf12a228e92ce473f7ff0953ac3488c750985fdc8226c</td>
+<td>22ecba3398bea7d9cd2cf12a228e92ce473f7ff0953ac3488c750985fdc8226c</td>
+</tr>
+<tr>
+<td>figures/exploratory/diagnostic_sensitivity.png</td>
+<td>True</td>
+<td>8bf05cc083dc4b8d78d8d84cd49d11d8533ccfc9656d15acab7fdb5ce958e04f</td>
+<td>8bf05cc083dc4b8d78d8d84cd49d11d8533ccfc9656d15acab7fdb5ce958e04f</td>
+</tr>
+<tr>
+<td>figures/exploratory/diagnostic_sensitivity.svg</td>
+<td>True</td>
+<td>aa35d3a012a7b32146037fa30cea3d2cec9cb7c8cc3cb167d9ff9c58a68d131e</td>
+<td>aa35d3a012a7b32146037fa30cea3d2cec9cb7c8cc3cb167d9ff9c58a68d131e</td>
+</tr>
+</tbody>
+</table>
+<p>Numerical equality does not validate the diagnostic assumptions. Kenet repeated windows/adults, unresolved Yu units/linkage, sparse cells, missing external validation, possible Dallas overlap and protocol differences remain. The old branch remains the historical analysis, not a current retained-model output.</p></body></html>

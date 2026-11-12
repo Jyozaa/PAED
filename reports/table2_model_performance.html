@@ -1,11 +1,11 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>table2 model performance</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="table-2-retained-model-results">Table 2. Retained model results</h1>
-<p>20 models are dependent within studies. NR means unavailable, not zero or poor performance. Source percentages remain separate from count-derived values in the full CSV. Original +/- quantities are not confidence intervals.</p>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>table2 model performance</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="retained-model-performance">Retained model performance</h1>
+<p>Revised dataset: 17 retained entries, including 8 Lu models. NR is unavailable, not zero. Original source text remains distinct from recalculated rates. The Lu XGBoost, gMLP and PEDCA-FT entries are wholly excluded, including their AUROCs, because their operating points were graphically extracted. This does not imply that their AUROCs were graph-derived.</p>
 <table>
 <thead>
 <tr>
 <th>study</th>
 <th>model</th>
-<th>row</th>
+<th>source row</th>
 <th>AUROC (source text)</th>
 <th>sensitivity (source)</th>
 <th>specificity (source)</th>
@@ -66,16 +66,6 @@
 </tr>
 <tr>
 <td>lu_2025</td>
-<td>xgboost</td>
-<td>13</td>
-<td>72.35 ± 4.00</td>
-<td>39.04%</td>
-<td>83.14%</td>
-<td>NR/NR/NR/NR</td>
-<td>NR</td>
-</tr>
-<tr>
-<td>lu_2025</td>
 <td>lightgbm</td>
 <td>14</td>
 <td>61.42 ± 11.06</td>
@@ -101,26 +91,6 @@
 <td>72.21 ± 7.22</td>
 <td>NR</td>
 <td>NR</td>
-<td>NR/NR/NR/NR</td>
-<td>NR</td>
-</tr>
-<tr>
-<td>lu_2025</td>
-<td>gmlp</td>
-<td>17</td>
-<td>75.04 ± 3.52</td>
-<td>8.22%</td>
-<td>97%</td>
-<td>NR/NR/NR/NR</td>
-<td>NR</td>
-</tr>
-<tr>
-<td>lu_2025</td>
-<td>pedca ft</td>
-<td>18</td>
-<td>73.99 ± 3.16</td>
-<td>42.47%</td>
-<td>84.69%</td>
 <td>NR/NR/NR/NR</td>
 <td>NR</td>
 </tr>

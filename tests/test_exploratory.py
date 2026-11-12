@@ -27,7 +27,7 @@ def scenarios(source,config):return execute(*source,config)
 
 
 def test_all_scenarios_and_labels_present(scenarios,config):
-    assert len(list(auroc_scenarios(config)))==18
+    assert len(list(auroc_scenarios(config)))==144
     assert len(list(diagnostic_scenarios(config)))==96
     for key in ['auroc_results','diagnostic_results']:
         rows=scenarios[key]
@@ -192,8 +192,9 @@ def test_failed_fit_has_no_successful_estimate(config,source):
     assert result['status']=='failed_not_pooled' and 'pooled_auroc' not in result
 
 
-def test_original_descriptive_findings_remain_unchanged(project):
-    baseline=baseline_checks(project);assert len(baseline['protected_files'])==67
+def test_versioned_revision_preserves_confirmatory_feasibility_conclusions(project):
+    baseline=baseline_checks(project);assert len(baseline['protected_files'])==76
+    assert baseline['revision_id']=='exclude_graph_derived_lu_models'
     status=json.loads((project/'results/analysis_status.json').read_text())
     assert status['auroc']['status']=='not_statistically_defensible'
     assert status['diagnostic']['status']=='not_statistically_defensible'
@@ -202,7 +203,7 @@ def test_original_descriptive_findings_remain_unchanged(project):
 def test_exploratory_end_to_end_is_deterministic_and_reports_every_scenario(project,tmp_path):
     first,checks=run(project,tmp_path/'one');second,_=run(project,tmp_path/'two')
     assert first['output_files']==second['output_files']
-    assert first['auroc']['successful_final_scenarios']==18
+    assert first['auroc']['successful_final_scenarios']==144
     assert first['diagnostic']['successful_final_scenarios']==96
     assert not first['diagnostic']['unrestricted_covariance_estimated'] and not first['diagnostic']['hsroc_curve_fitted']
     assert len(verify(project,tmp_path/'one'))==8
@@ -231,9 +232,12 @@ def test_exploratory_end_to_end_is_deterministic_and_reports_every_scenario(proj
         for link in parser.links+parser.images:
             uri=urlparse(link)
             if not uri.scheme and uri.path:assert (path.parent/unquote(uri.path)).exists(),link
-        assert all(len(set(widths))==1 and widths[0]>=4 for widths in parser.tables)
+        # The new before/after table has three columns; every row must still
+        # match its header and all older, wider scenario tables remain checked.
+        assert all(len(set(widths))==1 and widths[0]>=3 for widths in parser.tables)
         if path.name in {'consolidated_exploratory_report.html','exploratory_results_summary.html'}:
-            assert len(parser.tables)==6 and any(len(widths)==97 for widths in parser.tables)
+            assert len(parser.tables)>=7 and any(len(widths)==97 for widths in parser.tables)
+            assert any(len(widths)==127 for widths in parser.tables)
     for path in (tmp_path/'one/figures/exploratory').glob('*.svg'):
 
         assert 'EXPLORATORY' in path.read_text()
