@@ -4,9 +4,9 @@
     "pooled_estimate_produced": false,
     "pooled_estimate": null,
     "retained_studies": 5,
-    "retained_models": 20,
-    "point_estimates": 21,
-    "model_estimates_with_numerical_auroc": 20,
+    "retained_models": 17,
+    "point_estimates": 18,
+    "model_estimates_with_numerical_auroc": 17,
     "genuine_95ci_estimates": 1,
     "variance_bearing_independent_cohorts": 1,
     "potential_dependency_groups": 4,
@@ -15,7 +15,7 @@
     "analysis_unit": "heterogeneous admission, minute-score, hourly and repeated-window evaluations",
     "gate_reasons": [
       "Fewer than 3 eligible independent estimates",
-      "Only Yu 2023 has a supplied genuine CI; 11 Lu +/- values have unspecified meaning",
+      "Only Yu 2023 has a supplied genuine CI; 8 retained Lu +/- values have unspecified meaning",
       "Yu 2022/2023 may reuse patients; no covariance supplied",
       "Different horizons/units/validation types; Kenet representative-model selection unresolved"
     ],
@@ -48,6 +48,6 @@
     "demonstrated_eligible_models": 0,
     "interpretation": "No retained study demonstrates all strict criteria in supplied extraction; NR is not proof external validation never occurred",
     "with_setting_requirement_only_studies": 4,
-    "with_setting_requirement_only_models": 14
+    "with_setting_requirement_only_models": 11
   }
 }

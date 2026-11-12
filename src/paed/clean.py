@@ -138,6 +138,7 @@ def build(rows, contexts, config):
         if src['record_type']!='populated_model':reason='Cross-reference only; no extracted result; links to populated Yu 2022 record 29' if src['record_type']=='cross_reference' else 'Blank extraction record'
         elif sid=='yu_2026':reason=config['exclusions']['yu_2026']
         elif sid=='yu_2023' and MODEL_BY_ROW[n]=='gnb':reason=config['exclusions']['yu_2023_gnb']
+        elif mid in config.get('model_exclusions',{}):reason=config['model_exclusions'][mid]
         keep=not reason
         base={**src,'model_id':mid,'model_name':MODEL_BY_ROW[n].replace('_',' '),'retained':keep,
               'exclusion_reason':reason,'cohort_id':c.get('cohort_id',''),
@@ -174,7 +175,7 @@ def build(rows, contexts, config):
             context={k:base[k] for k in ['study_id','model_id','model_name','source_row','cohort_id','dependency_group','analysis_unit','prediction_horizon','validation_type','metric_source']}
             context.update(e,estimate_id=f'{mid}_a{idx}',original_text=base['auroc_raw'],
                            sampling_variance_available=e['se_logit_approx'] is not None,
-                           selection_status='candidate_index_model' if mid==c.get('representative_model') else 'descriptive_only',
+                           selection_status='candidate_representative_model' if mid==c.get('representative_model') else 'descriptive_only',
                            pooled_eligible=False)
             if sid=='bose_2019' and e['evaluation']=='training':context['selection_status']='training_descriptive_only'
             auroc.append(context)

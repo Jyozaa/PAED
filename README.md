@@ -1,118 +1,83 @@
-# Paediatric cardiac arrest prediction: reproducible evidence synthesis
+# Paediatric cardiac arrest prediction: revised evidence synthesis
 
-**Completed analysis of the supplied systematic-review extraction.** Five study reports and 20 models remain after agreed exclusions. Neither inferential meta-analysis is statistically defensible from the available evidence. No pooled estimates have been invented.
+The current revision excludes Lu 2025 XGBoost, gMLP and PEDCA-FT in full following the research team's decision that their graphically extracted sensitivity/specificity was insufficiently reliable. This does not imply that their AUROCs were graph-derived. Other Lu models remain eligible despite missing operating points.
 
-| Result | Finding |
-| --- | --- |
-| Original extraction | 6 reports, 26 populated model entries, 1 cross-reference (not a blank row) |
-| Working cohort | 5 reports, 20 models; 4 conservative potential cohort groups |
-| AUROC | 21 numerical evaluations (Bose training/test separate); only 1 genuine 95% CI |
-| Complete diagnostic tables | 7 dependent model tables from 2 sources; 0 confirmed eligible independent patient-level tables |
-| Strict protocol | 0 reports demonstrate all criteria from supplied evidence; no external-validation waiver presumed |
-| Inference | Both planned pooling workflows fail evidence eligibility; descriptive synthesis completed |
+| Result | Previous analysis | Revised analysis |
+| --- | --- | --- |
+| Retained study reports | 5 | 5 |
+| Retained models | 20 | 17 |
+| Lu models | 11 | 8 |
+| Retained Lu reported AUROC | 0.5472–0.7504 | 0.5472–0.7329 |
+| Core conditional pooled AUROC range | 0.7689–0.8451 | 0.7241–0.8305 |
+| AUROC scenarios | 18 | 18 core + 126 other Lu choices |
+| All revised conditional pooled AUROC scenarios | Not assessed | 0.7120–0.8441 |
+| Diagnostic scenarios | 96 | 96; numerically identical |
+| Conditional pooled sensitivity range | 87.30–98.24% | Unchanged |
+| Conditional pooled specificity range | 65.60–87.50% | Unchanged |
 
-The team-agreed general-PICU scope is exploratory. The registered review specifies cardiac ICU and external validation. Kenet also includes 38 adults. Two Dallas publications may reuse patients. QUADAS-2 and adapted GRADE require independent reviewer completion. This repository does not claim a new comprehensive search, independently verified full-text extraction, or completed dual-reviewer review.
+Ranges are spreads across assumption-dependent scenarios, not confidence intervals. The original CSV contains six reports, 26 populated model entries and one cross-reference. Previous exclusions remain five Yu 2026 composite-outcome models and Yu 2023 Gaussian Naive Bayes with graphical results. Original input files and curated source records are unchanged.
 
-A separate, team-requested **assumption-dependent exploratory pooling layer** is now available in [`reports/exploratory/consolidated_exploratory_report.md`](reports/exploratory/consolidated_exploratory_report.md). It calculates 18 AUROC scenarios and 96 constrained joint diagnostic scenarios. These conditional calculations do not replace the original confirmatory feasibility conclusions above. No new clinical evidence or original-paper verification was added.
+Read the [descriptive report](reports/final_analysis_report.md), [complete exploratory report](reports/exploratory/consolidated_exploratory_report.md), [before-and-after comparison](reports/revisions/exclusion_comparison.md), and [short compiled report](output/pdf/short_report.pdf). LaTeX is in [reports/short_report.tex](reports/short_report.tex). Styled HTML versions accompany the Markdown reports.
 
-Read the [complete statistical report](reports/final_analysis_report.md), [plain-English summary](reports/plain_english_summary.md), and [protocol discrepancies](reports/protocol_deviations.md). Styled HTML versions are included beside Markdown; open `reports/final_analysis_report.html` locally for readable tables and embedded figure links.
+## Reproduce the complete revision
 
-![Descriptive AUROC plot](figures/auroc_descriptive.png)
-
-## Reproduce from public curated aggregate data
-
-Tested with Python 3.14.7 on macOS; code requires Python >=3.11, and dependency wheels must be available for the chosen interpreter. Exact versions used are pinned in `requirements.txt`; the full installed environment is recorded separately.
+Use a full clone: integrity checks require the original historical Git commits. Tested with Python 3.14.7; code requires Python >=3.11 and compatible dependency wheels. Exact Python dependency versions are pinned in `requirements.txt`. Install Tectonic for LaTeX compilation; this run used Tectonic 0.17.0 (`brew install tectonic` on macOS). Its first invocation downloads the standard TeX bundle.
 
 ```bash
-git clone https://github.com/Jyozaa/PAED.git
+git clone --branch exclude-graph-derived-lu-models https://github.com/Jyozaa/PAED.git
 cd PAED
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-make all
-make verify
+make revised
+make verify-revised
 ```
 
-`make all` runs the complete pipeline, numerical/completeness checks and automated tests. End-to-end tests rebuild all outputs twice in isolated temporary directories and require identical result, figure and report hashes. Tests do not recursively invoke themselves. Timestamps, test durations and Git metadata in the run manifest are intentionally run-specific.
-
-To run without Make:
+Equivalent complete commands:
 
 ```bash
-.venv/bin/python scripts/run_pipeline.py --run-tests
-.venv/bin/python -m pytest -q
-.venv/bin/python scripts/verify_outputs.py
+.venv/bin/python scripts/run_revision.py --run-tests
+.venv/bin/python scripts/verify_revision.py
 ```
 
-No R installation is needed to reproduce the current no-pooling findings. The Python workflows evaluate the evidence gates, and the output datasets and reports explain exactly why no inferential optimizer should run. `scripts/meta_analysis.R` provides conditional established-package fitting using `metafor` and `mada`; it exits without fitting on current data. Its fitting paths have not been executed/validated as current study results. Future eligibility changes require expert review, new verified uncertainty/unit/selection evidence, and validation of those paths; toggling flags is not a scientific remedy.
+This runs descriptive analysis, all 144 AUROC scenarios, all 96 diagnostic scenarios, comparisons with saved results, compact AUROC rendering, LaTeX compilation, the full test suite and manifest verification. Tests rebuild the complete analysis twice in fresh directories and require identical scientific artifacts, reports, figures and PDF bytes. Execution timestamps, test durations and Git metadata are intentionally run-specific. Tests do not recursively invoke themselves. No R installation is required.
 
-If R is available, the current early-exit can be checked with:
+Individual stages remain available as `make all`, `make exploratory`, `make short-report`, `make verify` and `make verify-exploratory`. For publication or full reproducibility, use `make revised` because the final report links outputs from all stages. `scripts/meta_analysis.R` retains the original guarded confirmatory routes and exits without fitting on these scientifically ineligible inputs; it is separate from the executed exploratory methods.
+
+## Recheck the original input files locally
+
+Only the supplied extraction CSV, `List of Variables.pdf` and `PROSPERO.pdf` were used. No new clinical sources were retrieved. The original files are not committed. Place them beneath a local source directory with their original basenames and run:
 
 ```bash
-Rscript scripts/meta_analysis.R .
+.venv/bin/python scripts/run_revision.py --input-dir /path/to/local/sources --run-tests
+make verify-revised
 ```
 
-For future scientifically eligible data only, package installation is `Rscript -e 'install.packages(c("metafor", "mada"), repos="https://cloud.r-project.org")'`. The script uses a guarded logit-AUROC REML fit with a modified Hartung-Knapp interval and a guarded bivariate Reitsma REML fit for independent interior proportions. It refuses sparse zero-cell data requiring a validated binomial HSROC approach. These routes are not substitutes for obtaining missing study evidence.
+With the originals in the repository root, `make revised-raw` runs this audit. Input discovery rejects duplicate matching names. Ingestion preserves logical CSV records, physical multiline spans, both source headers, metric text and missingness. Private notes and correspondence-derived text remain withheld. Public reproduction uses existing sanitized aggregate records and cannot independently recheck fidelity to confidential originals. `raw_sources_verified_this_run` distinguishes these modes; the three original SHA256 hashes are retained in all manifests.
 
-## Reproduce the original-source ingestion audit
+## Statistical methods and limits
 
-Three original files were supplied and read in full locally:
+The 18 core AUROC scenarios select Lu logistic regression (0.6292), Bose's held-out test GLM (0.7500), either Yu 2023 RDN Boost (0.8500, genuine CI 0.79–0.90) or Yu 2022 logistic regression (0.8300), and one Kenet model: logistic (0.8670), XGBoost (0.9710) or soft voting (0.9570). Lu logistic is an analyst-selected conventional baseline, not a verified original primary-model designation. Each of the other seven retained Lu algorithms is crossed with those same 18 configurations, with one representative per source group.
 
-- `Data extraction paeds cardiac arrest SR progress 5.xlsx - Sheet1.csv`
-- `List of Variables.pdf` (3 pages)
-- `PROSPERO.pdf` (7 pages; CRD420251241478 version 3.0)
+AUROC uses Paule–Mandel random effects on logits and modified Hartung–Knapp t intervals. Missing original-scale SEs are assumed to be 0.02, 0.04 or 0.08; genuine Yu 2023 uncertainty is retained. Lu's unspecified ± values are never treated as SEs. A checked bracketed-root solution of the same Paule–Mandel equation replaces 11 rejected library numerical attempts without changing inputs or estimator. All attempts and warnings remain recorded.
 
-They are **not committed**. Place them anywhere beneath a local source directory, preserving their basenames, then run:
+Diagnostic pooling uses unchanged Yu 2023 and Kenet confusion matrices. Each scenario solves joint normal-logit GLS with prespecified between-source covariance, within-source correlation and variance inflation. It does not estimate unrestricted bivariate heterogeneity or fit HSROC. Design effects are illustrative assumptions, not empirically estimated corrections. All 96 result rows, input ledger and both diagnostic figures (PNG/SVG) reproduce the previous branch byte for byte.
 
-```bash
-.venv/bin/python scripts/run_pipeline.py --input-dir /path/to/local/sources --run-tests
-make verify
-```
+Confirmatory pooling remains unsupported: only one genuine AUROC CI is available; Kenet counts repeated five-minute windows and includes 38 adults; Yu 2023's representative-fold linkage/unit is unresolved; Yu 2022 and Yu 2023 may overlap; horizons and thresholds differ; external validation is unverified. The general-PICU scope exceeds strict PROSPERO cardiac-ICU criteria. Risk-of-bias and certainty assessments remain pending independent reviewers. These calculations cannot establish clinical deployment safety, calibration, alarm burden or patient-level missed arrests.
 
-When originals are in the repository root, `make raw` runs the same ingestion. Discovery is recursive and rejects duplicate matching filenames. Both CSV headers are preserved as metadata; logical record numbers and physical multiline line spans are retained. Original metrics are preserved in allowed aggregate fields. Private correspondence-derived text and unpublished free-text notes are withheld; the public run does not recreate them.
+## Provenance and outputs
 
-Public curated mode reproduces the numerical tables, evidence gates, descriptive figures and reports. It **cannot independently verify fidelity to originals or recover private details**. `source_provenance.json` records original-file hashes and page counts; `raw_sources_verified_this_run` distinguishes an actual original-source run from public-only reproduction. The manifest source Git SHA refers to the source revision available during execution and cannot be the future hash of a commit containing that manifest.
+- `config/revision.json`: exact team exclusion reason, original input hashes and saved-parent references.
+- `config/baselines/analysis_20_model_integrity.json`: previous 67-file integrity record, checked against its historical Git tree.
+- `config/exploratory_baseline_hashes.json`: revised 76-file scientific baseline. Original curated/source hashes remain enforced; it is never silently refreshed on rerun.
+- `data/history/analysis_20_models/`: immutable saved public aggregate results used for comparisons and checked against parent commit `38815dec5fa9d5d67c895739fa27a0a33dc8d88d`.
+- `results/`: revised inventories, exclusions, metrics, tables, feasibility decisions and data dictionaries.
+- `results/exploratory/`: 144 AUROC results and contributor ledgers, 96 diagnostic results and ledgers, attempts, assumptions, comparisons and Lu-choice sensitivities.
+- `figures/`: descriptive figures and compact report AUROC, PNG/SVG.
+- `figures/exploratory/`: 18 core forests, core and Lu-choice sensitivity figures, unchanged diagnostic figures.
+- `reports/`, `reports/exploratory/`, `reports/revisions/`: Markdown/HTML reports and LaTeX source.
+- `output/pdf/`: compiled three-page report and PDF build manifest.
+- `results/revisions/run_manifest.json`: complete revision verification, versions, commands, hashes, tests and warnings; component manifests remain at `run_manifest.json` and `results/exploratory/run_manifest.json`.
 
-## Repository contents
+The `exploratory-pooling` branch preserves the previous 20-model analysis. Publication does not overwrite it. The manifest's source Git SHA identifies the revision available during execution; a commit containing the manifest cannot record its own future hash.
 
-- `config/analysis.json`: selection hierarchy, exclusions, evidence gates and tolerances.
-- `config/study_context.json`: analyst-curated aggregate context and evidence provenance.
-- `config/source_schema.json`: exact two-row source headers and standardized mappings.
-- `data/curated/`: minimum necessary aggregate inputs, cell-state audit and source hashes.
-- `src/paed/`: ingestion, cleaning, feasibility, figures, reporting and orchestration.
-- `scripts/`: one-command runner, independent output verifier and conditional R models.
-- `tests/`: parsing, missingness, exclusions, 2x2 arithmetic, rounding, overlap, window-clustering and reproducibility tests.
-- `results/`: cleaned models, all source inventories, AUROC/diagnostic datasets, tables, logs, comparability and review worksheets.
-- `figures/`: six descriptive plots, each as PNG and SVG; [captions](reports/figure_captions.md) explain units and limitations.
-- `reports/`: complete statistical report, feasibility assessments, formatted tables, protocol/bias/certainty documentation, audit and validation.
-- `run_manifest.json`: counts, hashes, versions, methods, tests, warnings and source revision.
-
-## Interpretation boundaries
-
-AUROC is ranking discrimination, not arrest detection sensitivity. Six Kenet confusion matrices count repeated five-minute windows from 229 test patients with five CA patients; 211 positive windows are not 211 independent arrests. Yu 2023's representative matrix has unresolved model/threshold/horizon/unit linkage. Lu's +/- variation is not assumed to be SE/CI, and three operating points are graph-read. No naive binomial CIs, reconstructed confusion tables, dependent-model pooling, automatic best-AUROC selection, or formal software-assigned bias/certainty judgements are used.
-
-Study characteristics and metrics derive from the supplied extraction, not independent full-text re-extraction. Review-team questions are listed in the final report. The data cannot establish calibration, alarm burden per patient-day, patient-level missed arrests or readiness for deployment.
-
-## Public-data and publication policy
-
-Only code, sanitized aggregate extraction facts, generated reports/figures and provenance hashes are published. Original PDFs/CSV, extracted local PDF text, correspondence, unpublished narrative notes and credentials are ignored. Dataset decision logs identify exclusions and withheld fields without copying private contents. The `scripts/check_publication.py --staged` check reviews staged files for accidental raw files, private material and credential patterns. Metrics remain attributable to original study DOIs in the inventory. Publication was explicitly authorized for this repository.
-
-## Optional assumption-dependent exploratory pooling
-
-The continuation is isolated in `results/exploratory/`, `figures/exploratory/` and `reports/exploratory/`. To reproduce this layer without rewriting the original descriptive artifacts:
-
-```bash
-.venv/bin/python -m pip install -r requirements.txt
-make exploratory
-make verify-exploratory
-```
-
-Direct commands are `.venv/bin/python scripts/run_exploratory.py --run-tests` and `.venv/bin/python scripts/verify_exploratory.py`. The complete old and new test suite is `.venv/bin/python -m pytest -q`. No R or additional clinical sources are needed. Both workflows are executed, not only scaffolded.
-
-`config/exploratory_scenarios.json` specifies every selection, missing-AUROC SE, variance-inflation factor, between-source covariance and correlation scenario. `config/exploratory_baseline_hashes.json` protects 67 original scientific outputs/source-data/configuration files. Existing confirmatory `pooled_eligible` flags are unchanged. The original root `run_manifest.json` remains intact; the new manifest is `results/exploratory/run_manifest.json`.
-
-AUROC uses the established statsmodels Paule–Mandel estimator on logits and modified Hartung–Knapp t intervals, with hypothetical missing SEs 0.02/0.04/0.08 on the original scale. The genuine Yu 2023 interval is retained. All four-group scenarios omit either Yu 2022 or Yu 2023. The Kenet baseline is analyst-selected logistic regression; XGBoost and soft voting are separate alternatives. An estimating-equation check rejects one library numerical attempt; a documented bracketed-root solver for the same PM equation provides the accepted result with unchanged inputs. Every attempt is preserved.
-
-The diagnostic layer uses exactly two source summaries per scenario: one Kenet model plus Yu 2023. It solves a joint normal-logit GLS model of sensitivity and false-positive rate with **prespecified** between-source covariance, within-source correlation and variance inflation. It does not estimate an unrestricted random-effects covariance from two sources or fit an HSROC curve. Observed counts are unchanged. Kenet design effects 1/5/20 and Yu multipliers 1/5 are illustrative, not measured clustering corrections or verified patient counts. Conditional intervals and joint confidence ellipses depend on all supplied assumptions.
-
-Every scenario, source/uncertainty/covariance/weight ledger, numerical warning and failed attempt is reported. HTML reports and 18 forest plots plus three scenario-comparison figures are provided. See [methods](reports/exploratory/meta_analysis_methods.md), [all AUROC results](reports/exploratory/auroc_meta_analysis.md), [all diagnostic results](reports/exploratory/diagnostic_meta_analysis.md), [sensitivity contrasts](reports/exploratory/sensitivity_analysis.md), and [limitations](reports/exploratory/assumptions_and_limitations.md).
-
-All pooled values are exploratory conditional calculations. They do not establish clinical accuracy, independence of windows, a common threshold, external validity, or deployment safety. The original five-report/20-model dataset, agreed exclusions, adult-participant caveat, potential Dallas overlap, protocol discrepancies and pending reviewer assessments remain unchanged.
+Only sanitized aggregate data and derived outputs are published. `scripts/check_publication.py --staged` checks staged filenames and text for original private inputs, correspondence, contact information and credentials. No patient-level records are included.

@@ -1,0 +1,20 @@
+{
+  "analysis_class": "revised_descriptive_and_exploratory",
+  "engine": "Tectonic 0.17.0",
+  "command": "tectonic --keep-logs --outdir output/pdf reports/short_report.tex (run from reports with adjusted output path)",
+  "source_date_epoch": 1794441600,
+  "pages": 3,
+  "source_sha256": "acfd9f8bc5b750aaefdf249b6458e094dff875e1dbe6574d9be96944445c82bc",
+  "pdf_sha256": "9f9fa8659b8e165b5feff6484b419f1b93d4ed214e4d6e74161b9e95deca4939",
+  "page_text_sha256": [
+    "b4b946b1cc6ed4bce0a7cdf8f284972e79c62da5f746da175b03a89ad4b2a8f4",
+    "c10324722824e0229aa5a61a90edc7c262792cbc23324bfde6130f78740db6c1",
+    "32583211aae15baf4b80753f5e9f23ec08530c307acfc04348917f4c825ceeb5"
+  ],
+  "layout_warnings": [],
+  "included_figures": [
+    "figures/auroc_short_report.png"
+  ],
+  "sensitivity_specificity_graph_included": false,
+  "deterministic_metadata": true
+}

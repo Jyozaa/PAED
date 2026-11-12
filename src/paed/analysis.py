@@ -62,7 +62,7 @@ def feasibility(data, contexts, config):
                'contributing_independent_studies':0,'contributing_model_estimates':0,
                'analysis_unit':'heterogeneous admission, minute-score, hourly and repeated-window evaluations',
                'gate_reasons':gate_auroc([],config['minimum_auroc_independent_cohorts'])+
-                 ['Only Yu 2023 has a supplied genuine CI; 11 Lu +/- values have unspecified meaning',
+                 [f'Only Yu 2023 has a supplied genuine CI; {sum(r["study_id"]=="lu_2025" and r["uncertainty_type"]=="unspecified_plus_minus" for r in a)} retained Lu +/- values have unspecified meaning',
                   'Yu 2022/2023 may reuse patients; no covariance supplied',
                   'Different horizons/units/validation types; Kenet representative-model selection unresolved'],
                'estimator_if_eligible':'R metafor::rma.uni REML on logit AUROC, modified Hartung-Knapp t CI',

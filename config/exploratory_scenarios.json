@@ -1,13 +1,13 @@
 {
   "analysis_class": "exploratory_conditional",
-  "reference_date": "2026-11-11",
+  "reference_date": "2026-11-12",
   "evidence_policy": "Only supplied extraction and existing repository derivatives. No new papers, correspondence or clinical evidence.",
   "random_seed": 20261111,
   "deterministic_no_sampling": true,
   "alpha": 0.05,
   "auroc": {
     "fixed_estimate_ids": [
-      "lu_2025_pedca_ft_a1",
+      "lu_2025_logistic_a1",
       "bose_2019_glm_a2"
     ],
     "dallas_alternatives": [
@@ -30,7 +30,7 @@
     "preserve_genuine_ci_variance": true,
     "genuine_ci_transform": "existing endpoint-derived logit SE, construction method unverified",
     "assumed_se_transform": "delta method: se_logit = assumed_se_auroc / (p * (1-p))",
-    "model_selection_rationale": "Named Lu index; Bose held-out test; analyst-selected conventional Kenet baseline first, plus two alternatives; mutually exclusive Dallas reports. No ranking scenarios by favourable result.",
+    "model_selection_rationale": "Conventional Lu logistic-regression baseline replaces the wholly excluded named index; analyst-selected, not an original verified primary model. Bose held-out test, mutually exclusive Dallas reports, and separately chosen Kenet algorithms. All seven other retained Lu alternatives are crossed systematically.",
     "source_group_independence": "assumed across four conservative dependency groups, not independently established",
     "method": "Paule-Mandel",
     "software_function": "statsmodels.stats.meta_analysis.combine_effects(method_re='iterated')",
@@ -46,7 +46,18 @@
     "fallback_initial_upper": 1.0,
     "fallback_max_expansions": 60,
     "fallback_xtol": 1e-12,
-    "fallback_rtol": 1e-14
+    "fallback_rtol": 1e-14,
+    "core_lu_estimate_id": "lu_2025_logistic_a1",
+    "additional_lu_alternatives": [
+      "lu_2025_knn_dtw_a1",
+      "lu_2025_svc_gak_a1",
+      "lu_2025_knn_unif_a1",
+      "lu_2025_rf_gini_a1",
+      "lu_2025_lightgbm_a1",
+      "lu_2025_tabnn_a1",
+      "lu_2025_tresnet_a1"
+    ],
+    "additional_lu_selection_rule": "Every other eligible retained Lu numerical AUROC, in original source-record order; one Lu model per scenario. Full crossing with the same Dallas, Kenet and SE choices; no maximisation."
   },
   "diagnostic": {
     "yu_model": "yu_2023_rdn_boost",
@@ -127,5 +138,6 @@
     "minimum_cell_warning": 5,
     "boundary_cells": "stop; do not add continuity correction or alter counts",
     "warning": "EXPLORATORY — clustered windows, unresolved analysis units and assumed statistical parameters."
-  }
+  },
+  "revision_id": "exclude_graph_derived_lu_models"
 }

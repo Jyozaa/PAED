@@ -1,20 +1,17 @@
-# Table 2. Retained model results
+# Retained model performance
 
-20 models are dependent within studies. NR means unavailable, not zero or poor performance. Source percentages remain separate from count-derived values in the full CSV. Original +/- quantities are not confidence intervals.
+Revised dataset: 17 retained entries, including 8 Lu models. NR is unavailable, not zero. Original source text remains distinct from recalculated rates. The Lu XGBoost, gMLP and PEDCA-FT entries are wholly excluded, including their AUROCs, because their operating points were graphically extracted. This does not imply that their AUROCs were graph-derived.
 
-| study | model | row | AUROC (source text) | sensitivity (source) | specificity (source) | TP/FP/FN/TN | AUPRC |
+| study | model | source row | AUROC (source text) | sensitivity (source) | specificity (source) | TP/FP/FN/TN | AUPRC |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | lu_2025 | knn dtw | 8 | 55.27 ± 4.21 | NR | NR | NR/NR/NR/NR | NR |
 | lu_2025 | svc gak | 9 | 54.72 ± 3.80 | NR | NR | NR/NR/NR/NR | NR |
 | lu_2025 | knn unif | 10 | 57.41 ± 2.99 | NR | NR | NR/NR/NR/NR | NR |
 | lu_2025 | logistic | 11 | 62.92 ± 1.92 | NR | NR | NR/NR/NR/NR | NR |
 | lu_2025 | rf gini | 12 | 73.29 ± 2.47 | NR | NR | NR/NR/NR/NR | NR |
-| lu_2025 | xgboost | 13 | 72.35 ± 4.00 | 39.04% | 83.14% | NR/NR/NR/NR | NR |
 | lu_2025 | lightgbm | 14 | 61.42 ± 11.06 | NR | NR | NR/NR/NR/NR | NR |
 | lu_2025 | tabnn | 15 | 62.16 ± 3.64 | NR | NR | NR/NR/NR/NR | NR |
 | lu_2025 | tresnet | 16 | 72.21 ± 7.22 | NR | NR | NR/NR/NR/NR | NR |
-| lu_2025 | gmlp | 17 | 75.04 ± 3.52 | 8.22% | 97% | NR/NR/NR/NR | NR |
-| lu_2025 | pedca ft | 18 | 73.99 ± 3.16 | 42.47% | 84.69% | NR/NR/NR/NR | NR |
 | bose_2019 | glm | 19 | 0.91 (training set); 0.75 (test set) | 60.6% (test set; unchanged when evaluated on entire dataset excluding patients with <2h data) | 74.1% (test set); 80.2% (entire dataset) | NR/NR/NR/NR | NR |
 | yu_2023 | rdn boost | 20 | 0.85 [95% CI 0.79, 0.90] at 1 hour prior to CA (peak performance); values also reported at 13, 9, and 5 hours prior (see Table 1 subgroup analyses; overall model AUROC lower at more distal time points, improving as time to arrest decreased) | 90% | 65% | 36/63/4/115 | NR |
 | kenet_2023 | logistic | 23 | 0.867 (auPRC 0.529; accuracy 68.3%; PPV 16.3%; NPV 98.6%) | 87.20% | 66.90% | 184/944/27/1904 | 0.529 |

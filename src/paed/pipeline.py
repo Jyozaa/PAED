@@ -115,7 +115,7 @@ Source study facts were not independently re-extracted from full texts. Formal Q
     versions={p:version(p) for p in ['numpy','pandas','scipy','matplotlib','Markdown','pytest','pypdf']}
     exclusion_counts={reason:sum(x['exclusion_reason']==reason for x in data['excluded']) for reason in dict.fromkeys(x['exclusion_reason'] for x in data['excluded'])}
     outputs={str(p.relative_to(out)):digest(p) for folder in ['results','reports','figures'] for p in sorted((out/folder).iterdir()) if p.is_file()}
-    manifest={'analysis_reference_date':config['decision_date'],'started_at_utc':started,
+    manifest={'analysis_reference_date':config['decision_date'],'revision_id':config.get('revision_id'),'started_at_utc':started,
               'completed_at_utc':datetime.now(timezone.utc).isoformat(),'input_mode':'raw_local' if input_dir else 'public_curated',
               'raw_sources_verified_this_run':bool(input_dir),'inputs':source_provenance['inputs'],
               'pdf_read_checks':source_provenance['pdf_read_checks'],
@@ -146,14 +146,18 @@ def validate(root,data=None):
     checks.append('All mandatory result tables exist with nonempty schemas')
     read=lambda name:pd.read_csv(root/'results'/f'{name}.csv')
     audit=read('data_audit');models=read('cleaned_models');a=read('auroc_estimates');d=read('diagnostic_2x2')
-    assert len(audit)==27 and len(models)==20 and models.study_id.nunique()==5
+    assert len(audit)==27 and len(models)==17 and models.study_id.nunique()==5
     assert len(read('model_inventory'))==26 and len(read('study_inventory'))==6
-    assert len(read('exclusion_log'))==7
-    checks.append('Reconciled 27 records, 26 populated models, 6 original reports; 20 retained models / 5 reports; 6 exclusions plus 1 cross-reference')
-    assert len(a)==21 and a.auroc.between(0,1).all() and a.ci_lower.notna().sum()==1
-    assert (a.uncertainty_type=='unspecified_plus_minus').sum()==11
+    assert len(read('exclusion_log'))==10
+    excluded_ids=set(load(Path(__file__).resolve().parents[2]/'config/analysis.json').get('model_exclusions',{}))
+    assert not excluded_ids.intersection(models.model_id)
+    assert (models.study_id=='lu_2025').sum()==8
+    assert not set(read('operating_points').study_id).intersection({'lu_2025','yu_2022'})
+    checks.append('Reconciled 27 records, 26 populated models, 6 original reports; 17 retained models / 5 reports; 9 model exclusions plus 1 cross-reference')
+    assert len(a)==18 and a.auroc.between(0,1).all() and a.ci_lower.notna().sum()==1
+    assert (a.uncertainty_type=='unspecified_plus_minus').sum()==8
     assert a.loc[a.uncertainty_type=='unspecified_plus_minus','se_logit_approx'].isna().all()
-    checks.append('21 AUROCs; 1 genuine CI; 11 unspecified variations never used as SE')
+    checks.append('18 AUROCs; 1 genuine CI; 8 unspecified variations never used as SE')
     assert len(d)==7 and d.study_id.nunique()==2
     kenet=d[d.study_id=='kenet_2023']
     assert (kenet.total_units==3059).all() and (kenet.positive_units==211).all() and (kenet.negative_units==2848).all()

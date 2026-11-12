@@ -14,9 +14,6 @@ lu_2025,lu_2025_logistic,11,auroc,62.92 ± 1.92,0.6292,Semantic parse; internal_
 lu_2025,lu_2025_rf_gini,12,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
 lu_2025,lu_2025_rf_gini,12,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
 lu_2025,lu_2025_rf_gini,12,auroc,73.29 ± 2.47,0.7329000000000001,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
-lu_2025,lu_2025_xgboost,13,sensitivity,39.04%,[0.39039999999999997],Semantic parse; percent/proportion conversion; retain every named evaluation
-lu_2025,lu_2025_xgboost,13,specificity,83.14%,[0.8314],Semantic parse; percent/proportion conversion; retain every named evaluation
-lu_2025,lu_2025_xgboost,13,auroc,72.35 ± 4.00,0.7234999999999999,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
 lu_2025,lu_2025_lightgbm,14,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
 lu_2025,lu_2025_lightgbm,14,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
 lu_2025,lu_2025_lightgbm,14,auroc,61.42 ± 11.06,0.6142,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
@@ -26,12 +23,6 @@ lu_2025,lu_2025_tabnn,15,auroc,62.16 ± 3.64,0.6215999999999999,Semantic parse; 
 lu_2025,lu_2025_tresnet,16,sensitivity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
 lu_2025,lu_2025_tresnet,16,specificity,NR,[],Semantic parse; percent/proportion conversion; retain every named evaluation
 lu_2025,lu_2025_tresnet,16,auroc,72.21 ± 7.22,0.7221,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
-lu_2025,lu_2025_gmlp,17,sensitivity,8.22%,[0.08220000000000001],Semantic parse; percent/proportion conversion; retain every named evaluation
-lu_2025,lu_2025_gmlp,17,specificity,97%,[0.97],Semantic parse; percent/proportion conversion; retain every named evaluation
-lu_2025,lu_2025_gmlp,17,auroc,75.04 ± 3.52,0.7504000000000001,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
-lu_2025,lu_2025_pedca_ft,18,sensitivity,42.47%,[0.42469999999999997],Semantic parse; percent/proportion conversion; retain every named evaluation
-lu_2025,lu_2025_pedca_ft,18,specificity,84.69%,[0.8469],Semantic parse; percent/proportion conversion; retain every named evaluation
-lu_2025,lu_2025_pedca_ft,18,auroc,73.99 ± 3.16,0.7399,Semantic parse; internal_cross_validation; horizon target_interval_unverified; uncertainty unspecified_plus_minus
 bose_2019,bose_2019_glm,19,sensitivity,60.6% (test set; unchanged when evaluated on entire dataset excluding patients with <2h data),[0.606],Semantic parse; percent/proportion conversion; retain every named evaluation
 bose_2019,bose_2019_glm,19,specificity,74.1% (test set); 80.2% (entire dataset),"[0.741, 0.802]",Semantic parse; percent/proportion conversion; retain every named evaluation
 bose_2019,bose_2019_glm,19,auroc,0.91 (training set); 0.75 (test set),0.91,Semantic parse; training; horizon warning_time_variable; uncertainty not_reported

@@ -24,12 +24,6 @@ lu_2025,lu_2025_rf_gini,12,MODEL_DEPENDENCE,all,warning,All models within this s
 lu_2025,lu_2025_rf_gini,12,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
 lu_2025,lu_2025_rf_gini,12,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
 lu_2025,lu_2025_rf_gini,12,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
-lu_2025,lu_2025_xgboost,13,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
-lu_2025,lu_2025_xgboost,13,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
-lu_2025,lu_2025_xgboost,13,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
-lu_2025,lu_2025_xgboost,13,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
-lu_2025,lu_2025_xgboost,13,GRAPH_READ_OPERATING_POINT,sensitivity_specificity,warning,Operating point read from bar chart according to extraction; values are approximate; no integer denominators or threshold verified
-lu_2025,lu_2025_xgboost,13,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
 lu_2025,lu_2025_lightgbm,14,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
 lu_2025,lu_2025_lightgbm,14,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
 lu_2025,lu_2025_lightgbm,14,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
@@ -45,18 +39,6 @@ lu_2025,lu_2025_tresnet,16,MODEL_DEPENDENCE,all,warning,All models within this s
 lu_2025,lu_2025_tresnet,16,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
 lu_2025,lu_2025_tresnet,16,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
 lu_2025,lu_2025_tresnet,16,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
-lu_2025,lu_2025_gmlp,17,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
-lu_2025,lu_2025_gmlp,17,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
-lu_2025,lu_2025_gmlp,17,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
-lu_2025,lu_2025_gmlp,17,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
-lu_2025,lu_2025_gmlp,17,GRAPH_READ_OPERATING_POINT,sensitivity_specificity,warning,Operating point read from bar chart according to extraction; values are approximate; no integer denominators or threshold verified
-lu_2025,lu_2025_gmlp,17,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
-lu_2025,lu_2025_pedca_ft,18,AUROC_VARIATION_UNSPECIFIED,auroc,warning,"+/- is not identified as SD, SE or CI; not used as variance"
-lu_2025,lu_2025_pedca_ft,18,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
-lu_2025,lu_2025_pedca_ft,18,PUBLIC_SOURCE_VERIFICATION_NEEDED,all,warning,Correspondence content withheld; operational outcome definition and exact target interval require public-source verification
-lu_2025,lu_2025_pedca_ft,18,DUPLICATED_QUALITY_TEMPLATE,all,warning,Source quality field repeats KNN-Dtw index description across all models; not model-specific evidence
-lu_2025,lu_2025_pedca_ft,18,GRAPH_READ_OPERATING_POINT,sensitivity_specificity,warning,Operating point read from bar chart according to extraction; values are approximate; no integer denominators or threshold verified
-lu_2025,lu_2025_pedca_ft,18,EXTERNAL_VALIDATION_NOT_DEMONSTRATED,all,warning,External validation: explicitly_absent; strict protocol eligibility not established
 bose_2019,bose_2019_glm,19,MODEL_DEPENDENCE,all,warning,All models within this source share an evaluation cohort; model entries are not independent studies
 bose_2019,bose_2019_glm,19,RECRUITMENT_DISCREPANCY,all,warning,January vs November 2013 recruitment start recorded
 bose_2019,bose_2019_glm,19,PATIENT_TABLE_NOT_RECONSTRUCTABLE,2x2,warning,60.6% test sensitivity incompatible with a simple integer table of five test CA patients; bootstrap/minute-score estimand needs verification

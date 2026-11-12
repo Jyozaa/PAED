@@ -37,7 +37,7 @@ def test_source_headers_and_multiline_numbering(project):
 def test_pipeline_end_to_end_reproduces_same_outputs_without_raw_files(project,tmp_path):
     first=run(project,tmp_path/'first')
     second=run(project,tmp_path/'second')
-    assert first['counts']['retained_models']==20
+    assert first['counts']['retained_models']==17
     assert first['input_mode']=='public_curated' and not first['raw_sources_verified_this_run']
     assert first['output_files']==second['output_files']
     assert len(validate(tmp_path/'first'))==8
@@ -61,10 +61,13 @@ def test_worksheet_and_all_data_dictionary_columns_exist(project,evidence,tmp_pa
 
 
 def test_html_report_structure_and_local_figure_links(project,tmp_path):
+    # The final report links both analysis stages and the revision comparison.
+    # Build that complete report graph before checking every local target.
+    from paed.revision_pipeline import run as complete_run
     from html.parser import HTMLParser
     from urllib.parse import urlparse,unquote
     output=tmp_path/'html-check'
-    run(project,output)
+    complete_run(project,output)
     class Parser(HTMLParser):
         def __init__(self):super().__init__();self.images=[];self.links=[];self.h2=[];self.heading=False
         def handle_starttag(self,tag,attrs):

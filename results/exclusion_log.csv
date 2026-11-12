@@ -4,5 +4,8 @@ source_row,source_line_start,source_line_end,source_nonempty_cells,study_id,mode
 5,60,68,41,yu_2026,yu_2026_xgboost,populated_model,False,"Composite adverse event performance, not cardiac arrest alone",36,True,False
 6,69,77,41,yu_2026,yu_2026_logistic,populated_model,False,"Composite adverse event performance, not cardiac arrest alone",36,True,False
 7,78,86,41,yu_2026,yu_2026_svm,populated_model,False,"Composite adverse event performance, not cardiac arrest alone",36,True,False
+13,113,117,42,lu_2025,lu_2025_xgboost,populated_model,False,Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.,36,True,False
+17,133,137,42,lu_2025,lu_2025_gmlp,populated_model,False,Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.,36,True,False
+18,138,141,42,lu_2025,lu_2025_pedca_ft,populated_model,False,Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.,36,True,False
 21,159,160,2,yu_2023,yu_2023_logistic_reference,cross_reference,False,Cross-reference only; no extracted result; links to populated Yu 2022 record 29,4,False,False
 22,161,170,42,yu_2023,yu_2023_gnb,populated_model,False,Graphical results without adequately extractable numerical estimates,37,True,False

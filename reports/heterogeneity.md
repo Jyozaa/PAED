@@ -1,13 +1,12 @@
-# Heterogeneity and sensitivity analyses
+# Heterogeneity and eligibility sensitivity
 
-The pairwise matrix contains all 10 pairs among five retained reports. No pair is approved for statistical pooling from current data. Same-setting comparisons may provide clinical context, but setting alone does not establish a common estimand. The matrix distinguishes potential patient overlap from no identified overlap; the latter is not proof of independence.
+Five retained reports form four conservative potential dependency groups. All 10 report pairs remain descriptive comparisons, not approved confirmatory pooling pairs. Absence of identified overlap elsewhere is not proof of independence.
 
-- **Lead time:** Lu uses first-24h input, with exact outcome interval requiring public verification. Bose reports variable warning time (mean 17h among 16 cases) after selecting a 2h input window; this is not AUROC for a fixed 17h forecast. Yu extracts 1h peak results with other horizons insufficiently numerical. Kenet labels five-minute windows within 3h of arrest.
-- **Architecture:** regressions, nearest-neighbour/kernel baselines, tree ensembles, neural networks and multimodal transformer differ alongside inputs, outcome windows and validation. Within-study contrasts remain dependent. No cross-study causal superiority ranking or significance test is supported.
-- **Population:** four CICU reports and one general PICU; Bose infants <=1y, broader paediatric cohorts elsewhere. Kenet includes 38 adults. No exact consistent neonatal strata exist for subgroup fitting.
-- **Validation:** internal CV or patient split; Yu 2022 independent validation unreported; external validation not demonstrated. Training performance is explicitly separated from test performance.
-- **Units:** admission-, minute-score-, hourly observation- and five-minute-window estimands cannot be interchanged. Two Dallas reports probably share patients and are grouped conservatively.
-- **Outcome and sampling:** mechanical-function cessation, CPR and registry definitions differ; some samples select cases/controls or negative windows relative to discharge. Case fractions and window proportions are not prospective population CA risks.
-- **Inputs:** ECG/HRV in Bose and Kenet; NIRS/vasoactive signals in Yu; EHR static/time-series/tabular-text representations in Lu. Demographics are documented even when not a primary thematic target; they can contribute performance and applicability differences.
+- Lead time differs: first-24h input for Lu with exact outcome interval unverified; variable warning time for Bose (mean 17h, SD 7.5h) after a selected 2h input window; extracted 1h peaks for Yu; 3h positive-window labeling for Kenet.
+- Units differ: admission with patient-grouped CV, minute risk scores, hourly observations and repeated five-minute windows.
+- Population differs: four cardiac-ICU reports and one general PICU; infants only in Bose, broader ages elsewhere; Kenet includes 38 adults.
+- Validation is internal or unreported. No retained report demonstrates external validation. Different case/control reference times and discharge-linked negative windows affect transportability.
+- Dallas reports have matching institution, period and 160 CA/711 controls, so they are never independent contributors in the same exploratory scenario.
+- Retained Lu architectures are now two kernel/neighbour time-series methods, five static-EHR baselines and one numerical time-series network. All eight are retained despite missing operating points. Their AUROCs range 0.5472-0.7329.
 
-The team working cohort has five reports/20 models. Restricting only to registered CICU setting leaves four reports/14 models (at most three conservative dependency groups). Requiring demonstrated external validation leaves zero confirmed eligible studies. Neither sensitivity restriction produces a defensible pooled analysis. No independent pooled estimates exist to support leave-one-out, quantitative subgroups, meta-regression, I-squared, publication-bias regression or prediction intervals.
+CICU-only eligibility leaves 11 models; the strict demonstrated-eligibility subset remains empty. No confirmatory meta-regression, subgroup model, Egger test, leave-one-out analysis, I-squared or prediction interval is supported. The exploratory layer separately quantifies choices of all eight Lu representatives and assumed uncertainty, without interpreting scenario stability as clinical validation.

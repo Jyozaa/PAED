@@ -1,109 +1,296 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>final analysis report</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="ai-prediction-of-paediatric-cardiac-arrest-statistical-analysis-of-the-supplied-systematic-review-extraction">AI prediction of paediatric cardiac arrest: statistical analysis of the supplied systematic-review extraction</h1>
-<p>Analysis reference date: 11 November 2026. Registered review: CRD420251241478. <strong>Exploratory working cohort; not fully protocol-concordant.</strong> This is a completed analysis of the supplied extraction, not a claim that a new comprehensive database search, full-text re-extraction or dual-reviewer systematic review has been completed.</p>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>final analysis report</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#223241;max-width:1200px;margin:40px auto;padding:0 28px}h1{font-size:2.1em;color:#163e53}h2{border-bottom:1px solid #cad9df;padding-top:20px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td,th{padding:9px 12px;border:1px solid #d9e2e7;vertical-align:top}th{background:#eaf0f4;text-align:left}tbody tr:nth-child(even){background:#f7f9fa}img{max-width:100%;height:auto}code{background:#edf2f5;padding:2px 5px}a{color:#006a87}.notice{background:#fff0d9;padding:15px;border-left:4px solid #b77716}@media print{body{font-size:11px;margin:0}h2{break-after:avoid}img{max-height:85vh}table{display:table;font-size:8px}}</style><body><h1 id="revised-paediatric-cardiac-arrest-analysis">Revised paediatric cardiac arrest analysis</h1>
+<p>Eligibility revision: 12 November 2026. Exploratory working scope, not fully protocol-concordant. This report analyses the supplied extraction rather than claiming new systematic searching or independent full-text verification.</p>
 <h2 id="1-research-question-and-objectives">1. Research question and objectives</h2>
-<p>How accurately do AI and machine-learning algorithms predict cardiac arrest in paediatric intensive care? Primary objectives were feasibility-tested random-effects AUROC synthesis and bivariate/HSROC sensitivity-specificity synthesis. Secondary objectives were descriptive comparisons of architecture, lead time, validation, ICU setting and input modality, with dependency, bias and clinical-use assessment.</p>
-<p>AUROC is threshold-integrated ranking discrimination. Sensitivity is TP/(TP+FN) at an operating threshold; specificity is TN/(TN+FP). PPV is the fraction of positive predictions that are true positives in the evaluated sample. These are different estimands. The analysis unit must accompany each: repeated windows are not independent children or independent arrests.</p>
+<p>How accurately can predictive algorithms identify impending paediatric cardiac arrest? Both confirmatory feasibility and separately labelled exploratory calculations are retained. AUROC, threshold-specific sensitivity/specificity and PPV concern different estimands and units.</p>
 <h2 id="2-data-sources-and-study-eligibility">2. Data sources and study eligibility</h2>
-<p>All three supplied sources were fully read: the 42-column CSV with two header records, the 3-page List of Variables, and 7-page PROSPERO snapshot version 3.0. Original files remain local; SHA-256 hashes are in the run manifest. Logical CSV record numbers include the two headers; physical line spans account for multiline cells. The public curated inputs contain only whitelisted aggregate facts, metric texts and source identifiers. Private correspondence content, raw PDFs/CSV, personal contact details and unpublished free-text notes are excluded.</p>
-<p>The data contain <strong>27 post-header records, six study reports and 26 populated model entries</strong>. Record 21 contains a cross-reference rather than extracted numerical results. It points to the Yu 2022 logistic model in record 29. There are zero fully blank records. No original study full texts, raw patient data, independent reviewer forms, database search logs or full screening totals were supplied. Source study facts below are extraction-based and not independently reverified against full reports. Internet checks were restricted to methodological guidance, not additions to the included-study dataset.</p>
+<p>Only the original extraction CSV, List of Variables (3 pages), PROSPERO snapshot (7 pages) and their existing derivatives are used. No new papers, external data or correspondence were obtained. Original-file hashes are unchanged. Source row means 1-based logical CSV record including both header records; physical multiline spans are separate. Original/curated sources remain immutable, with raw PDFs/CSV and private narratives excluded from Git.</p>
+<p>There are 27 post-header records, 26 populated original model entries and 6 original reports. One record is a cross-reference, with no extracted results, rather than a blank row. After 9 whole-model exclusions, <strong>5 reports and 17 models remain</strong>, including <strong>8 Lu models</strong>. There are <strong>18 numerical AUROC evaluations</strong>, because Bose contributes separate training and test results, and 8 unspecified Lu +/- quantities. Only one labelled AUROC CI is supplied. Seven complete candidate diagnostic tables still come from two sources.</p>
 <h2 id="3-agreed-exclusions-and-protocol-discrepancies">3. Agreed exclusions and protocol discrepancies</h2>
-<p>All five Yu 2026 models were excluded because accuracy concerns composite adverse events rather than arrest alone. Yu 2023 Gaussian Naive Bayes was excluded because numerical results were not adequately extractable. The working cohort retains <strong>five reports and 20 models</strong>: Lu 2025 (11), Bose 2019 (1), Yu 2023 RDN Boost (1), Kenet 2023 (6), Yu 2022 (1).</p>
-<p>PROSPERO restricts the population to under-18 cardiac ICU inpatients and excludes models without external validation. The team explicitly accepted general PICU, retaining Kenet. Its 38 adult participants create an additional unresolved eligibility issue. Lu and Bose explicitly lack external validation; none of the other reports demonstrates it in the extraction. Thus <strong>zero studies/zero models demonstrate all strict criteria</strong>. NR is not proof that validation never occurred, and no formal waiver or register amendment is claimed. Restriction to CICU setting alone leaves four reports/14 models. See <a href="protocol_deviations.md">protocol deviations</a> for the registered wording, affected studies and required decisions.</p>
+<p>Previous exclusions remain: five Yu 2026 models for composite adverse events and Yu 2023 Gaussian Naive Bayes for inadequate graphical numerical results. The new team decision excludes entire Lu 2025 XGBoost, gMLP and PEDCA-FT entries, including their AUROCs: <strong>Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.</strong> This is a model-level eligibility decision based on the sensitivity/specificity extraction, not a claim that those AUROCs were necessarily graph-read. Missing sensitivity/specificity alone does not exclude the other Lu models.</p>
+<p>General PICU remains team-agreed; Kenet includes 38 adults. No external-validation waiver or PROSPERO amendment is presumed. Strict demonstrated eligibility remains empty.</p>
 <h2 id="4-data-cleaning-and-validation">4. Data cleaning and validation</h2>
-<p>The deterministic pipeline preserves grouped header metadata, source metric text and separate numerical fields. It standardizes percentages and proportions, semantically separates Bose training/test AUROCs, parses the labelled Yu 2023 CI, and retains unspecified +/- variation without treating it as SE or CI. Approximate distal Yu 2022 graphical ranges are not manufactured into hourly observations. Missing, not reported, not applicable, ambiguous and zero states are distinct; 1,134 source data-cell states are auditable. No missing value is set to zero and no 2x2 is reconstructed from rounded percentages.</p>
-<p>Seven complete count tables are recalculated using standard formulas, with reported and count-derived values retained separately. One comparison exceeds the study-appropriate rounding tolerance: <strong>Kenet random-forest specificity reported 77.8%, count-derived 77.5632%</strong>. Yu 2023 integer percentages agree within rounding. Each numerical AUROC and count table retains study/model IDs, source record, DOI via the model table, metric source, horizon context, validation and dependency identifiers.</p>
-<p>Yu 2022/2023 share institution, recruitment period (November 2010-January 2019), and 160 CA/711 control counts. They are conservatively assigned one potential dependency group. This does not determine exact overlap or permit their variances to be combined. Five reports therefore form at most <strong>four potential independent cohort groups</strong> under this working assumption.</p>
+<p>Two headers and multiline source provenance are preserved. Percentages are normalized without replacing missing values by zero. All exclusions occur before numerical metric parsing for retained analysis. Original uncertainty text remains distinct from CI/SE. Complete diagnostic tables are recalculated, and the random-forest specificity discrepancy is retained. Original source hashes are unchanged.</p>
 <h2 id="5-characteristics-of-included-studies">5. Characteristics of included studies</h2>
-<p>All five reports describe retrospective single-centre US populations. Four are cardiac/cardiovascular ICU reports and one is general PICU. Samples vary from Bose's 64 analysed patients (20 held-out test patients, five CA) to Lu's 3,566 patients/4,672 admissions. Kenet has 1,145 retained patients (15 CA) after 1,019 exclusions, including 57 CA; test set is 229 patients with five CA. Both Dallas reports contain 160 cases and 711 controls, with probable patient reuse. The 18.37% Dallas selected-sample fraction is not a natural population incidence. These denominators cannot be summed as independent patient recruitment.</p>
+<p>All five reports are retrospective single-centre US studies. Counts by report are {'lu_2025': 8, 'bose_2019': 1, 'yu_2023': 1, 'kenet_2023': 6, 'yu_2022': 1}.</p>
 <table>
 <thead>
 <tr>
 <th>study_id</th>
-<th>models</th>
-<th>unit</th>
+<th>retained_models</th>
+<th>sample_size_and_ca</th>
+<th>icu_setting</th>
+<th>model_architectures</th>
+<th>training_validation</th>
+<th>prediction_horizon</th>
+<th>reporting_limitations</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>lu_2025</td>
-<td>11</td>
-<td>admission_with_patient_grouped_cv</td>
+<td>8</td>
+<td>3,566 patients; 4,672 admissions; 4.0% patient and 3.1% admission CA proportions (rounded; exact counts not supplied)</td>
+<td>CICU</td>
+<td>knn dtw; svc gak; knn unif; logistic; rf gini; lightgbm; tabnn; tresnet</td>
+<td>Five-fold CV grouped by patient; no separate external validation</td>
+<td>First-24h input; target outcome interval requires public verification</td>
+<td>Eight retained AUROC +/- quantities have unspecified meaning; no eligible retained sensitivity/specificity; three whole model entries excluded by team because their operating points were graphical. Exact outcome interval/definition remains unverified; duplicated baseline quality text.</td>
 </tr>
 <tr>
 <td>bose_2019</td>
 <td>1</td>
-<td>minute_risk_scores_patient_split_uncertainty</td>
+<td>Initial 228 patients (22 CA); analysed 64 (16 CA, 48 matched controls); training 44 (11 CA), test 20 (5 CA)</td>
+<td>CICU</td>
+<td>glm</td>
+<td>Patient train/test split 44/20, with 60 bootstrap iterations; no external validation</td>
+<td>At least 2h warning; mean 17h (SD 7.5) among 16 cases; not a fixed 17h forecast</td>
+<td>Only 5 test arrest patients; bootstrap procedure described but no numerical AUROC CI/SE supplied; percentage sensitivity does not identify an integer patient table; recruitment start date inconsistent</td>
 </tr>
 <tr>
 <td>yu_2023</td>
 <td>1</td>
-<td>representative_fold_table_unit_unverified</td>
+<td>160 index CA cases/events and 711 unique controls; selected case-control fraction 18.37%, not population incidence</td>
+<td>CICU</td>
+<td>rdn boost</td>
+<td>Five-fold CV (80/20 per fold), control subsampling; no demonstrated external validation</td>
+<td>1h extracted peak AUROC; other 5/9/13h results not numerically supplied</td>
+<td>Representative confusion-matrix model attribution assumed in extraction; fold, threshold, horizon and unit unresolved; probable cohort reuse with Yu 2022; rounded PPV/NPV require comparison with exact table-derived values</td>
 </tr>
 <tr>
 <td>kenet_2023</td>
 <td>6</td>
-<td>repeated_5_minute_window</td>
+<td>1,145 patients, 15 CA; 14,714 windows, 516 positive overall; test 229 patients (5 CA); six test matrices each contain 3,059 windows (211 positive)</td>
+<td>general_PICU</td>
+<td>logistic; svm; random forest; xgboost; lightgbm; soft voting</td>
+<td>Patient split: train 732 (6 CA), validation 184 (4 CA), test 229 (5 CA)</td>
+<td>5min windows labelled positive within 3h before CA; 3h preferred over 1h</td>
+<td>Repeated windows and six dependent models; no intrapatient correlation or clustering adjustment supplied; 1,019/2,164 patients removed including 57 CA; 38 adults included; recruitment ends July vs August 2021</td>
 </tr>
 <tr>
 <td>yu_2022</td>
 <td>1</td>
-<td>hourly_repeated_observations_validation_unreported</td>
+<td>871 selected patients: 160 CA and 711 controls; 18.37% sample fraction, not population prevalence</td>
+<td>CICU</td>
+<td>logistic</td>
+<td>No independent validation reported</td>
+<td>1h extracted peak; 1-15h evaluated, distal ranges approximate only</td>
+<td>No AUROC CI/SE or model-level 2x2; independent validation unreported; cases referenced to arrest vs controls first 48h; probable cohort reuse with Yu 2023</td>
 </tr>
 </tbody>
 </table>
-<p><a href="table1_study_characteristics.html">Full Table 1</a> includes age, sex, setting, outcome definitions, recruitment discrepancies, input modalities, architectures, training/validation, horizon/frequency, units and limitations. <a href="table2_model_performance.html">Full Table 2</a> includes all 20 model results, original and recalculated performance, genuine CI, counts and available precision-recall metrics.</p>
 <h2 id="6-descriptive-predictive-performance">6. Descriptive predictive performance</h2>
-<p>There are <strong>21 exact numerical AUROC evaluations from 20 models</strong>, because Bose reports training 0.91 and held-out test 0.75. The 20 nontraining/other reported model evaluations span <strong>0.5472-0.9710</strong>. This is a descriptive minimum/maximum across heterogeneous dependent results; it is not a pooled estimate, confidence interval or cross-study architecture ranking. Lu's 11 AUROCs span 0.5472-0.7504; named index PEDCA-FT is 0.7399 with unspecified variation 0.0316, while gMLP is 0.7504 with unspecified variation 0.0352. Kenet AUROCs range 0.867-0.971 on repeated windows. Yu 2022 is 0.83 at the extracted 1-hour peak; Yu 2023 is 0.85 (95% CI 0.79-0.90) at 1 hour.</p>
-<p>Sensitivity and specificity are numerically supplied for 11 retained models, with an additional entire-dataset specificity for Bose. Three Lu operating points are graph-read: XGBoost 39.04%/83.14%, gMLP 8.22%/97%, PEDCA-FT 42.47%/84.69%; they have unknown thresholds and no verifiable integer tables. These show why high AUROC need not mean high sensitivity at the chosen operating point.</p>
-<p>Kenet XGBoost's table gives sensitivity <strong>99.5261%</strong>, specificity <strong>69.5927%</strong>, PPV <strong>19.5167%</strong> (210 TP, 866 FP, 1 FN, 1,982 TN). Soft voting gives sensitivity <strong>90.9953%</strong>, specificity <strong>87.8862%</strong>, PPV <strong>35.7542%</strong> (192 TP, 345 FP, 19 FN, 2,503 TN). The difference describes window-level threshold trade-offs in a shared sample; inferential paired comparisons are not possible without joint predictions. Six reported AUPRCs range 0.529-0.797; selected negative windows shape these precision/recall values and PPVs.</p>
+<p>Nontraining/other reported AUROC span: <strong>0.5472-0.9710</strong>. Lu retained span: <strong>0.5472-0.7329</strong>. Bose held-out test 0.75 versus training 0.91; Yu 2023 0.85 (95% CI 0.79-0.90); Yu 2022 peak 0.83; Kenet 0.867-0.971. These are dependent descriptive results, not study averages or an architecture ranking. Lu and Yu 2022 have no eligible operating points. The model table preserves every retained result.</p>
+<table>
+<thead>
+<tr>
+<th>study</th>
+<th>model</th>
+<th>source row</th>
+<th>AUROC (source text)</th>
+<th>sensitivity (source)</th>
+<th>specificity (source)</th>
+<th>TP/FP/FN/TN</th>
+<th>AUPRC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lu_2025</td>
+<td>knn dtw</td>
+<td>8</td>
+<td>55.27 ± 4.21</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>svc gak</td>
+<td>9</td>
+<td>54.72 ± 3.80</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>knn unif</td>
+<td>10</td>
+<td>57.41 ± 2.99</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>logistic</td>
+<td>11</td>
+<td>62.92 ± 1.92</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>rf gini</td>
+<td>12</td>
+<td>73.29 ± 2.47</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>lightgbm</td>
+<td>14</td>
+<td>61.42 ± 11.06</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>tabnn</td>
+<td>15</td>
+<td>62.16 ± 3.64</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>lu_2025</td>
+<td>tresnet</td>
+<td>16</td>
+<td>72.21 ± 7.22</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>bose_2019</td>
+<td>glm</td>
+<td>19</td>
+<td>0.91 (training set); 0.75 (test set)</td>
+<td>60.6% (test set; unchanged when evaluated on entire dataset excluding patients with &lt;2h data)</td>
+<td>74.1% (test set); 80.2% (entire dataset)</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>yu_2023</td>
+<td>rdn boost</td>
+<td>20</td>
+<td>0.85 [95% CI 0.79, 0.90] at 1 hour prior to CA (peak performance); values also reported at 13, 9, and 5 hours prior (see Table 1 subgroup analyses; overall model AUROC lower at more distal time points, improving as time to arrest decreased)</td>
+<td>90%</td>
+<td>65%</td>
+<td>36/63/4/115</td>
+<td>NR</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>logistic</td>
+<td>23</td>
+<td>0.867 (auPRC 0.529; accuracy 68.3%; PPV 16.3%; NPV 98.6%)</td>
+<td>87.20%</td>
+<td>66.90%</td>
+<td>184/944/27/1904</td>
+<td>0.529</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>svm</td>
+<td>24</td>
+<td>0.955 (auPRC 0.614; accuracy 68.3%; PPV 17.6%; NPV 99.7%)</td>
+<td>97.60%</td>
+<td>66.10%</td>
+<td>206/965/5/1883</td>
+<td>0.614</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>random forest</td>
+<td>25</td>
+<td>0.936 (auPRC 0.597; accuracy 78.6%; PPV 23.4%; NPV 99.3%)</td>
+<td>92.40%</td>
+<td>77.80%</td>
+<td>195/639/16/2209</td>
+<td>0.597</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>xgboost</td>
+<td>26</td>
+<td>0.971 (auPRC 0.797 — best of all six models on both metrics; accuracy 71.7%; PPV 19.5%; NPV 99.9%)</td>
+<td>99.50%</td>
+<td>69.60%</td>
+<td>210/866/1/1982</td>
+<td>0.797</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>lightgbm</td>
+<td>27</td>
+<td>0.950 (auPRC 0.727; accuracy 72.0%; PPV 19.4%; NPV 99.7%)</td>
+<td>97.20%</td>
+<td>70.20%</td>
+<td>205/850/6/1998</td>
+<td>0.727</td>
+</tr>
+<tr>
+<td>kenet_2023</td>
+<td>soft voting</td>
+<td>28</td>
+<td>0.957 (auPRC 0.733; accuracy 88.1% — highest of all six models; PPV 35.8% — highest of all six models; NPV 99.2%)</td>
+<td>91.00%</td>
+<td>87.90%</td>
+<td>192/345/19/2503</td>
+<td>0.733</td>
+</tr>
+<tr>
+<td>yu_2022</td>
+<td>logistic</td>
+<td>29</td>
+<td>0.83 at 1 hour before CA (best/peak performance); AUROC increased over time as it approached the arrest, ranging from approximately 0.72–0.74 at 15–10 hours prior, rising to 0.83 at 1 hour prior (see Figure 1 for full hourly trend)</td>
+<td>NR</td>
+<td>NR</td>
+<td>NR/NR/NR/NR</td>
+<td>NR</td>
+</tr>
+</tbody>
+</table>
 <h2 id="7-auroc-meta-analysis-methods-feasibility-results">7. AUROC meta-analysis: methods, feasibility, results</h2>
-<p><strong>Status: Not statistically defensible from the supplied data.</strong> Five reports/20 models supply 21 points; <strong>one independent cohort supplies a labelled AUROC CI</strong>. <strong>Zero studies and zero model estimates contribute to a pooled fit.</strong> Units and horizons are heterogeneous; the strict-protocol confirmed subset is empty.</p>
-<p>The model-selection hierarchy prefers explicitly named/sole index models and appropriate independent validation, with no highest-AUROC rule. Kenet's representative-model decision is unresolved. Yu peak horizons are not treated as prospectively selected for cross-study synthesis. From Yu 2023's labelled CI, endpoint normal approximation yields SE 0.02806174 on AUROC scale and 0.22252939 on logit scale. Its CI construction is not established. Eleven unspecified Lu +/- quantities and narrative bootstrap descriptions cannot supply valid inverse-variance weights.</p>
-<p>The guarded established-package route is REML <code>metafor::rma.uni</code> on logit AUROC with modified Hartung-Knapp t CI and back-transformation, but the eligibility gate stops before optimization. No mean is substituted, variance invented, or pooled diamond drawn. Tau-squared, I-squared, prediction interval and meta-analytic p-values are not estimable here. <a href="auroc_feasibility.md">Full AUROC feasibility assessment</a> documents all checks.</p>
+<p><strong>Confirmatory status: not statistically defensible from the supplied evidence.</strong> 5 reports/17 models supply 18 AUROC evaluations, but just one cohort has genuine numerical uncertainty. The 8 retained Lu +/- values are unspecified, not SEs. No confirmatory pooled AUROC, CI, p-value, tau-squared, I-squared or prediction interval is produced.</p>
+<p>The separate exploratory report recomputes 18 core scenarios with Lu logistic regression and all seven retained alternative representatives. No original PEDCA-FT pooled value is reused as a revised result. The statistical estimator remains Paule-Mandel with modified Hartung-Knapp intervals; only its representative inputs change.</p>
 <h2 id="8-sensitivityspecificity-meta-analysis-methods-feasibility-results">8. Sensitivity/specificity meta-analysis: methods, feasibility, results</h2>
-<p><strong>Status: Not statistically defensible from the supplied data.</strong> <strong>Seven model tables from two study sources; zero confirmed eligible independent patient-level datasets; zero studies/model estimates in a pooled fit.</strong> Six tables count repeated five-minute windows from the same Kenet sample; one Yu 2023 table is a representative fold with unresolved model attribution, threshold, horizon and unit. No clusters or patient-level data can be recovered from marginal aggregate counts.</p>
-<p>All six Kenet tables total 3,059 windows (211 positive, 2,848 negative), not patients. Its test set has five CA patients. Yu 2023's table totals 218 units and recalculates to sensitivity 0.9000, specificity 0.646067, PPV 0.363636 and NPV 0.966387. This is not assumed to be a 1-hour operating point corresponding to its AUROC. No naive binomial confidence limits are calculated from windows or unresolved units.</p>
-<p>The conditional bivariate implementation uses <code>mada::reitsma</code> with REML for independent interior proportions, with no unnecessary count correction. It requires explicit selection and comparability confirmation and a conservative minimum of five independent datasets; binomial HSROC would be needed for sparse boundary data. Even an optimistic two-study fit cannot reliably characterize the full random-effects covariance here, and its underlying unit/linkage assumptions fail first. No model convergence, pooled sensitivity/specificity or fitted summary ROC is claimed. <a href="diagnostic_feasibility.md">Full diagnostic feasibility assessment</a> includes all validated matrices.</p>
+<p><strong>Confirmatory status: not statistically defensible from the supplied evidence.</strong> Seven tables represent six Kenet algorithms on shared windows and one Yu 2023 representative fold. Zero confirmed independent patient-level tables contribute to a confirmatory pooled fit. No unrestricted bivariate covariance or HSROC curve is estimated.</p>
+<p>The 96 constrained joint GLS scenarios are rerun with unchanged count tables and covariance assumptions and numerically compared with the saved prior run. These conditional summaries are not an unrestricted bivariate/HSROC fit.</p>
 <h2 id="9-heterogeneity-and-sensitivity-analyses">9. Heterogeneity and sensitivity analyses</h2>
-<p>The pairwise matrix examines all 10 report pairs. ICU mix, age, disease spectrum, arrest definitions, case/control selection, input representation, lead time, model selection, validation and sampling unit vary substantially. Mean warning time (Bose), first-24h input (Lu), fixed extracted pre-arrest peak points (Yu) and within-3h positive windows (Kenet) represent different targets. Thematic inputs include vitals, ECG/HRV, labs, NIRS, medication and demographic context, with no universal shared variable set.</p>
-<p>The exploratory cohort is compared with CICU-only (four reports/14 models) and strict demonstrated-eligibility (zero) subsets; neither supports pooling. Potential Dallas reuse prevents independent treatment of Yu 2022/2023. No meta-regression, quantitative subgroup fitting, leave-one-out, Egger regression, funnel-asymmetry test or unstable heterogeneity statistic is performed. See <a href="heterogeneity.md">heterogeneity report</a> and matrix CSV.</p>
+<p>Different forecast times, definitions, units, sampling and internal validation persist. Yu 2022/2023 are grouped conservatively for possible overlap. Eight Lu representatives are analysed separately, never as independent cohorts in a single pooled scenario. Conditional scenario spread does not establish clinical validity.</p>
 <h2 id="10-risk-of-bias-and-certainty">10. Risk of bias and certainty</h2>
-<p>Twenty QUADAS-2 domain evidence records and applicability prompts were prepared. All formal judgements remain pending independent reviewer assessment. Concerns needing review include spectrum selection, large missing-data exclusions, sparse events, threshold/model selection, differential time anchoring, repeated observations, model leakage and validation. Reported detail is not proof of low risk, and missing detail is not proof of high risk. <a href="https://www.bmj.com/content/388/bmj-2024-082505">PROBAST+AI</a> may be a useful additional prediction-model-specific framework; it has not replaced the registered QUADAS-2 tool.</p>
-<p>Adapted GRADE domains are documented without an unsupported final grade. Bias, indirectness, precision and inconsistency cannot be resolved by apparently high AUROC. Search/reporting-bias evidence is incomplete. No software-based claim of independent dual review is made. See <a href="risk_of_bias.md">risk-of-bias report</a> and <a href="certainty_of_evidence.md">certainty worksheet</a>.</p>
+<p>QUADAS-2 evidence and adapted GRADE preparation remain incomplete reviewer worksheets; no definitive software-assigned ratings or dual-reviewer completion are claimed.</p>
 <h2 id="11-clinical-interpretation">11. Clinical interpretation</h2>
-<p>These studies suggest discriminatory signal in selected retrospective data, while documenting substantial operating-point trade-offs. Kenet's high sensitivity concerns positive five-minute windows, not the proportion of children whose arrests were successfully anticipated. A false-positive window is not automatically a distinct clinical alarm. The negative-window sampling scheme, alarm suppression, treatment actions and prospective CA incidence affect actual workload and PPV. Selected case-control or window PPVs cannot be transported directly to an unselected ICU population.</p>
-<p>No evidence here establishes calibration, acceptable alarms per patient-day, clinical net benefit, prospective prevention of arrests, improved survival or safe deployment. External and prospective evaluation at clinically useful horizons, with patient/cluster-aware uncertainty and explicit thresholds, is required to assess clinical usability.</p>
+<p>High AUROC does not establish sensitivity at a chosen threshold. Window-level missed predictions and false positives are not missed children or distinct clinical alarms. Calibration, prospective benefits, alert burden and deployment safety cannot be inferred.</p>
 <h2 id="12-limitations">12. Limitations</h2>
-<p>This is analysis of a supplied aggregate extraction, with no independently verified original full texts, IPD, complete search/screening logs or full protocol. Extraction assumptions and graphical readings are traceable but remain uncertain. Private correspondence is withheld rather than treated as public corroboration. Only one genuine AUROC CI exists; eleven variability quantities are unspecified. Multiple models/horizons and probable cohort reuse create dependency. Seven tables do not yield seven independent studies. Kenet clustering, five test CA patients and adult participants limit interpretation; positive-window counts also need reconciliation with event multiplicity and the three-hour labeling rule; Yu 2023 linkage is unresolved. Case/control and negative-window sampling affect transportability; bias/certainty assessment remains incomplete. Conditional R fitting code is provided, but no ineligible inferential model was run or validated as a current result.</p>
+<p>One genuine AUROC CI, eight unspecified Lu variability quantities, repeated Kenet windows, sparse arrest patients, mixed age, selected controls, missing external validation, possible Dallas reuse and unresolved Yu linkage remain. Sources cannot be independently checked against full papers in this task. Hypothetical uncertainty/covariance does not resolve these gaps.</p>
 <h2 id="13-evidence-based-conclusion">13. Evidence-based conclusion</h2>
-<p><strong>Neither planned inferential meta-analysis is statistically defensible from the supplied evidence.</strong> The completed descriptive synthesis retains five reports and 20 models, preserves 21 AUROC evaluations, one genuine CI and seven complete candidate diagnostic tables, and explains their provenance, dependency and limitations. These data cannot establish a universal AUROC, sensitivity/specificity pair, architecture winner or clinical readiness. This is a feasibility outcome, not a technical model-fitting failure or evidence that all AI prediction is ineffective.</p>
+<p>The revised evidence-supported synthesis contains 5 reports/17 models. Confirmatory pooling remains not statistically defensible. Separate conditional scenarios quantify the implications of explicit assumptions and revised model selection; they do not establish clinical accuracy.</p>
 <h2 id="14-outstanding-questions-for-the-review-team">14. Outstanding questions for the review team</h2>
-<ol>
-<li>Confirm/document the scope broadening to general PICU and decide how to handle Kenet's 38 adults; obtain paediatric-only performance if needed.</li>
-<li>Resolve the registered external-validation requirement through additional evidence or an explicit documented methodological decision; no waiver is presumed.</li>
-<li>Verify all included-study facts against public full reports, especially Lu outcome/target interval, graphical operating points and +/- definition; keep private correspondence private.</li>
-<li>Confirm Dallas patient overlap and evaluation independence, including whether comparator estimates are reused.</li>
-<li>Obtain genuine AUROC SEs/CIs and their construction; do not use fold SD as sampling SE without justification.</li>
-<li>Confirm Yu 2023's table model, threshold, fold, horizon and unit; reconcile its 40 positive units with cohort/fold descriptions without reconstruction assumptions.</li>
-<li>Obtain patient-level or cluster-adjusted Kenet diagnostic estimates and prospective alarm-rate denominators; confirm model selection without choosing observed maxima.</li>
-<li>Reconcile recruitment-date discrepancies, model-specific quality templates and random-forest specificity; resolve exact horizon selection before pooling.</li>
-<li>Supply search strategy/screening counts and complete independent QUADAS-2/adapted GRADE assessments with consensus.</li>
-</ol>
+<p>Resolve scope/adult inclusion, external-validation eligibility, Dallas overlap, prediction horizons, true source uncertainty, table linkage and bias/certainty judgements before manuscript publication. No additional data request or external evidence retrieval was made during this revision.</p>
 <h2 id="15-reproducibility-information">15. Reproducibility information</h2>
-<p>The command <code>make all</code> rebuilds curated-data analyses, CSV tables, figures, Markdown/HTML reports and the run manifest, then runs the full test suite and verifies output completeness. <code>make raw</code> re-ingests all three local originals and regenerates the public curated data. Python source separates ingestion, semantic cleaning, feasibility/independence checks, figures and reporting. Conditional R code has its own early eligibility gates and is not needed to reproduce the current no-pooling findings.</p>
-<p>Input SHA-256 hashes, software versions, counts, configuration, analysis status, warnings, output hashes, actual commands, execution timestamps, test results and the available source Git revision are in <code>run_manifest.json</code>. Public-only reproduction cannot prove fidelity of withheld originals; original-source audit requires local source files. Re-running numerical tables/figures is deterministic; execution timestamps, test duration and source Git metadata naturally change. The manifest Git SHA identifies the source revision at run time, not a claim of containing its own future publication-commit hash.</p>
+<p>Run <code>make revised</code> for the full descriptive, exploratory, comparison and LaTeX/PDF workflow with tests. Versioned historical/current baseline records preserve provenance; previous outputs remain on the parent Git branch. See the root, exploratory and revision manifests for commands, source hashes, versions, fit attempts and tests. The PDF requires Tectonic; no sensitivity/specificity graph is included in that short report.</p>
 <h2 id="descriptive-figures">Descriptive figures</h2>
-<p><img alt="AUROC estimates" src="../figures/auroc_descriptive.png" /></p>
-<p><img alt="Sensitivity points" src="../figures/sensitivity_descriptive.png" /></p>
-<p><img alt="Specificity points" src="../figures/specificity_descriptive.png" /></p>
-<p><img alt="ROC-space scatter" src="../figures/sroc_descriptive.png" /></p>
-<p><img alt="Comparability overview" src="../figures/heterogeneity_overview.png" /></p>
-<p><img alt="Dataset flow" src="../figures/inclusion_flow.png" /></p>
-<p>See <a href="figure_captions.md">full captions</a>; all plots are descriptive and no pooled-estimate figure is implied.</p>
-<h2 id="methodological-references">Methodological references</h2>
-<ul>
-<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5564999/">Takwoingi et al., performance of diagnostic accuracy meta-analysis with few studies/sparse data</a> supports caution about complex hierarchical fitting in small syntheses; it does not validate pooling the current clustered tables.</li>
-<li><a href="https://methods.cochrane.org/sites/methods.cochrane.org.sdt/files/uploads/Chapter%2010%20-%20Version%201.0.pdf">Cochrane DTA handbook, Chapter 10</a> describes bivariate/HSROC models and restrictions on heterogeneity exploration.</li>
-<li><a href="https://www.bmj.com/content/388/bmj-2024-082505">PROBAST+AI original tool publication</a> supports considering a prediction-model-specific assessment in addition to the registered tool.</li>
-<li><a href="https://wviechtb.github.io/metafor/reference/rma.uni.html">metafor package author documentation</a> and <a href="https://rdrr.io/cran/mada/man/reitsma.html">mada package documentation</a> define the conditional estimators. Methods sources were checked online; included-study metrics remain based exclusively on supplied extraction.</li>
-</ul></body></html>
+<p><img alt="auroc descriptive" src="../figures/auroc_descriptive.png" /></p>
+<p><img alt="sensitivity descriptive" src="../figures/sensitivity_descriptive.png" /></p>
+<p><img alt="specificity descriptive" src="../figures/specificity_descriptive.png" /></p>
+<p><img alt="sroc descriptive" src="../figures/sroc_descriptive.png" /></p>
+<p><img alt="heterogeneity overview" src="../figures/heterogeneity_overview.png" /></p>
+<p><img alt="inclusion flow" src="../figures/inclusion_flow.png" /></p>
+<p>See <a href="figure_captions.md">captions</a>, <a href="exploratory/consolidated_exploratory_report.md">exploratory results</a>, and <a href="revisions/exclusion_comparison.md">before/after comparison</a>.</p></body></html>

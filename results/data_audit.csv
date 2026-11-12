@@ -9,12 +9,12 @@ source_row,source_line_start,source_line_end,source_nonempty_cells,study_id,mode
 10,98,102,42,lu_2025,lu_2025_knn_unif,populated_model,True,,36,True,False
 11,103,107,42,lu_2025,lu_2025_logistic,populated_model,True,,36,True,False
 12,108,112,42,lu_2025,lu_2025_rf_gini,populated_model,True,,36,True,False
-13,113,117,42,lu_2025,lu_2025_xgboost,populated_model,True,,36,True,False
+13,113,117,42,lu_2025,lu_2025_xgboost,populated_model,False,Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.,36,True,False
 14,118,122,42,lu_2025,lu_2025_lightgbm,populated_model,True,,36,True,False
 15,123,127,42,lu_2025,lu_2025_tabnn,populated_model,True,,36,True,False
 16,128,132,42,lu_2025,lu_2025_tresnet,populated_model,True,,36,True,False
-17,133,137,42,lu_2025,lu_2025_gmlp,populated_model,True,,36,True,False
-18,138,141,42,lu_2025,lu_2025_pedca_ft,populated_model,True,,36,True,False
+17,133,137,42,lu_2025,lu_2025_gmlp,populated_model,False,Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.,36,True,False
+18,138,141,42,lu_2025,lu_2025_pedca_ft,populated_model,False,Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.,36,True,False
 19,142,144,41,bose_2019,bose_2019_glm,populated_model,True,,36,True,False
 20,145,158,42,yu_2023,yu_2023_rdn_boost,populated_model,True,,37,True,True
 21,159,160,2,yu_2023,yu_2023_logistic_reference,cross_reference,False,Cross-reference only; no extracted result; links to populated Yu 2022 record 29,4,False,False

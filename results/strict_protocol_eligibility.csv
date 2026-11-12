@@ -1,6 +1,6 @@
 study_id,populated_models,retained_models,setting,external_validation,strict_status,strict_reason
 yu_2026,5,0,CICU,not_reported,excluded_outcome_and_external_validation_not_demonstrated,"Composite adverse events, and no demonstrated external validation"
-lu_2025,11,11,CICU,explicitly_absent,excluded_no_external_validation,Single-centre internal cross-validation only
+lu_2025,11,8,CICU,explicitly_absent,excluded_no_external_validation,Single-centre internal cross-validation only
 bose_2019,1,1,CICU,explicitly_absent,excluded_no_external_validation,Single-centre train/test split; external validation explicitly absent
 yu_2023,2,1,CICU,not_reported,external_validation_not_demonstrated,Five-fold internal CV only recorded; external-validation requirement not demonstrated
 kenet_2023,6,6,general_PICU,not_reported,excluded_setting_mixed_age_and_external_validation_not_demonstrated,"General PICU outside registered CICU scope, mixed age (38 aged 18+), and no demonstrated external validation"

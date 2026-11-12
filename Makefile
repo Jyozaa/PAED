@@ -19,3 +19,16 @@ exploratory:
 
 verify-exploratory:
 	$(PYTHON) scripts/verify_exploratory.py
+
+.PHONY: revised revised-raw verify-revised short-report
+revised:
+	$(PYTHON) scripts/run_revision.py --run-tests
+
+revised-raw:
+	$(PYTHON) scripts/run_revision.py --input-dir . --run-tests
+
+verify-revised:
+	$(PYTHON) scripts/verify_revision.py
+
+short-report:
+	$(PYTHON) scripts/build_short_report.py

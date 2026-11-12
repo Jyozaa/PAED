@@ -1,18 +1,12 @@
-# Protocol discrepancies and exploratory scope
+# Protocol discrepancies and revised working eligibility
 
-Registered reference: supplied PROSPERO snapshot **CRD420251241478, version 3.0 (1 August 2026), printed 4 November 2026**, pages 2, 4-5 and 7. No amendment was performed by this project. The working decisions below are supplied by the research team in this task, not inferred from apparent performance.
+Registered reference: supplied PROSPERO CRD420251241478 version 3.0, published 1 August 2026, printed 4 November 2026. No register amendment or external-validation waiver was performed or inferred.
 
-## Registered wording and working decisions
+The population wording on page 2 specifies under-18 cardiac-ICU inpatients and excludes models without external validation or accuracy metrics. Page 7 records narrowing to cardiac intensive care. Page 5 nevertheless lists NICU/PICU subgroups; this ambiguity does not demonstrate a waiver of the restrictive wording. The team accepts general PICU for this working analysis, retaining Kenet. Its 38 adults remain an additional unresolved discrepancy with paediatric-only eligibility.
 
-Page 2 limits the population to paediatric patients under 18 in cardiac intensive care and excludes models without external validation or reported accuracy metrics. Page 7 explicitly records narrowing to cardiac intensive care. Page 5 also lists NICU/PICU subgroups, which creates internal ambiguity but does not establish that the restrictive population criterion was waived.
+Previous exclusions remain: five Yu 2026 models for composite adverse events and Yu 2023 Gaussian Naive Bayes for inadequate graphical numerical results. The new team decision excludes entire Lu 2025 XGBoost, gMLP and PEDCA-FT entries, including their AUROCs: **Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.** This is a model-level eligibility decision based on the sensitivity/specificity extraction, not a claim that those AUROCs were necessarily graph-read. Missing sensitivity/specificity alone does not exclude the other Lu models.
 
-The team explicitly retained **Kenet 2023 general PICU** because cardiac arrest prediction is the working focus. The current five-study cohort is therefore **exploratory and not fully protocol-concordant**. General PICU inclusion does not automatically authorize adult inclusion: Kenet's extraction includes **38 patients aged 18+** with zero CA, with no age-restricted accuracy tables. That additional discrepancy requires confirmation or paediatric-only results.
-
-The team excluded all Yu 2026 models because outcomes combine arrest and therapeutic/composite events, and excluded Yu 2023 Gaussian Naive Bayes because numerical performance cannot be adequately extracted. Yu 2023 RDN Boost remains. Record 21 is a cross-reference to Yu 2022, not a separate quantified logistic model.
-
-## External validation remains unresolved
-
-| study | setting | external_validation | strict_status | reason |
+| study | setting | external validation | strict status | reason |
 | --- | --- | --- | --- | --- |
 | yu_2026 | CICU | not_reported | excluded_outcome_and_external_validation_not_demonstrated | Composite adverse events, and no demonstrated external validation |
 | lu_2025 | CICU | explicitly_absent | excluded_no_external_validation | Single-centre internal cross-validation only |
@@ -22,18 +16,8 @@ The team excluded all Yu 2026 models because outcomes combine arrest and therape
 | yu_2022 | CICU | not_reported | external_validation_not_demonstrated | Neither internal independent validation nor external validation established in extraction |
 
 
-No retained study **demonstrates** external validation in the supplied extraction. Lu and Bose explicitly lack it; Yu 2022, Yu 2023 and Kenet are recorded NR or only internally validated. NR is not proof that no external validation exists, but it cannot satisfy an affirmative eligibility requirement. Internal held-out testing and cross-validation are not external validation.
+The revised working cohort contains 5 reports/17 models. Restricting setting alone leaves 4 CICU reports/11 models. No retained report demonstrates every strict criterion, particularly external validation; NR is not proof that validation never occurred. Lu and Bose explicitly lack external validation. The confirmatory strict subset remains zero demonstrated eligible reports/models.
 
-Under strict application with demonstrated eligibility required, **0 studies / 0 models** can be confirmed eligible from these files. Four retained CICU study reports / 14 models pass the setting restriction alone; six Kenet models fail that restriction. If the external-validation requirement were explicitly revised, the CICU-only descriptive subset would contain those four reports, with probable overlap in the two Dallas publications. Its AUROC pooling still lacks sufficient independent variances; only one candidate confusion matrix remains, with unresolved linkage. No protocol-concordant pooled analysis is possible now.
+The extraction framework permits multiple models/thresholds but not independent treatment of repeated results. AUROC across thresholds differs from an area under a cross-study SROC; a single operating point does not recover an AUROC. Protocol specificity wording is imprecise: specificity concerns non-arrest units. The full-protocol citation is the PRISMA statement rather than an accessible study-specific protocol. Search/screening totals and independent reviewer decisions are absent. QUADAS-2 and adapted GRADE remain registered; no replacement or completed dual review is claimed.
 
-## Further issues requiring explicit methodological resolution
-
-- The extraction framework allows multiple models per paper and multiple thresholds. These are repeated results, not independent studies. The present pipeline adds dependency and analysis-unit checks.
-- The registration combines AUROC extraction with AUC from HSROC or trapezoidal integration. A study's threshold-integrated AUROC and area under a cross-study summary ROC are different estimands. A single sensitivity/specificity pair cannot recover a study's AUROC.
-- Protocol sensitivity/specificity wording mentions neonates despite broader paediatric eligibility. Specificity concerns non-arrest units, not the proportion of arrest cases detected. SMD is mentioned without a defined contrast and is not used here.
-- The full-protocol citation in the snapshot is the PRISMA 2020 reporting statement, not an accessible study-specific full protocol. A complete search strategy, screening totals and independent extraction decisions are not supplied. The dataset flow is not represented as a full PRISMA flow.
-- QUADAS-2 and adapted GRADE remain registered. No tool replacement, dual-reviewer assessment or formal certainty grade is asserted.
-
-## Team confirmation before publication
-
-Confirm and document the general-PICU change; resolve mixed-age Kenet eligibility; clarify whether to retain the external-validation requirement, seek missing external studies or formally revise the protocol; obtain patient/cluster-adjusted results and genuine AUROC uncertainty; confirm Dallas overlap; confirm representative models and non-peak-driven horizon choices; verify the Yu 2023 table's model, fold, threshold, horizon and unit; independently assess bias/certainty and reconcile any changes with the register. This report does not claim a waiver or amended PROSPERO record.
+Before manuscript publication, the team must resolve scope, adult inclusion, external validation, overlapping Dallas patients, model/horizon selection, source uncertainty and Yu table linkage, and complete independent risk-of-bias/certainty review. The present revision is transparent team-directed eligibility, not a protocol amendment. Historical 20-model results remain on the parent branch and are explicitly separated in the before/after report.

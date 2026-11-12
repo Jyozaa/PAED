@@ -1,21 +1,14 @@
-# Full extraction audit
+# Revised data audit
 
-All 3 supplied files were read completely before analysis: the CSV, the 3-page extraction framework, and the 7-page PROSPERO snapshot. PDF text was extracted page by page and its layout checked locally. No original study full texts or patient data were supplied. Original files and extracted PDF text remain local and ignored by Git.
+Only the original extraction CSV, List of Variables (3 pages), PROSPERO snapshot (7 pages) and their existing derivatives are used. No new papers, external data or correspondence were obtained. Original-file hashes are unchanged. Source row means 1-based logical CSV record including both header records; physical multiline spans are separate. Original/curated sources remain immutable, with raw PDFs/CSV and private narratives excluded from Git.
 
-## Counts and source numbering
+## Recalculated counts
 
-- 42 columns; two header records (group labels and original field names).
-- 27 records after headers: 26 populated model entries, **1 cross-reference record, 0 completely blank records**.
-- Six original study reports: Yu 2026 (5 models), Lu 2025 (11), Bose 2019 (1), Yu 2023 (2 populated, plus 1 unpopulated cross-reference), Kenet 2023 (6), Yu 2022 (1).
-- Five Yu 2026 models excluded for composite outcomes, plus one Yu 2023 Gaussian Naive Bayes model excluded for insufficient numerical results.
-- The cross-reference at logical record 21 points to Yu 2022 record 29; it is not counted as a seventh exclusion from the 26 populated models and is not forward-filled into an extra result.
-- Retained: **5 studies, 20 models**, four conservative potential cohort groups (Yu 2022/2023 grouped for possible reuse).
-- Numerical AUROC: 21 estimates across 20 retained models; Bose contributes distinct training and held-out test values. Only 1 estimate has a labelled 95% CI. Eleven Lu values have unspecified +/- variation.
-- Seven complete candidate 2x2 tables: six Kenet models and one Yu 2023 representative fold; two study sources, zero confirmed independent patient-level tables eligible for pooling.
+There are 27 post-header records, 26 populated original model entries and 6 original reports. One record is a cross-reference, with no extracted results, rather than a blank row. After 9 whole-model exclusions, **5 reports and 17 models remain**, including **8 Lu models**. There are **18 numerical AUROC evaluations**, because Bose contributes separate training and test results, and 8 unspecified Lu +/- quantities. Only one labelled AUROC CI is supplied. Seven complete candidate diagnostic tables still come from two sources.
 
-The preliminary “one blank row” checkpoint is corrected to a cross-reference with two non-empty cells. All other preliminary study/model counts reconcile. Source row denotes the **logical record** starting with header record 1; physical multiline spans are retained in `data_audit.csv` and the curated JSON.
+Previous exclusions remain: five Yu 2026 models for composite adverse events and Yu 2023 Gaussian Naive Bayes for inadequate graphical numerical results. The new team decision excludes entire Lu 2025 XGBoost, gMLP and PEDCA-FT entries, including their AUROCs: **Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable.** This is a model-level eligibility decision based on the sensitivity/specificity extraction, not a claim that those AUROCs were necessarily graph-read. Missing sensitivity/specificity alone does not exclude the other Lu models.
 
-## Record decisions
+## Every source decision
 
 | source_row | study_id | model_id | record_type | retained | exclusion_reason |
 | --- | --- | --- | --- | --- | --- |
@@ -29,12 +22,12 @@ The preliminary “one blank row” checkpoint is corrected to a cross-reference
 | 10 | lu_2025 | lu_2025_knn_unif | populated_model | True |  |
 | 11 | lu_2025 | lu_2025_logistic | populated_model | True |  |
 | 12 | lu_2025 | lu_2025_rf_gini | populated_model | True |  |
-| 13 | lu_2025 | lu_2025_xgboost | populated_model | True |  |
+| 13 | lu_2025 | lu_2025_xgboost | populated_model | False | Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable. |
 | 14 | lu_2025 | lu_2025_lightgbm | populated_model | True |  |
 | 15 | lu_2025 | lu_2025_tabnn | populated_model | True |  |
 | 16 | lu_2025 | lu_2025_tresnet | populated_model | True |  |
-| 17 | lu_2025 | lu_2025_gmlp | populated_model | True |  |
-| 18 | lu_2025 | lu_2025_pedca_ft | populated_model | True |  |
+| 17 | lu_2025 | lu_2025_gmlp | populated_model | False | Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable. |
+| 18 | lu_2025 | lu_2025_pedca_ft | populated_model | False | Research-team decision: model excluded because sensitivity and specificity were extracted graphically and considered insufficiently reliable. |
 | 19 | bose_2019 | bose_2019_glm | populated_model | True |  |
 | 20 | yu_2023 | yu_2023_rdn_boost | populated_model | True |  |
 | 21 | yu_2023 | yu_2023_logistic_reference | cross_reference | False | Cross-reference only; no extracted result; links to populated Yu 2022 record 29 |
@@ -48,14 +41,17 @@ The preliminary “one blank row” checkpoint is corrected to a cross-reference
 | 29 | yu_2022 | yu_2022_logistic | populated_model | True |  |
 
 
-## Scope and metrics
+## Retained study/model counts
 
-Inventories enumerate every populated original model, study, metric text, outcome context, horizon, validation and dependency identifier. `source_cell_states.csv` audits all 27 x 42 = 1,134 data cells without publishing private text. Excluded results are not used for descriptive working-cohort performance ranges. No 2x2 reconstruction or CI imputation was made.
+| study | retained models |
+| --- | --- |
+| lu_2025 | 8 |
+| bose_2019 | 1 |
+| yu_2023 | 1 |
+| kenet_2023 | 6 |
+| yu_2022 | 1 |
 
-The supplied framework prioritizes TP/FP/FN/TN and repeated-model extraction. The CSV adds AUROC but lacks dedicated AUROC CI-method, threshold-specific evaluation-unit and cluster-covariance fields. See the complete dictionary and feasibility reports for the consequences.
 
-## Numerical validation
+The original 42 source columns and two header records are preserved in the schema metadata. All 1,134 data-cell missingness states remain audited. Source records 13, 17 and 18 are excluded from retained tables, figures, ranges and pooled inputs. Their original text remains in source provenance and excluded inventory rows only. Lu retained AUROC range is **0.5472-0.7329**. No arithmetic model average is presented as a study estimate. Lu and Yu 2022 now have no eligible sensitivity/specificity observations; missing is never replaced by zero.
 
-1 retained model/metric discrepancy exceeds the documented rounding tolerance: Kenet random-forest specificity, reported 0.778 versus 0.77563202 from counts (difference -0.00236798). Yu 2023 specificity 65% and PPV/NPV 36%/97% agree with exact count-derived values within integer-percentage rounding. Source values are never overwritten.
-
-Other flags include probable Dallas cohort reuse; missing external validation; Kenet repeated-window clustering and 38 adult participants; graph-read Lu operating points; duplicated KNN quality text across Lu models; conflicting recruitment dates; approximate distal AUROC ranges; and uncertain linkage of the Yu 2023 representative-fold table.
+Seven diagnostic tables still have unchanged counts. The Kenet random-forest specificity discrepancy remains: reported 77.8%, counts 77.5632%. Yu integer percentages agree within their rounding tolerance. Other flags preserve possible Dallas reuse, missing external validation, clustered windows, mixed-age Kenet, inconsistent recruitment dates and unresolved Yu 2023 table linkage.

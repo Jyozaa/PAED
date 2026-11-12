@@ -1,0 +1,12 @@
+measure,previous,revised,analysis_class,revision_id
+Retained study reports,5,5,revision_comparison,exclude_graph_derived_lu_models
+Retained models,20,17,revision_comparison,exclude_graph_derived_lu_models
+Retained Lu models,11,8,revision_comparison,exclude_graph_derived_lu_models
+Lu reported AUROC range,0.5472-0.7504,0.5472-0.7329,revision_comparison,exclude_graph_derived_lu_models
+Core AUROC scenarios,18,18,revision_comparison,exclude_graph_derived_lu_models
+Core conditional pooled AUROC range,0.7689-0.8451,0.7241-0.8305,revision_comparison,exclude_graph_derived_lu_models
+Additional retained-Lu AUROC scenarios,0,126,revision_comparison,exclude_graph_derived_lu_models
+All revised Lu-choice conditional pooled AUROC range,Not previously assessed,0.7120-0.8441,revision_comparison,exclude_graph_derived_lu_models
+Diagnostic scenarios,96,96,revision_comparison,exclude_graph_derived_lu_models
+Conditional diagnostic sensitivity (%),87.2956-98.2449,87.2956-98.2449,revision_comparison,exclude_graph_derived_lu_models
+Conditional diagnostic specificity (%),65.5968-87.4968,65.5968-87.4968,revision_comparison,exclude_graph_derived_lu_models

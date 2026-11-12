@@ -13,3 +13,10 @@ __pycache__/
 PROSPERO.pdf
 List of Variables.pdf
 Data extraction paeds cardiac arrest SR progress 5.xlsx - Sheet1.csv
+/output/pdf/*.log
+/output/pdf/*.aux
+/output/pdf/compile_stdout.txt
+
+# Quarantined untracked cloud-sync duplicate artifacts; preserve locally only.
+figures/exploratory/.cloud-duplicate-*.quarantined
+figures/exploratory/.cloud-duplicates/

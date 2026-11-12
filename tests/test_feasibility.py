@@ -44,5 +44,5 @@ def test_real_evidence_correctly_gated(evidence,project):
     assert status['diagnostic']['source_cohort_groups']==2
     assert status['diagnostic']['eligible_datasets']==0
     assert status['strict_protocol']['demonstrated_eligible_studies']==0
-    assert status['strict_protocol']['with_setting_requirement_only_models']==14
+    assert status['strict_protocol']['with_setting_requirement_only_models']==11
     assert not status['auroc']['pooled_estimate_produced'] and not status['diagnostic']['pooled_estimate_produced']

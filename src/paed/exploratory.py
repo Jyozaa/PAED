@@ -22,12 +22,18 @@ LIMIT_D='Two source summaries; Kenet clustered windows and mixed-age sample; Yu 
 
 
 def auroc_scenarios(config):
-    c=config['auroc']
-    for dallas,kenet,se in product(c['dallas_alternatives'],c['kenet_alternatives'],c['assumed_auroc_scale_ses']):
-        yield {'scenario_id':f'A_{dallas.split("_")[1]}_{kenet.removeprefix("kenet_2023_").removesuffix("_a1")}_SE{round(se*100):02d}',
-               'estimate_ids':[*c['fixed_estimate_ids'],dallas,kenet],
-               'dallas_estimate_id':dallas,'kenet_estimate_id':kenet,'assumed_se_auroc':se,
-               'initial_selection':dallas==c['initial_dallas'] and kenet==c['initial_kenet']}
+    c=config['auroc'];core=c['core_lu_estimate_id']
+    other_fixed=[x for x in c['fixed_estimate_ids'] if x!=core]
+    if len(other_fixed)!=1:raise ValueError('One fixed Bose estimate must accompany the selected Lu estimate')
+    for lu in [core,*c['additional_lu_alternatives']]:
+        family='core_lu_logistic' if lu==core else 'alternative_lu_model'
+        prefix='' if lu==core else 'LU_'+lu.removeprefix('lu_2025_').removesuffix('_a1')+'_'
+        for dallas,kenet,se in product(c['dallas_alternatives'],c['kenet_alternatives'],c['assumed_auroc_scale_ses']):
+            yield {'scenario_id':f'A_{prefix}{dallas.split("_")[1]}_{kenet.removeprefix("kenet_2023_").removesuffix("_a1")}_SE{round(se*100):02d}',
+                   'scenario_family':family,'lu_estimate_id':lu,
+                   'estimate_ids':[lu,*other_fixed,dallas,kenet],
+                   'dallas_estimate_id':dallas,'kenet_estimate_id':kenet,'assumed_se_auroc':se,
+                   'initial_selection':lu==core and dallas==c['initial_dallas'] and kenet==c['initial_kenet']}
 
 
 def diagnostic_scenarios(config):
